@@ -8,27 +8,27 @@ export function PremiumClients() {
     {
       name: "Doxis",
       logo: "/logos/doxis.png",
-      description: "Slimme documentverwerking en workflow-optimalisatie voor efficiëntere bedrijfsvoering."
+      description: "Voor Doxis hebben we een slimme trechter voor DAS-aanvragen opgezet met automatische filtering, classificatie en routering naar de juiste collega, waardoor urgente cases sneller worden opgepakt en handwerk verdwijnt."
     },
     {
       name: "Vinster",
       logo: "/logos/vinster.png",
-      description: "AI-gedreven analyse en rapportage voor datagestuurde besluitvorming en groei."
+      description: "Voor Vinster hebben we een AI-loopbaanplatform opgezet met dynamisch formulier, AI-workflow en automatische PDF-rapporten via Placid, gekoppeld aan Stripe voor betalingen/licenties en Supabase als database."
     },
     {
       name: "Educared",
       logo: "/logos/educared.png",
-      description: "Geautomatiseerde leertrajecten en persoonlijke ontwikkelingsplannen voor optimale kennisoverdracht."
+      description: "Voor Educared hebben we een volledig geautomatiseerd contract- en e-signproces opgezet: sjabloon en ontvangers uploaden, automatisch invullen en versturen, notificatie bij ondertekening en alles centraal gearchiveerd."
     },
     {
       name: "LEK Sloopwerken",
       logo: "/logos/lek-sloopwerken.png",
-      description: "Digitalisering van projectmanagement en veiligheidsprocessen voor efficiëntere uitvoering."
+      description: "Voor Lek Sloopwerken hebben we een Twilio-telefoniesysteem opgezet met IVR-keuzemenu's, call logging, voicemail-naar-mail en Make-flows die alles direct bij het juiste team laten landen."
     },
     {
       name: "De Groene Wereld",
       logo: "/logos/de-groene-wereld.png",
-      description: "Slimme tuinonderhoud planning en klantcommunicatie voor duurzame groei en klanttevredenheid."
+      description: "Voor De Groene Wereld hebben we een contentgeneratiesysteem opgezet dat modules omzet naar leerdoelen, docent- en student­samenvattingen en begrippenlijsten, inclusief exports naar PDF/Excel/Docs."
     }
   ];
 
