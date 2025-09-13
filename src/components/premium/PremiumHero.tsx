@@ -30,38 +30,40 @@ export function PremiumHero() {
           
           {/* Right Column - Image Card */}
           <div className="lg:flex justify-end items-center">
-            <div className="relative w-full lg:w-[42%] xl:w-[40%] min-w-[360px] max-w-[520px] lg:ml-14">
-              {/* Desktop Pills - Floating over left edge */}
-              <div className="hidden lg:block absolute -left-4 top-6 z-10 space-y-3">
-                <div className="bg-background/95 backdrop-blur-sm border border-border text-foreground px-3 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-muted/50 transition-colors">
-                  AI-workshop
-                </div>
-                <div className="bg-background/95 backdrop-blur-sm border border-border text-foreground px-3 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-muted/50 transition-colors">
-                  In 4 dagen live
-                </div>
-              </div>
-              
+            <div className="relative w-full lg:w-[40%] min-w-[360px] max-w-[520px] lg:ml-14">
               {/* Image Container */}
               <div className="relative group overflow-hidden rounded-[14px] lg:rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
                 <div className="aspect-[3/4] lg:aspect-[3/4] relative">
                   <img 
                     src={workshopHero}
-                    alt="Wij geven een AI-workshop aan een team in een vergaderruimte"
-                    className="w-full h-full object-cover object-[center_right]"
+                    alt="Teamtraining over AI-automatisering tijdens een workshop"
+                    className="w-full h-full object-cover object-[60%_40%]"
                   />
                   {/* Subtle bottom gradient overlay */}
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/12 to-transparent pointer-events-none"></div>
+                  
+                  {/* Callout chip - Desktop */}
+                  <div className="hidden lg:block absolute top-4 right-4">
+                    <a 
+                      href="/training"
+                      className="inline-block bg-white text-[#0F172A] border border-[#E6EAF2] px-[14px] py-[10px] rounded-full text-sm font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.1)] hover:bg-[#F6F8FB] hover:-translate-y-0.5 transition-all duration-200"
+                      aria-label="Naar trainingspagina automatisering"
+                    >
+                      Ook zo'n training?
+                    </a>
+                  </div>
                 </div>
               </div>
               
-              {/* Mobile Pills - Below image */}
-              <div className="lg:hidden mt-4 flex gap-3 justify-center">
-                <div className="bg-background border border-border text-foreground px-3 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-muted/50 transition-colors">
-                  AI-workshop
-                </div>
-                <div className="bg-background border border-border text-foreground px-3 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-muted/50 transition-colors">
-                  In 4 dagen live
-                </div>
+              {/* Mobile Callout - Below image */}
+              <div className="lg:hidden mt-4 flex justify-center">
+                <a 
+                  href="/training"
+                  className="inline-block bg-white text-[#0F172A] border border-[#E6EAF2] px-[14px] py-[10px] rounded-full text-sm font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.1)] hover:bg-[#F6F8FB] transition-all duration-200"
+                  aria-label="Naar trainingspagina automatisering"
+                >
+                  Ook zo'n training?
+                </a>
               </div>
             </div>
           </div>
