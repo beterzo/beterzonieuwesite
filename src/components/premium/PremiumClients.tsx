@@ -2,15 +2,33 @@ export function PremiumClients() {
   const clients = [
     {
       name: "Bureau Reuring",
-      logo: "/logos/bureau-reuring.png"
+      logo: "/logos/bureau-reuring.png",
+      description: "Automatisering van administratieve processen voor meer focus op klantcontact en strategische advisering."
     },
     {
       name: "Doxis",
-      logo: "/logos/doxis.png"
+      logo: "/logos/doxis.png",
+      description: "Slimme documentverwerking en workflow-optimalisatie voor efficiëntere bedrijfsvoering."
     },
     {
       name: "Vinster",
-      logo: "/logos/vinster.png"
+      logo: "/logos/vinster.png",
+      description: "AI-gedreven analyse en rapportage voor datagestuurde besluitvorming en groei."
+    },
+    {
+      name: "Educared",
+      logo: "/logos/educared.png",
+      description: "Geautomatiseerde leertrajecten en persoonlijke ontwikkelingsplannen voor optimale kennisoverdracht."
+    },
+    {
+      name: "LEK Sloopwerken",
+      logo: "/logos/lek-sloopwerken.png",
+      description: "Digitalisering van projectmanagement en veiligheidsprocessen voor efficiëntere uitvoering."
+    },
+    {
+      name: "De Groene Wereld",
+      logo: "/logos/de-groene-wereld.png",
+      description: "Slimme tuinonderhoud planning en klantcommunicatie voor duurzame groei en klanttevredenheid."
     }
   ];
 
@@ -22,7 +40,7 @@ export function PremiumClients() {
             Vertrouwd door
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {clients.map((client, index) => (
               <div 
                 key={index}
@@ -35,10 +53,10 @@ export function PremiumClients() {
                     className="h-20 w-auto object-contain mx-auto"
                   />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   <h3 className="font-semibold text-foreground">{client.name}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {/* Plaats hier tekst over de samenwerking */}
+                  <p className="text-muted-foreground leading-relaxed">
+                    {client.description}
                   </p>
                 </div>
               </div>
