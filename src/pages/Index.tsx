@@ -1,23 +1,23 @@
-import { HeroSection } from "@/components/HeroSection";
-import { StatsSection } from "@/components/StatsSection";
-import { ClientLogos } from "@/components/ClientLogos";
-import { MethodSection } from "@/components/MethodSection";
-import { SolutionsSection } from "@/components/SolutionsSection";
-import { TrackRecordSection } from "@/components/TrackRecordSection";
-import { CTASection } from "@/components/CTASection";
-import { Footer } from "@/components/Footer";
+import { PremiumHero } from "@/components/premium/PremiumHero";
+import { PremiumKPIs } from "@/components/premium/PremiumKPIs";
+import { PremiumClients } from "@/components/premium/PremiumClients";
+import { PremiumMethod } from "@/components/premium/PremiumMethod";
+import { PremiumSolutions } from "@/components/premium/PremiumSolutions";
+import { PremiumProof } from "@/components/premium/PremiumProof";
+import { PremiumCTA } from "@/components/premium/PremiumCTA";
+import { PremiumFooter } from "@/components/premium/PremiumFooter";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <HeroSection />
-      <StatsSection />
-      <ClientLogos />
-      <MethodSection />
-      <SolutionsSection />
-      <TrackRecordSection />
-      <CTASection />
-      <Footer />
+      <PremiumHero />
+      <PremiumKPIs />
+      <PremiumClients />
+      <PremiumMethod />
+      <PremiumSolutions />
+      <PremiumProof />
+      <PremiumCTA />
+      <PremiumFooter />
     </div>
   );
 };

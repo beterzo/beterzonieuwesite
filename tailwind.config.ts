@@ -51,9 +51,12 @@ export default {
         },
         "dark-bg": "hsl(var(--dark-bg))",
         "dark-foreground": "hsl(var(--dark-foreground))",
+        "surface-mist": "hsl(var(--surface-mist))",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...require("tailwindcss/defaultTheme").fontFamily.sans],
+        sans: ["var(--font-primary)", ...require("tailwindcss/defaultTheme").fontFamily.sans],
+        primary: ["var(--font-primary)", ...require("tailwindcss/defaultTheme").fontFamily.sans],
+        fallback: ["var(--font-fallback)", ...require("tailwindcss/defaultTheme").fontFamily.sans],
       },
       boxShadow: {
         sm: "var(--shadow-sm)",

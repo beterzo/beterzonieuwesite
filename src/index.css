@@ -2,61 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Beterzo Design System - Modern, clean with #027BFF brand color */
+/* Beterzo Design System - Premium minimalist with Manrope & #027BFF */
 
 @layer base {
   :root {
-    /* Brand Colors */
+    /* Premium Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 220 13% 18%;
+    --foreground: 225 15% 7%;
 
-    /* Beterzo Brand Primary - #027BFF */
+    /* Primary Brand - #027BFF */
     --primary: 211 100% 50%;
     --primary-foreground: 0 0% 100%;
     --primary-hover: 211 100% 45%;
 
-    /* Cards & Surfaces */
+    /* Premium Surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 220 13% 18%;
-    --card-border: 220 13% 91%;
-
+    --card-foreground: 225 15% 7%;
+    --surface-mist: 220 40% 98%;
+    
     /* Secondary & Muted */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 13% 18%;
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
-
-    /* Accent */
-    --accent: 211 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --secondary: 220 40% 98%;
+    --secondary-foreground: 225 15% 7%;
+    --muted: 220 40% 98%;
+    --muted-foreground: 215 12% 60%;
 
     /* Interactive Elements */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
+    --border: 215 12% 92%;
+    --input: 215 12% 92%;
     --ring: 211 100% 50%;
 
-    /* Destructive */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    /* Dark Section */
+    --dark-bg: 225 15% 7%;
+    --dark-foreground: 0 0% 100%;
 
-    /* Popover */
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 18%;
-
-    /* Design System Variables */
-    --radius: 0.75rem;
+    /* Premium Design Variables */
+    --radius: 0.875rem; /* 14px */
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 13% 18% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(220 13% 18% / 0.1), 0 2px 4px -2px hsl(220 13% 18% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(220 13% 18% / 0.1), 0 4px 6px -4px hsl(220 13% 18% / 0.1);
+    /* Subtle Premium Shadows */
+    --shadow-subtle: 0 6px 12px hsl(225 15% 7% / 0.08);
+    --shadow-card: 0 6px 12px hsl(225 15% 7% / 0.06);
+    --shadow-float: 0 8px 16px hsl(225 15% 7% / 0.08);
     
-    /* Gradients */
-    --gradient-brand: linear-gradient(135deg, hsl(211 100% 50%), hsl(211 100% 45%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 98%));
-    
-    /* Typography */
-    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    /* Typography System - Manrope Primary */
+    --font-primary: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+    --font-fallback: 'Inter', system-ui, -apple-system, sans-serif;
 
     
     /* Track Record Dark Background */
@@ -77,50 +66,93 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    line-height: 1.6;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1 {
+    @apply font-bold tracking-tight;
+    font-size: clamp(3.25rem, 4vw, 3.5rem);
+    line-height: 1.15;
+  }
+
+  h2 {
     @apply font-semibold tracking-tight;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    line-height: 1.25;
+  }
+
+  h3 {
+    @apply font-semibold tracking-tight;
+    font-size: clamp(1.375rem, 2vw, 1.5rem);
+    line-height: 1.35;
+  }
+
+  .container {
+    max-width: 1200px;
   }
 }
 
 @layer components {
-  /* Hero Gradient Background */
-  .hero-bg {
-    background: var(--gradient-subtle);
+  /* Premium Section Spacing */
+  .section-spacing {
+    @apply py-20 lg:py-24;
   }
   
-  /* Card Hover Effects */
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  .section-spacing-sm {
+    @apply py-16 lg:py-20;
   }
   
-  /* Brand Button Styles */
-  .btn-brand {
-    @apply bg-primary text-primary-foreground hover:bg-primary-hover shadow-md transition-all duration-200;
+  /* Premium Card Styles */
+  .premium-card {
+    @apply bg-card rounded-[14px] border border-border;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease;
+  }
+  
+  .premium-card:hover {
+    box-shadow: var(--shadow-float);
+    transform: translateY(-2px);
+  }
+  
+  /* Floating Tiles */
+  .floating-tile {
+    @apply bg-surface-mist rounded-[14px] p-6;
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  /* Premium Button Styles */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-[14px] font-medium transition-all duration-200;
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .btn-primary:hover {
+    @apply bg-primary-hover;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-float);
   }
   
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-muted border border-border shadow-sm transition-all duration-200;
+    @apply bg-background text-foreground border-2 border-border px-8 py-4 rounded-[14px] font-medium transition-all duration-200;
   }
   
-  /* Track Record Dark Section */
-  .track-record-bg {
+  .btn-secondary:hover {
+    @apply border-foreground;
+    transform: translateY(-1px);
+  }
+  
+  /* Dark Section */
+  .dark-section {
     background: hsl(var(--dark-bg));
     color: hsl(var(--dark-foreground));
   }
   
-  /* Subtle Animations */
-  .fade-in {
-    animation: fadeIn 0.7s ease-out forwards;
-    opacity: 0;
-  }
-  
-  .slide-up {
-    animation: slideUp 0.7s ease-out forwards;
-    opacity: 0;
-    transform: translateY(20px);
+  /* Premium Grid */
+  .premium-grid {
+    @apply grid gap-6 lg:gap-8;
   }
 }
 
