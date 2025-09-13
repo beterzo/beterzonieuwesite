@@ -36,26 +36,25 @@ export function PremiumClients() {
     <section className="section-spacing-sm">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-12">
-          <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-            Vertrouwd door
-          </p>
+          <h2 className="text-foreground">
+            <span className="text-primary">Beterzo</span> wordt vertrouwd door:
+          </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {clients.map((client, index) => (
               <div 
                 key={index}
-                className="bg-surface rounded-xl p-8 hover:shadow-card transition-all duration-300 text-center"
+                className="flex flex-col items-center text-center space-y-6"
               >
-                <div className="mb-6">
+                <div className="h-20 flex items-center justify-center">
                   <img
                     src={client.logo}
                     alt={`${client.name} logo`}
-                    className="h-20 w-auto object-contain mx-auto"
+                    className="h-full w-auto object-contain"
                   />
                 </div>
-                <div className="space-y-3">
-                  <h3 className="font-semibold text-foreground">{client.name}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                <div className="premium-card p-6 space-y-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 w-full">
+                  <p className="text-muted-foreground leading-relaxed text-sm">
                     {client.description}
                   </p>
                 </div>
