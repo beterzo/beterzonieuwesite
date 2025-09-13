@@ -3,7 +3,7 @@ export function PremiumClients() {
     {
       name: "Bureau Reuring",
       logo: "/logos/bureau-reuring.png",
-      description: "Automatisering van administratieve processen voor meer focus op klantcontact en strategische advisering."
+      description: "Voor Bureau Reuring werken we achter de schermen aan administratieve processen die zorgen voor meer ruimte, tijd en focus op klantcontact en strategische advisering."
     },
     {
       name: "Doxis",
