@@ -30,7 +30,7 @@ export function PremiumHero() {
           
           {/* Right Column - Image Card */}
           <div className="lg:flex justify-end items-center">
-            <div className="relative w-full lg:w-[40%] min-w-[360px] max-w-[520px] lg:ml-14">
+            <div className="relative w-full lg:w-[50%] xl:w-[48%] min-w-[360px] max-w-[580px] lg:ml-14">
               {/* Image Container */}
               <div className="relative group overflow-hidden rounded-[14px] lg:rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
                 <div className="aspect-[3/4] lg:aspect-[3/4] relative">
