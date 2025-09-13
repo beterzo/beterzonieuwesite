@@ -22,17 +22,25 @@ export function PremiumClients() {
             Vertrouwd door
           </p>
           
-          <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {clients.map((client, index) => (
               <div 
                 key={index}
-                className="group transition-all duration-300 p-6 rounded-xl hover:bg-surface/50"
+                className="bg-surface rounded-xl p-8 hover:shadow-card transition-all duration-300 text-center"
               >
-                <img
-                  src={client.logo}
-                  alt={`${client.name} logo`}
-                  className="h-12 w-auto object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-                />
+                <div className="mb-6">
+                  <img
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    className="h-20 w-auto object-contain mx-auto"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-semibold text-foreground">{client.name}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {/* Plaats hier tekst over de samenwerking */}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
