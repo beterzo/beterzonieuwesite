@@ -44,20 +44,18 @@ export function PremiumClients() {
             {clients.map((client, index) => (
               <div 
                 key={index}
-                className="flex flex-col items-center text-center space-y-6"
+                className="premium-card p-6 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
               >
-                <div className="h-20 flex items-center justify-center">
+                <div className="h-16 flex items-center justify-center">
                   <img
                     src={client.logo}
                     alt={`${client.name} logo`}
                     className="h-full w-auto object-contain"
                   />
                 </div>
-                <div className="premium-card p-6 space-y-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 w-full">
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    {client.description}
-                  </p>
-                </div>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {client.description}
+                </p>
               </div>
             ))}
           </div>
