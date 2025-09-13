@@ -2,55 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Beterzo Design System - Premium minimalist with Manrope & #027BFF */
+/* Beterzo Design System - Premium Typography & Refined Tokens */
 
 @layer base {
   :root {
-    /* Premium Brand Colors */
+    /* Refined Brand Colors - Stronger contrast */
     --background: 0 0% 100%;
-    --foreground: 225 15% 7%;
+    --foreground: 215 25% 8%;    /* #0F172A - stronger primary text */
 
     /* Primary Brand - #027BFF */
     --primary: 211 100% 50%;
     --primary-foreground: 0 0% 100%;
     --primary-hover: 211 100% 45%;
 
-    /* Premium Surfaces */
+    /* Premium Surfaces & Secondary Text */
     --card: 0 0% 100%;
-    --card-foreground: 225 15% 7%;
-    --surface-mist: 220 40% 98%;
+    --card-foreground: 215 25% 8%;
+    --surface-mist: 220 33% 97%;     /* #F6F8FB - refined light surface */
+    --muted: 220 33% 97%;
+    --muted-foreground: 215 16% 34%; /* #475569 - refined secondary text */
     
-    /* Secondary & Muted */
-    --secondary: 220 40% 98%;
-    --secondary-foreground: 225 15% 7%;
-    --muted: 220 40% 98%;
-    --muted-foreground: 215 12% 60%;
+    /* Secondary Styles */
+    --secondary: 220 33% 97%;
+    --secondary-foreground: 215 25% 8%;
 
     /* Interactive Elements */
-    --border: 215 12% 92%;
-    --input: 215 12% 92%;
+    --border: 220 18% 89%;       /* #E6EAF2 - refined border */
+    --input: 220 18% 89%;
     --ring: 211 100% 50%;
 
     /* Dark Section */
-    --dark-bg: 225 15% 7%;
+    --dark-bg: 225 22% 7%;       /* #0B1220 - refined dark */
     --dark-foreground: 0 0% 100%;
 
     /* Premium Design Variables */
-    --radius: 0.875rem; /* 14px */
+    --radius: 0.875rem; /* 14px everywhere */
     
-    /* Subtle Premium Shadows */
-    --shadow-subtle: 0 6px 12px hsl(225 15% 7% / 0.08);
-    --shadow-card: 0 6px 12px hsl(225 15% 7% / 0.06);
-    --shadow-float: 0 8px 16px hsl(225 15% 7% / 0.08);
+    /* Refined Premium Shadows */
+    --shadow-card: 0 8px 20px hsl(215 25% 8% / 0.08);    /* y=8, blur=20, 8% opacity */
+    --shadow-float: 0 12px 24px hsl(215 25% 8% / 0.1);   /* hover state */
+    --shadow-subtle: 0 4px 12px hsl(215 25% 8% / 0.06);  /* minimal shadow */
     
-    /* Typography System - Manrope Primary */
-    --font-primary: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+    /* Typography System - Inter Variable Primary */
+    --font-primary: 'Inter var', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --font-fallback: 'Inter', system-ui, -apple-system, sans-serif;
-
-    
-    /* Track Record Dark Background */
-    --dark-bg: 220 13% 13%;
-    --dark-foreground: 0 0% 98%;
   }
 
   .dark {
@@ -66,46 +61,76 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground;
     font-family: var(--font-primary);
-    font-size: 17px;
-    line-height: 1.6;
+    font-weight: 500;  /* minimum body weight */
+    font-size: 16px;   /* Body M */
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
+  /* Typography Scale - Heavier weights, tighter spacing */
   h1 {
-    @apply font-bold tracking-tight;
-    font-size: clamp(3.25rem, 4vw, 3.5rem);
-    line-height: 1.15;
+    font-weight: 800;
+    font-size: clamp(3.5rem, 4vw, 3.75rem); /* 56-60px */
+    line-height: 1.12;
+    letter-spacing: -0.2px;
   }
 
   h2 {
-    @apply font-semibold tracking-tight;
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    line-height: 1.25;
+    font-weight: 700; 
+    font-size: clamp(2.5rem, 3vw, 2.75rem); /* 40-44px */
+    line-height: 1.18;
+    letter-spacing: -0.2px;
   }
 
   h3 {
-    @apply font-semibold tracking-tight;
-    font-size: clamp(1.375rem, 2vw, 1.5rem);
-    line-height: 1.35;
+    font-weight: 650;
+    font-size: clamp(1.75rem, 2vw, 2rem); /* 28-32px */
+    line-height: 1.22;
+  }
+
+  /* Body text variants */
+  .body-l {
+    font-weight: 520;
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  .body-m {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .text-small {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  /* KPI numbers - always bold */
+  .kpi-number {
+    font-weight: 800;
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 1180px; /* 1140-1200px range */
   }
 }
 
 @layer components {
-  /* Premium Section Spacing */
+  /* Premium Section Spacing - 80-96px */
   .section-spacing {
-    @apply py-20 lg:py-24;
+    @apply py-20 lg:py-24; /* 80px-96px */
   }
   
   .section-spacing-sm {
     @apply py-16 lg:py-20;
   }
   
-  /* Premium Card Styles */
+  /* Premium Card Styles - refined shadows */
   .premium-card {
     @apply bg-card rounded-[14px] border border-border;
     box-shadow: var(--shadow-card);
@@ -123,9 +148,15 @@
     box-shadow: var(--shadow-subtle);
   }
   
-  /* Premium Button Styles */
+  /* Premium Button Styles - proper heights & weights */
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-8 py-4 rounded-[14px] font-medium transition-all duration-200;
+    @apply bg-primary text-primary-foreground rounded-[14px] transition-all duration-200;
+    font-weight: 600;
+    height: 48px; /* 44-48px range */
+    padding: 0 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: var(--shadow-subtle);
   }
   
@@ -136,11 +167,17 @@
   }
   
   .btn-secondary {
-    @apply bg-background text-foreground border-2 border-border px-8 py-4 rounded-[14px] font-medium transition-all duration-200;
+    @apply bg-background text-foreground border-2 border-foreground rounded-[14px] transition-all duration-200;
+    font-weight: 600;
+    height: 48px;
+    padding: 0 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .btn-secondary:hover {
-    @apply border-foreground;
+    @apply bg-surface-mist;
     transform: translateY(-1px);
   }
   
@@ -150,9 +187,25 @@
     color: hsl(var(--dark-foreground));
   }
   
-  /* Premium Grid */
+  /* Premium Grid - 24px gutters */
   .premium-grid {
-    @apply grid gap-6 lg:gap-8;
+    @apply grid;
+    gap: 1.5rem; /* 24px */
+  }
+  
+  /* Links with refined styling */
+  .premium-link {
+    font-weight: 550;
+    transition: all 0.2s ease;
+  }
+  
+  .premium-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Icons with proper stroke weight */
+  .icon-stroke {
+    stroke-width: 1.75px; /* 1.75-2px range */
   }
 }
 
