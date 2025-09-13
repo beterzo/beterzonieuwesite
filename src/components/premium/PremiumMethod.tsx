@@ -4,7 +4,7 @@ const steps = [
   {
     icon: Ear,
     title: "Intake",
-    description: "Ik luister, map processen en kies quick wins",
+    description: "Wij luisteren, mappen processen en kiezen quick wins",
     detail: "Samen identificeren we de grootste tijdvreters in jouw workflow.",
   },
   {
@@ -27,7 +27,7 @@ export function PremiumMethod() {
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-20">
           <h2 className="text-foreground">
-            Zo <span className="text-primary">werk ik</span>
+            Zo <span className="text-primary">werken wij</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Van verkennend gesprek tot werkende oplossing

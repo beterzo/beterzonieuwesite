@@ -14,7 +14,7 @@ export function PremiumHero() {
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Je koos dit vak niet voor herhaling. Ik haal de routines weg met AI, 
+              Je koos dit vak niet voor herhaling. Wij halen de routines weg met AI, 
               zodat jij tijd hebt voor werk dat telt.
             </p>
             
@@ -46,7 +46,7 @@ export function PremiumHero() {
                 <div className="aspect-[3/4] lg:aspect-[3/4] relative">
                   <img 
                     src={workshopHero}
-                    alt="Kai geeft een AI-workshop aan een team in een vergaderruimte"
+                    alt="Wij geven een AI-workshop aan een team in een vergaderruimte"
                     className="w-full h-full object-cover object-[center_right]"
                   />
                   {/* Subtle bottom gradient overlay */}

@@ -67,7 +67,7 @@ export function PremiumProof() {
         {/* Client Quote */}
         <div className="max-w-4xl mx-auto text-center">
           <blockquote className="text-xl lg:text-2xl font-medium leading-relaxed mb-6 opacity-90">
-            "Binnen 2 weken had ik 15 uur per week terug. Nu kan ik me focussen op 
+            "Binnen 2 weken hadden wij 15 uur per week terug. Nu kunnen we ons focussen op 
             strategisch werk in plaats van administratie."
           </blockquote>
           <cite className="text-primary font-medium">

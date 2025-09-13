@@ -4,7 +4,7 @@ const footerLinks = {
   main: [
     { name: "Home", href: "/" },
     { name: "Diensten", href: "/diensten" },
-    { name: "Over mij", href: "/over-mij" },
+    { name: "Over ons", href: "/over-ons" },
     { name: "Contact", href: "/contact" },
     { name: "Privacy", href: "/privacy" },
   ],
@@ -30,7 +30,7 @@ export function PremiumFooter() {
               </div>
               <p className="text-muted-foreground leading-relaxed max-w-md mb-8">
                 AI-automatisering die ruimte geeft aan vakmanschap. 
-                Ik maak technologie begrijpelijk en snel inzetbaar.
+                Wij maken technologie begrijpelijk en snel inzetbaar.
               </p>
               <Button className="btn-primary">
                 Plan gesprek

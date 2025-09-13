@@ -50,7 +50,7 @@ export function PremiumSolutions() {
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-foreground">
-            Mijn <span className="text-primary">oplossingen</span>
+            Onze <span className="text-primary">oplossingen</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Van standaard tot volledig maatwerk
