@@ -129,7 +129,7 @@ export default function Header() {
                 <img 
                   src={beterzLogo} 
                   alt="Beterzo" 
-                  className="h-8 w-auto"
+                  className="h-12 w-auto"
                 />
               </a>
             </div>
