@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Clock, TrendingUp, Users } from "lucide-react";
-import { StepperNavigation } from "@/components/stepper/StepperNavigation";
-import { StepContent } from "@/components/stepper/StepContent";
+import { HorizontalStepper } from "@/components/stepper/HorizontalStepper";
 import howWeWorkHero from "@/assets/how-we-work-hero.jpg";
 import workshopHero from "@/assets/workshop-hero.jpg";
 import stepProposal from "@/assets/step-proposal.jpg";
@@ -10,35 +9,7 @@ import stepBuild from "@/assets/step-build.jpg";
 import stepDelivery from "@/assets/step-delivery.jpg";
 import stepTraining from "@/assets/step-training.jpg";
 
-const stepperSteps = [
-  {
-    id: 1,
-    chip: "begin",
-    title: "beterzo begin"
-  },
-  {
-    id: 2,
-    chip: "bod",
-    title: "beterzo bod"
-  },
-  {
-    id: 3,
-    chip: "bouw",
-    title: "beterzo bouw"
-  },
-  {
-    id: 4,
-    chip: "bezorgen",
-    title: "beterzo bezorgen"
-  },
-  {
-    id: 5,
-    chip: "boost",
-    title: "beterzo boost"
-  }
-];
-
-const stepContent = [
+const stepperData = [
   {
     id: 1,
     chip: "begin",
@@ -135,47 +106,6 @@ const kpis = [
 ];
 
 export default function HowWeWork() {
-  const [currentStep, setCurrentStep] = useState(1);
-
-  // Handle URL hash for direct linking
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const stepMatch = hash.match(/#stap-(\d+)/);
-      if (stepMatch) {
-        const stepNumber = parseInt(stepMatch[1], 10);
-        if (stepNumber >= 1 && stepNumber <= 5) {
-          setCurrentStep(stepNumber);
-        }
-      }
-    }
-  }, []);
-
-  // Update URL hash when step changes
-  useEffect(() => {
-    window.history.replaceState(null, '', `#stap-${currentStep}`);
-  }, [currentStep]);
-
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft' && currentStep > 1) {
-        setCurrentStep(currentStep - 1);
-      } else if (e.key === 'ArrowRight' && currentStep < 5) {
-        setCurrentStep(currentStep + 1);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [currentStep]);
-
-  const handleStepChange = (step: number) => {
-    setCurrentStep(step);
-  };
-
-  const currentStepContent = stepContent.find(step => step.id === currentStep);
-
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -216,24 +146,8 @@ export default function HowWeWork() {
         </div>
       </section>
 
-      {/* Interactive Stepper Section */}
-      <section className="section-spacing bg-background">
-        <StepperNavigation
-          currentStep={currentStep}
-          totalSteps={5}
-          onStepChange={handleStepChange}
-          steps={stepperSteps}
-        />
-        
-        <div className="py-16">
-          {currentStepContent && (
-            <StepContent
-              step={currentStepContent}
-              isActive={true}
-            />
-          )}
-        </div>
-      </section>
+      {/* Horizontal Stepper Section */}
+      <HorizontalStepper steps={stepperData} />
 
       {/* KPI Strip */}
       <section className="section-spacing-sm bg-surface-mist">
