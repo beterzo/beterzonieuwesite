@@ -116,16 +116,21 @@ export default function HowWeWork() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-foreground">
-                  Hoe wij werken
+                  Welkom bij beterzo
                 </h1>
-                <h2 className="text-2xl text-muted-foreground font-medium">
-                  ...en wat jij daarvan merkt
-                </h2>
               </div>
               
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                We halen herhaling weg met slimme automatisering, leveren snel en trainen je team zodat iedereen direct kan starten.
-              </p>
+              <div className="space-y-6 text-xl text-muted-foreground leading-relaxed max-w-xl">
+                <p>
+                  Bedrijven verliezen kostbare tijd aan repetitieve taken die echte groei in de weg staan. Beterzo zet slimme AI en automatisering in die perfect aansluit bij jouw "why".
+                </p>
+                <p>
+                  Door processen te automatiseren krijg jij de vrijheid om te focussen op wat écht belangrijk is: jouw expertise. Als onderdeel van Bureau Reuring werkt beterzo elke dag om jouw bedrijf te transformeren naar een efficiëntere versie van zichzelf!
+                </p>
+                <p>
+                  We kijken er naar uit om samen te werken aan jouw oplossing!
+                </p>
+              </div>
             </div>
             
             {/* Right Column - Image Card */}
