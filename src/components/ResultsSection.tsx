@@ -39,6 +39,13 @@ export function ResultsSection() {
           Resultaten
         </h2>
 
+        {/* Note */}
+        <div className="mb-8 md:mb-10">
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-[720px]">
+            Volgens onderzoek van McKinsey kan tot circa 70% van taken worden geautomatiseerd. Resultaten verschillen per team en proces.
+          </p>
+        </div>
+
         {/* Tablet Grid (2x2) */}
         <div 
           className="hidden md:grid lg:hidden md:grid-cols-2 gap-6"
@@ -146,13 +153,6 @@ export function ResultsSection() {
               </div>
             );
           })}
-        </div>
-
-        {/* Note */}
-        <div className="mt-8 md:mt-10">
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-[720px]">
-            Volgens onderzoek van McKinsey kan tot circa 70% van taken worden geautomatiseerd. Resultaten verschillen per team en proces.
-          </p>
         </div>
       </div>
     </section>
