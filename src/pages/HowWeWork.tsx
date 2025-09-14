@@ -13,7 +13,7 @@ const stepperData = [
   {
     id: 1,
     chip: "begin",
-    title: "beterzo begin",
+    title: "Beterzo begin",
     subtitle: "Begin — intake & kansenkaart",
     description: "We starten met een korte intake en processcan. We brengen herhaling, knelpunten en snelste winst in kaart en bepalen meetbare doelen.",
     infoCards: [
@@ -28,7 +28,7 @@ const stepperData = [
   {
     id: 2,
     chip: "bod",
-    title: "beterzo bod",
+    title: "Beterzo bod",
     subtitle: "Bod — maatwerkvoorstel",
     description: "We leveren een scherp voorstel met scope, planning en budget. Je ziet precies wat we automatiseren en wat het oplevert.",
     infoCards: [
@@ -43,7 +43,7 @@ const stepperData = [
   {
     id: 3,
     chip: "bouw",
-    title: "beterzo bouw",
+    title: "Beterzo bouw",
     subtitle: "Bouw — van idee naar live",
     description: "We bouwen in korte sprints. We koppelen jullie tools, zetten AI-agents op en testen op echte cases. Minder handwerk, meer flow.",
     infoCards: [
@@ -58,7 +58,7 @@ const stepperData = [
   {
     id: 4,
     chip: "bezorgen",
-    title: "beterzo bezorgen",
+    title: "Beterzo bezorgen",
     subtitle: "Bezorgen — go-live & overdracht",
     description: "We leveren op, documenteren en monitoren. Je oplossing draait stabiel en iedereen weet wat te doen.",
     infoCards: [
@@ -73,7 +73,7 @@ const stepperData = [
   {
     id: 5,
     chip: "boost",
-    title: "beterzo boost",
+    title: "Beterzo boost",
     subtitle: "Boost — training & 30 dagen support",
     description: "We trainen het team, draaien samen de eerste weken mee en plannen verbeteringen. Zo blijft het echt werken.",
     infoCards: [

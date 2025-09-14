@@ -63,7 +63,7 @@ export default function About() {
                 
                 <div className="space-y-6 text-muted-foreground leading-[1.55] font-medium max-w-[72ch]">
                   <p>
-                    Met Beterzo laat ik zien dat technologie niet alleen ondersteunend is, maar juist dé sleutel tot innovatie. Alles kan nét een tikkie beterzo – en dat is precies wat wij doen.
+                    Met Beterzo laat ik zien dat technologie niet alleen ondersteunend is, maar juist dé sleutel tot innovatie. Alles kan nét een tikje Beterzo – en dat is precies wat wij doen.
                   </p>
                   
                   <p>
@@ -75,7 +75,7 @@ export default function About() {
                   </p>
 
                   <p>
-                    Alles een stukje beterzo, want waarom genoegen nemen met goed als het beterzo kan?
+                    Alles een stukje Beterzo, want waarom genoegen nemen met goed als het Beterzo kan?
                   </p>
 
                   <p>
