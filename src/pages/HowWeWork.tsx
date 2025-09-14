@@ -114,17 +114,17 @@ export default function HowWeWork() {
       <section className="py-20" style={{ backgroundColor: '#027BFF' }}>
         <div className="container mx-auto px-6">
           {/* Desktop Flow */}
-          <div className="hidden lg:flex items-center justify-between gap-8 max-w-7xl mx-auto">
+          <div className="hidden lg:flex items-center justify-between gap-4 max-w-6xl mx-auto">
             {flowSteps.map((step, index) => (
               <div key={index} className="flex items-center">
                 {/* Flow Card */}
-                <div className="bg-white rounded-[14px] p-6 shadow-sm min-w-[240px] max-w-[280px]">
-                  <div className="space-y-4">
+                <div className="bg-white rounded-[14px] p-4 shadow-sm w-[200px]">
+                  <div className="space-y-3">
                     <div className="inline-block">
-                      <span className="text-foreground font-semibold">beterzo </span>
-                      <span className="text-[#027BFF] font-semibold">{step.chip}</span>
+                      <span className="text-foreground font-semibold text-sm">beterzo </span>
+                      <span className="text-[#027BFF] font-semibold text-sm">{step.chip}</span>
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-xs leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -132,9 +132,9 @@ export default function HowWeWork() {
                 
                 {/* Arrow */}
                 {index < flowSteps.length - 1 && (
-                  <div className="mx-4 flex items-center">
-                    <div className="w-12 h-0.5 bg-white/60 border-t border-dashed border-white/60"></div>
-                    <ArrowRight className="h-4 w-4 text-white/60 ml-1" strokeWidth={2} />
+                  <div className="mx-2 flex items-center">
+                    <div className="w-8 h-0.5 bg-white/60 border-t border-dashed border-white/60"></div>
+                    <ArrowRight className="h-3 w-3 text-white/60 ml-1" strokeWidth={2} />
                   </div>
                 )}
               </div>
