@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLocation } from "react-router-dom";
+import beterzLogo from "@/assets/beterzo-logo.png";
 
 const navigationItems = [
   { name: "Home", href: "/" },
   { name: "Diensten", href: "/diensten", hasDropdown: true },
   { name: "Hoe wij werken", href: "/hoe-wij-werken" },
-  { name: "Cases", href: "/cases" },
   { name: "Over ons", href: "/over-ons" },
   { name: "FAQ", href: "/faq" }
 ];
@@ -124,11 +124,13 @@ export default function Header() {
             <div className="flex-shrink-0">
               <a 
                 href="/" 
-                className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
+                className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
               >
-                <div className="text-2xl font-bold text-foreground tracking-tight">
-                  beter<span className="text-primary">zo</span>
-                </div>
+                <img 
+                  src={beterzLogo} 
+                  alt="Beterzo" 
+                  className="h-8 w-auto"
+                />
               </a>
             </div>
 
