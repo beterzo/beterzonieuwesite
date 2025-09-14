@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       {/* Intro Section */}
-      <section className="section-spacing">
+      <section className="pt-16 pb-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-foreground mb-6">
@@ -21,7 +21,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="section-spacing-sm">
+      <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8">
             {/* Left Half - Kai Section */}
@@ -111,7 +111,7 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="section-spacing-sm">
+      <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             {["Simpel & concreet", "Resultaat binnen 30 dagen", "Persoonlijke begeleiding"].map((value, index) => (
