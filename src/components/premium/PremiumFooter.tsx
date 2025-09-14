@@ -32,8 +32,8 @@ export function PremiumFooter() {
                 AI-automatisering die ruimte geeft aan vakmanschap. 
                 Wij maken technologie begrijpelijk en snel inzetbaar.
               </p>
-              <Button className="btn-primary">
-                Plan gesprek
+              <Button asChild className="btn-primary">
+                <a href="/plan">Plan gratis gesprek</a>
               </Button>
             </div>
             

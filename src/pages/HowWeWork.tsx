@@ -184,8 +184,8 @@ export default function HowWeWork() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-primary">
-                Plan gratis gesprek
+              <Button asChild className="btn-primary">
+                <a href="/plan">Plan gratis gesprek</a>
               </Button>
               <Button variant="outline" className="btn-secondary">
                 Bekijk voorbeelden

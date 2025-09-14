@@ -109,8 +109,8 @@ export default function Header() {
 
               {/* Desktop CTA */}
               <div className="ml-6">
-                <Button className="btn-primary h-12 px-6">
-                  Plan Kennismaking
+                <Button asChild className="btn-primary h-12 px-6">
+                  <a href="/plan">Plan gratis gesprek</a>
                 </Button>
               </div>
             </div>
@@ -174,8 +174,8 @@ export default function Header() {
 
             {/* Mobile CTA */}
             <div className="p-6 mt-auto border-t border-border">
-              <Button className="btn-primary w-full h-12">
-                Plan gesprek
+              <Button asChild className="btn-primary w-full h-12">
+                <a href="/plan">Plan gratis gesprek</a>
               </Button>
             </div>
           </div>

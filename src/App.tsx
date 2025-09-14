@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import HowWeWork from "./pages/HowWeWork";
+import Plan from "./pages/Plan";
+import Privacy from "./pages/Privacy";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
@@ -28,6 +30,10 @@ const App = () => (
               <Route path="/over-ons" element={<About />} />
               <Route path="/how-we-work" element={<HowWeWork />} />
               <Route path="/hoe-wij-werken" element={<HowWeWork />} />
+              <Route path="/plan" element={<Plan />} />
+              <Route path="/plan-gesprek" element={<Plan />} />
+              <Route path="/plan-kennismaking" element={<Plan />} />
+              <Route path="/privacy" element={<Privacy />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/veelgestelde-vragen" element={<FAQ />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
