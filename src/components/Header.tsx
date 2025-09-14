@@ -134,74 +134,76 @@ export default function Header() {
               </a>
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-7">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative">
-                  {item.hasDropdown ? (
-                    <div className="relative">
-                      <button
-                        onClick={handleServicesToggle}
-                        className={cn(
-                          "flex items-center space-x-1 px-3 py-2 text-foreground font-semibold transition-colors duration-200 rounded-lg",
-                          "hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
-                          isServicesOpen && "text-primary"
-                        )}
-                        aria-expanded={isServicesOpen}
-                        aria-haspopup="true"
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown 
+            {/* Desktop Navigation - Right Aligned */}
+            <div className="hidden lg:flex items-center space-x-8">
+              <nav className="flex items-center space-x-8">
+                {navigationItems.map((item) => (
+                  <div key={item.name} className="relative">
+                    {item.hasDropdown ? (
+                      <div className="relative">
+                        <button
+                          onClick={handleServicesToggle}
                           className={cn(
-                            "h-4 w-4 transition-transform duration-200",
-                            isServicesOpen && "rotate-180"
+                            "flex items-center space-x-1 px-3 py-2 text-foreground font-semibold transition-colors duration-200 rounded-lg",
+                            "hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+                            isServicesOpen && "text-primary"
                           )}
-                        />
-                      </button>
+                          aria-expanded={isServicesOpen}
+                          aria-haspopup="true"
+                        >
+                          <span>{item.name}</span>
+                          <ChevronDown 
+                            className={cn(
+                              "h-4 w-4 transition-transform duration-200",
+                              isServicesOpen && "rotate-180"
+                            )}
+                          />
+                        </button>
 
-                      {/* Services Dropdown */}
-                      {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[720px] bg-background rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)] border border-border p-6 z-50">
-                          <div className="grid grid-cols-2 gap-4">
-                            {servicesItems.map((service) => (
-                              <a
-                                key={service.name}
-                                href={service.href}
-                                className="flex flex-col p-4 rounded-lg transition-colors duration-200 hover:bg-surface-mist hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                              >
-                                <div className="font-semibold text-foreground mb-1">
-                                  {service.name}
-                                </div>
-                                <div className="text-sm text-muted-foreground">
-                                  {service.description}
-                                </div>
-                              </a>
-                            ))}
+                        {/* Services Dropdown */}
+                        {isServicesOpen && (
+                          <div className="absolute top-full left-0 mt-2 w-[720px] bg-background rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)] border border-border p-6 z-50">
+                            <div className="grid grid-cols-2 gap-4">
+                              {servicesItems.map((service) => (
+                                <a
+                                  key={service.name}
+                                  href={service.href}
+                                  className="flex flex-col p-4 rounded-lg transition-colors duration-200 hover:bg-surface-mist hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                                >
+                                  <div className="font-semibold text-foreground mb-1">
+                                    {service.name}
+                                  </div>
+                                  <div className="text-sm text-muted-foreground">
+                                    {service.description}
+                                  </div>
+                                </a>
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <a
-                      href={item.href}
-                      className={cn(
-                        "relative px-3 py-2 text-foreground font-semibold transition-colors duration-200 rounded-lg",
-                        "hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
-                        isActiveRoute(item.href) && "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full"
-                      )}
-                    >
-                      {item.name}
-                    </a>
-                  )}
-                </div>
-              ))}
-            </nav>
+                        )}
+                      </div>
+                    ) : (
+                      <a
+                        href={item.href}
+                        className={cn(
+                          "relative px-3 py-2 text-foreground font-semibold transition-colors duration-200 rounded-lg",
+                          "hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+                          isActiveRoute(item.href) && "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full"
+                        )}
+                      >
+                        {item.name}
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </nav>
 
-            {/* Desktop CTA */}
-            <div className="hidden lg:flex">
-              <Button className="btn-primary h-12 px-6">
-                Plan gesprek
-              </Button>
+              {/* Desktop CTA */}
+              <div className="ml-6">
+                <Button className="btn-primary h-12 px-6">
+                  Plan Kennismaking
+                </Button>
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
