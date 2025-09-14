@@ -29,7 +29,7 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl">
             <h1 className="text-[56px] leading-[1.12] font-extrabold text-foreground mb-6 tracking-[-0.2px]">
-              Ons <span className="text-primary">team</span>
+              Wij zijn <span className="text-primary">Beterzo</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-[1.55] font-medium max-w-3xl">
               We bouwen AI-oplossingen die herhaling wegnemen, zodat teams tijd hebben voor werk dat telt.
@@ -41,7 +41,7 @@ export default function About() {
       {/* Main Content Section - 3 Column Layout */}
       <section className="pb-14">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 max-w-7xl mx-auto items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 max-w-7xl mx-auto items-start">
             
             {/* Column 1: Kai Portrait (4 cols) */}
             <div className="lg:col-span-4">
@@ -51,13 +51,6 @@ export default function About() {
                   alt="Portret Kai"
                   className="w-full h-full object-cover object-center"
                 />
-                {/* Name chip overlay */}
-                <div 
-                  className="absolute top-3 left-3 z-10 bg-white text-foreground border border-[#E6EAF2] px-3 py-2 rounded-full text-sm font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.1)]"
-                  aria-label="Portretlabel: Hi, ik ben Kai"
-                >
-                  Hi, ik ben Kai
-                </div>
               </div>
             </div>
             
@@ -65,7 +58,7 @@ export default function About() {
             <div className="lg:col-span-5">
               <div className="space-y-6">
                 <h3 className="text-[30px] leading-[1.22] font-bold text-foreground tracking-[-0.2px]">
-                  Wij zijn Beterzo
+                  Ik ben Kai
                 </h3>
                 
                 <div className="space-y-6 text-muted-foreground leading-[1.55] font-medium max-w-[72ch]">
@@ -95,24 +88,8 @@ export default function About() {
             
             {/* Column 3: Duo Portraits + Text (3 cols) */}
             <div className="lg:col-span-3">
-              {/* Name chip for duo portraits - above photos on mobile, overlay on desktop */}
-              <div 
-                className="mb-3 lg:hidden bg-white text-foreground border border-[#E6EAF2] px-3 py-2 rounded-full text-sm font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.1)] inline-block"
-                aria-label="Portretlabel: Hi, wij zijn Ilona en Jean-Luc"
-              >
-                Hi, wij zijn Ilona en Jean-Luc
-              </div>
-              
               {/* Mini-grid for portraits */}
-              <div className="grid grid-cols-2 gap-4 mb-6 relative">
-                {/* Desktop overlay chip */}
-                <div 
-                  className="hidden lg:block absolute top-3 left-1/2 transform -translate-x-1/2 z-10 bg-white text-foreground border border-[#E6EAF2] px-3 py-2 rounded-full text-sm font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.1)]"
-                  aria-label="Portretlabel: Hi, wij zijn Ilona en Jean-Luc"
-                >
-                  Hi, wij zijn Ilona en Jean-Luc
-                </div>
-                
+              <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="aspect-square h-[236px] relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
                   <img 
                     src={jeanlucPortrait}
