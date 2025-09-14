@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
+import beterzFooterLogo from "@/assets/beterzo-logo-footer.png";
 
 const footerLinks = {
   navigation: [
@@ -33,9 +34,13 @@ export default function Footer() {
             
             {/* Brand Column */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">
-                Beterzo
-              </h3>
+              <div className="flex items-center">
+                <img 
+                  src={beterzFooterLogo} 
+                  alt="Beterzo" 
+                  className="h-10 w-auto"
+                />
+              </div>
               <p className="text-[#E2E8F0] leading-[1.55] font-medium max-w-[72ch]">
                 We bouwen AI-automatisering die herhaling weghaalt. Teams krijgen tijd terug voor werk dat telt.
               </p>
