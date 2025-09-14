@@ -1,5 +1,5 @@
 import { PremiumHero } from "@/components/premium/PremiumHero";
-import { PremiumKPIs } from "@/components/premium/PremiumKPIs";
+import { ResultsSection } from "@/components/ResultsSection";
 import { PremiumClients } from "@/components/premium/PremiumClients";
 import { PremiumMethod } from "@/components/premium/PremiumMethod";
 import { PremiumSolutions } from "@/components/premium/PremiumSolutions";
@@ -9,7 +9,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <PremiumHero />
-      <PremiumKPIs />
+      <ResultsSection />
       <PremiumClients />
       <PremiumMethod />
       <PremiumSolutions />
