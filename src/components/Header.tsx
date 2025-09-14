@@ -1,56 +1,20 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLocation } from "react-router-dom";
 import beterzLogo from "@/assets/beterzo-logo.png";
 
 const navigationItems = [
   { name: "Home", href: "/" },
-  { name: "Diensten", href: "/diensten", hasDropdown: true },
   { name: "Hoe wij werken", href: "/hoe-wij-werken" },
   { name: "Over ons", href: "/over-ons" },
   { name: "FAQ", href: "/faq" }
 ];
 
-const servicesItems = [
-  {
-    name: "Agent atelier",
-    href: "/agent-atelier",
-    description: "Van idee naar werkende AI-agent in 4 dagen."
-  },
-  {
-    name: "Automatisering",
-    href: "/automatisering", 
-    description: "Koppel je processen, minder handwerk, meer flow."
-  },
-  {
-    name: "Toetsgenerator",
-    href: "/toetsgenerator",
-    description: "Consistente vragen uit modules en leerdoelen."
-  },
-  {
-    name: "Lesstof uitwerken",
-    href: "/lesstof-uitwerken",
-    description: "Leerdoelen, samenvattingen, begrippenlijsten."
-  },
-  {
-    name: "AI klantenservice",
-    href: "/ai-klantenservice",
-    description: "24/7 antwoorden, escalaties, meertalig."
-  },
-  {
-    name: "Custom solutions",
-    href: "/custom",
-    description: "Maatwerk voor jouw stack."
-  }
-];
-
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const location = useLocation();
 
   // Handle scroll for sticky header
@@ -66,14 +30,12 @@ export default function Header() {
   // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
-    setIsServicesOpen(false);
   }, [location.pathname]);
 
   // Handle ESC key to close menus
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        setIsServicesOpen(false);
         setIsMobileMenuOpen(false);
       }
     };
@@ -100,14 +62,6 @@ export default function Header() {
       return location.pathname === '/';
     }
     return location.pathname.startsWith(href);
-  };
-
-  const handleServicesToggle = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
-
-  const handleMobileServicesToggle = () => {
-    setIsMobileServicesOpen(!isMobileServicesOpen);
   };
 
   return (
@@ -139,61 +93,16 @@ export default function Header() {
               <nav className="flex items-center space-x-8">
                 {navigationItems.map((item) => (
                   <div key={item.name} className="relative">
-                    {item.hasDropdown ? (
-                      <div className="relative">
-                        <button
-                          onClick={handleServicesToggle}
-                          className={cn(
-                            "flex items-center space-x-1 px-3 py-2 text-foreground font-semibold transition-colors duration-200 rounded-lg",
-                            "hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
-                            isServicesOpen && "text-primary"
-                          )}
-                          aria-expanded={isServicesOpen}
-                          aria-haspopup="true"
-                        >
-                          <span>{item.name}</span>
-                          <ChevronDown 
-                            className={cn(
-                              "h-4 w-4 transition-transform duration-200",
-                              isServicesOpen && "rotate-180"
-                            )}
-                          />
-                        </button>
-
-                        {/* Services Dropdown */}
-                        {isServicesOpen && (
-                          <div className="absolute top-full left-0 mt-2 w-[720px] bg-background rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)] border border-border p-6 z-50">
-                            <div className="grid grid-cols-2 gap-4">
-                              {servicesItems.map((service) => (
-                                <a
-                                  key={service.name}
-                                  href={service.href}
-                                  className="flex flex-col p-4 rounded-lg transition-colors duration-200 hover:bg-surface-mist hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                                >
-                                  <div className="font-semibold text-foreground mb-1">
-                                    {service.name}
-                                  </div>
-                                  <div className="text-sm text-muted-foreground">
-                                    {service.description}
-                                  </div>
-                                </a>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <a
-                        href={item.href}
-                        className={cn(
-                          "relative px-3 py-2 text-foreground font-semibold transition-colors duration-200 rounded-lg",
-                          "hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
-                          isActiveRoute(item.href) && "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full"
-                        )}
-                      >
-                        {item.name}
-                      </a>
-                    )}
+                    <a
+                      href={item.href}
+                      className={cn(
+                        "relative px-3 py-2 text-foreground font-semibold transition-colors duration-200 rounded-lg",
+                        "hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+                        isActiveRoute(item.href) && "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full"
+                      )}
+                    >
+                      {item.name}
+                    </a>
                   </div>
                 ))}
               </nav>
@@ -221,13 +130,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Dropdown Overlay */}
-        {isServicesOpen && (
-          <div 
-            className="fixed inset-0 z-40" 
-            onClick={() => setIsServicesOpen(false)}
-          />
-        )}
+        {/* Dropdown Overlay - Remove this section since no dropdown exists */}
       </header>
 
       {/* Mobile Menu Drawer */}
@@ -256,47 +159,15 @@ export default function Header() {
             <nav className="p-6 space-y-2">
               {navigationItems.map((item) => (
                 <div key={item.name}>
-                  {item.hasDropdown ? (
-                    <div>
-                      <button
-                        onClick={handleMobileServicesToggle}
-                        className="flex items-center justify-between w-full px-4 py-3 text-left font-semibold text-foreground rounded-lg transition-colors duration-200 hover:bg-surface-mist"
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown 
-                          className={cn(
-                            "h-4 w-4 transition-transform duration-200",
-                            isMobileServicesOpen && "rotate-180"
-                          )}
-                        />
-                      </button>
-                      
-                      {isMobileServicesOpen && (
-                        <div className="ml-4 mt-2 space-y-1">
-                          {servicesItems.map((service) => (
-                            <a
-                              key={service.name}
-                              href={service.href}
-                              className="block px-4 py-3 text-muted-foreground rounded-lg transition-colors duration-200 hover:bg-surface-mist hover:text-primary"
-                            >
-                              <div className="font-medium mb-1">{service.name}</div>
-                              <div className="text-sm">{service.description}</div>
-                            </a>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <a
-                      href={item.href}
-                      className={cn(
-                        "block px-4 py-3 font-semibold rounded-lg transition-colors duration-200 hover:bg-surface-mist hover:text-primary",
-                        isActiveRoute(item.href) ? "text-primary bg-surface-mist" : "text-foreground"
-                      )}
-                    >
-                      {item.name}
-                    </a>
-                  )}
+                  <a
+                    href={item.href}
+                    className={cn(
+                      "block px-4 py-3 font-semibold rounded-lg transition-colors duration-200 hover:bg-surface-mist hover:text-primary",
+                      isActiveRoute(item.href) ? "text-primary bg-surface-mist" : "text-foreground"
+                    )}
+                  >
+                    {item.name}
+                  </a>
                 </div>
               ))}
             </nav>

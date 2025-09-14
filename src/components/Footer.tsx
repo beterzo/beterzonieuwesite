@@ -5,20 +5,11 @@ import beterzFooterLogo from "@/assets/beterzo-logo-footer.png";
 const footerLinks = {
   navigation: [
     { name: "Home", href: "/" },
-    { name: "Diensten", href: "/diensten" },
     { name: "Over ons", href: "/over-ons" },
     { name: "Hoe wij werken", href: "/hoe-wij-werken" },
     { name: "Cases", href: "/cases" },
     { name: "FAQ", href: "/veelgestelde-vragen" },
     { name: "Contact", href: "/contact" }
-  ],
-  services: [
-    { name: "Agent atelier", href: "/diensten/agent-atelier" },
-    { name: "Automatisering", href: "/diensten/automatisering" },
-    { name: "Toetsvragen generator", href: "/diensten/toetsvragen" },
-    { name: "Lesstof uitwerken", href: "/diensten/lesstof" },
-    { name: "AI klantenservice", href: "/diensten/klantenservice" },
-    { name: "Custom AI solutions", href: "/diensten/custom" }
   ]
 };
 
@@ -30,7 +21,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 py-14">
         <div className="max-w-7xl mx-auto">
           {/* Main Footer Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             
             {/* Brand Column */}
             <div className="space-y-4">
@@ -62,25 +53,6 @@ export default function Footer() {
                       className="text-[#E2E8F0] font-medium hover:text-white hover:underline transition-colors"
                     >
                       {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Services Column */}
-            <div className="space-y-4">
-              <h4 className="text-lg font-bold text-white">
-                Diensten
-              </h4>
-              <ul className="space-y-3">
-                {footerLinks.services.map((service, index) => (
-                  <li key={index}>
-                    <a
-                      href={service.href}
-                      className="text-[#E2E8F0] font-medium hover:text-white hover:underline transition-colors"
-                    >
-                      {service.name}
                     </a>
                   </li>
                 ))}
