@@ -9,14 +9,20 @@ export function PremiumHero() {
           {/* Left Column - Content */}
           <div className="space-y-8">
             <h1 className="text-foreground">
-              Geef ruimte aan{" "}
-              <span className="text-primary">vakmanschap</span>
+              Welkom bij beterzo
             </h1>
             
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Je koos dit vak niet voor herhaling. Wij halen de routines weg met AI, 
-              zodat jij tijd hebt voor werk dat telt.
-            </p>
+            <div className="space-y-6 text-xl text-muted-foreground leading-relaxed max-w-xl">
+              <p>
+                Bedrijven verliezen kostbare tijd aan repetitieve taken die echte groei in de weg staan. Beterzo zet slimme AI en automatisering in die perfect aansluit bij jouw "why".
+              </p>
+              <p>
+                Door processen te automatiseren krijg jij de vrijheid om te focussen op wat écht belangrijk is: jouw expertise. Als onderdeel van Bureau Reuring werkt beterzo elke dag om jouw bedrijf te transformeren naar een efficiëntere versie van zichzelf!
+              </p>
+              <p>
+                We kijken er naar uit om samen te werken aan jouw oplossing!
+              </p>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="btn-primary">
