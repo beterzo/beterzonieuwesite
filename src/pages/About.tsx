@@ -49,8 +49,15 @@ export default function About() {
                 <img 
                   src={kaiPortrait}
                   alt="Portret Kai"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
+                {/* Name chip overlay */}
+                <div 
+                  className="absolute top-3 left-3 z-10 bg-white text-foreground border border-[#E6EAF2] px-3 py-2 rounded-full text-sm font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.1)]"
+                  aria-label="Portretlabel: Hi, ik ben Kai"
+                >
+                  Hi, ik ben Kai
+                </div>
               </div>
             </div>
             
@@ -88,20 +95,36 @@ export default function About() {
             
             {/* Column 3: Duo Portraits + Text (3 cols) */}
             <div className="lg:col-span-3">
+              {/* Name chip for duo portraits - above photos on mobile, overlay on desktop */}
+              <div 
+                className="mb-3 lg:hidden bg-white text-foreground border border-[#E6EAF2] px-3 py-2 rounded-full text-sm font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.1)] inline-block"
+                aria-label="Portretlabel: Hi, wij zijn Ilona en Jean-Luc"
+              >
+                Hi, wij zijn Ilona en Jean-Luc
+              </div>
+              
               {/* Mini-grid for portraits */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="aspect-square h-[220px] relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
+              <div className="grid grid-cols-2 gap-4 mb-6 relative">
+                {/* Desktop overlay chip */}
+                <div 
+                  className="hidden lg:block absolute top-3 left-1/2 transform -translate-x-1/2 z-10 bg-white text-foreground border border-[#E6EAF2] px-3 py-2 rounded-full text-sm font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.1)]"
+                  aria-label="Portretlabel: Hi, wij zijn Ilona en Jean-Luc"
+                >
+                  Hi, wij zijn Ilona en Jean-Luc
+                </div>
+                
+                <div className="aspect-square h-[236px] relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
                   <img 
                     src={jeanlucPortrait}
                     alt="Portret Jean-Luc"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
-                <div className="aspect-square h-[220px] relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
+                <div className="aspect-square h-[236px] relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
                   <img 
                     src={ilonaPortrait}
                     alt="Portret Ilona"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
               </div>
