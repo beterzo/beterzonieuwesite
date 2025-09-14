@@ -37,7 +37,7 @@ export function PremiumClients() {
       <div className="container mx-auto px-6">
         <div className="text-center space-y-12">
           <h2 className="text-foreground">
-            <span className="text-primary">Beterzo</span> wordt vertrouwd door:
+            <span className="text-primary">Beterzo</span> vertrouwd door
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
