@@ -35,8 +35,8 @@ export function ResultsSection() {
     <section className="py-12 md:py-14 bg-white">
       <div className="container mx-auto px-5 max-w-[1200px]">
         {/* Section Title */}
-        <h2 className="text-[#0F172A] text-lg font-bold mb-8 md:mb-10">
-          Resultaat voor jullie
+        <h2 className="text-foreground mb-8 md:mb-10">
+          Resultaten
         </h2>
 
         {/* Tablet Grid (2x2) */}
@@ -150,7 +150,7 @@ export function ResultsSection() {
 
         {/* Note */}
         <div className="mt-8 md:mt-10">
-          <p className="text-[#475569] text-sm font-medium leading-[1.55] max-w-[720px]">
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-[720px]">
             Volgens onderzoek van McKinsey kan tot circa 70% van taken worden geautomatiseerd. Resultaten verschillen per team en proces.
           </p>
         </div>
