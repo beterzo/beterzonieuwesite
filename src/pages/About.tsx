@@ -82,19 +82,6 @@ export default function About() {
                     Tot snel!
                   </p>
                 </div>
-
-                {/* Help Points List */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-foreground">Waar we bij helpen</h4>
-                  <ul className="space-y-3">
-                    {helpPoints.map((point, index) => (
-                      <li key={index} className="flex items-center gap-3">
-                        <point.icon className="h-5 w-5 text-primary flex-shrink-0" strokeWidth={2} />
-                        <span className="text-muted-foreground font-medium">{point.text}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </div>
             
