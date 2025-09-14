@@ -1,53 +1,183 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Clock, TrendingUp, Users, ArrowRight, ChevronRight } from "lucide-react";
+import { Clock, TrendingUp, Users } from "lucide-react";
+import { StepperNavigation } from "@/components/stepper/StepperNavigation";
+import { StepContent } from "@/components/stepper/StepContent";
 import howWeWorkHero from "@/assets/how-we-work-hero.jpg";
-const flowSteps = [{
-  chip: "begin",
-  title: "beterzo begin",
-  description: "Het startpunt. In een intake ontdekken we samen waar jullie direct tijd winnen en wat echt beter kan."
-}, {
-  chip: "bod",
-  title: "beterzo bod",
-  description: "Een maatwerkvoorstel dat precies laat zien hoe wij het nét een stukje beter aanpakken, inclusief scope en planning."
-}, {
-  chip: "bouw",
-  title: "beterzo bouw",
-  description: "We bouwen jullie automatisering. Minder handwerk, meer flow. Getest op jullie processen en tools."
-}, {
-  chip: "bezorgen",
-  title: "beterzo bezorgen",
-  description: "De oplevering. De oplossing draait netjes en stabiel, met duidelijke documentatie en afspraken."
-}, {
-  chip: "boost",
-  title: "beterzo boost",
-  description: "Training en onboarding voor het team. Iedereen weet wat te doen en we monitoren de eerste weken."
-}];
-const kpis = [{
-  icon: Clock,
-  value: "7 uur",
-  label: "per week bespaard"
-}, {
-  icon: TrendingUp,
-  value: "92%",
-  label: "ziet verbetering binnen 30 dagen"
-}, {
-  icon: Users,
-  value: "500+",
-  label: "AI-agents live"
-}];
-const faqs = [{
-  question: "Hoe snel kunnen jullie starten?",
-  answer: "Intake binnen een week, eerste versie vaak binnen 4 dagen live."
-}, {
-  question: "Werkt dit met onze tools?",
-  answer: "Ja. We koppelen met je bestaande tools en maken waar nodig maatwerk."
-}, {
-  question: "Wat als we willen uitbreiden?",
-  answer: "We bouwen modulair. Opschalen zonder je proces te breken."
-}];
+import workshopHero from "@/assets/workshop-hero.jpg";
+import stepProposal from "@/assets/step-proposal.jpg";
+import stepBuild from "@/assets/step-build.jpg";
+import stepDelivery from "@/assets/step-delivery.jpg";
+import stepTraining from "@/assets/step-training.jpg";
+
+const stepperSteps = [
+  {
+    id: 1,
+    chip: "begin",
+    title: "beterzo begin"
+  },
+  {
+    id: 2,
+    chip: "bod",
+    title: "beterzo bod"
+  },
+  {
+    id: 3,
+    chip: "bouw",
+    title: "beterzo bouw"
+  },
+  {
+    id: 4,
+    chip: "bezorgen",
+    title: "beterzo bezorgen"
+  },
+  {
+    id: 5,
+    chip: "boost",
+    title: "beterzo boost"
+  }
+];
+
+const stepContent = [
+  {
+    id: 1,
+    chip: "begin",
+    title: "beterzo begin",
+    subtitle: "Begin — intake & kansenkaart",
+    description: "We starten met een korte intake en processcan. We brengen herhaling, knelpunten en snelste winst in kaart en bepalen meetbare doelen.",
+    infoCards: [
+      { icon: "FileText" as const, label: "Deliverables", value: "kansenkaart, KPI's, technische quick-scan" },
+      { icon: "Clock" as const, label: "Doorlooptijd", value: "60–90 min intake" },
+      { icon: "Users" as const, label: "Betrokkenen", value: "proces-owner, 1–2 key users" },
+      { icon: "Target" as const, label: "Output", value: "concreet plan met 2–3 quick wins" }
+    ],
+    mediaUrl: workshopHero,
+    mediaAlt: "Workshop over AI-automatisering en procesverbetering"
+  },
+  {
+    id: 2,
+    chip: "bod",
+    title: "beterzo bod",
+    subtitle: "Bod — maatwerkvoorstel",
+    description: "We leveren een scherp voorstel met scope, planning en budget. Je ziet precies wat we automatiseren en wat het oplevert.",
+    infoCards: [
+      { icon: "FileText" as const, label: "Deliverables", value: "scope, planning, integraties, risico's" },
+      { icon: "Clock" as const, label: "Doorlooptijd", value: "2–3 werkdagen" },
+      { icon: "Users" as const, label: "Betrokkenen", value: "lead + stakeholder" },
+      { icon: "Target" as const, label: "Output", value: "akkoordklare offerte" }
+    ],
+    mediaUrl: stepProposal,
+    mediaAlt: "Professionele presentatie van automatiseringsvoorstel"
+  },
+  {
+    id: 3,
+    chip: "bouw",
+    title: "beterzo bouw",
+    subtitle: "Bouw — van idee naar live",
+    description: "We bouwen in korte sprints. We koppelen jullie tools, zetten AI-agents op en testen op echte cases. Minder handwerk, meer flow.",
+    infoCards: [
+      { icon: "FileText" as const, label: "Deliverables", value: "gekoppelde flows (Make), AI-prompts/agents, testcases" },
+      { icon: "Clock" as const, label: "Doorlooptijd", value: "vaak 4 dagen tot eerste versie" },
+      { icon: "Users" as const, label: "Betrokkenen", value: "product owner, tech contact" },
+      { icon: "Target" as const, label: "Output", value: "werkende eerste versie (V1)" }
+    ],
+    mediaUrl: stepBuild,
+    mediaAlt: "Ontwikkelomgeving met automatiseringsflows en AI-agents"
+  },
+  {
+    id: 4,
+    chip: "bezorgen",
+    title: "beterzo bezorgen",
+    subtitle: "Bezorgen — go-live & overdracht",
+    description: "We leveren op, documenteren en monitoren. Je oplossing draait stabiel en iedereen weet wat te doen.",
+    infoCards: [
+      { icon: "FileText" as const, label: "Deliverables", value: "documentatie, monitoring, rechten/rollen" },
+      { icon: "Clock" as const, label: "Doorlooptijd", value: "1–2 dagen voor afronding" },
+      { icon: "Users" as const, label: "Betrokkenen", value: "key users" },
+      { icon: "Target" as const, label: "Output", value: "live omgeving + handleiding" }
+    ],
+    mediaUrl: stepDelivery,
+    mediaAlt: "Succesvolle go-live van automatiseringsoplossing"
+  },
+  {
+    id: 5,
+    chip: "boost",
+    title: "beterzo boost",
+    subtitle: "Boost — training & 30 dagen support",
+    description: "We trainen het team, draaien samen de eerste weken mee en plannen verbeteringen. Zo blijft het echt werken.",
+    infoCards: [
+      { icon: "FileText" as const, label: "Deliverables", value: "training, Q&A, backlog" },
+      { icon: "Clock" as const, label: "Doorlooptijd", value: "30 dagen support" },
+      { icon: "Users" as const, label: "Betrokkenen", value: "teamleden, beheer" },
+      { icon: "Target" as const, label: "Output", value: "geborgd gebruik + roadmap" }
+    ],
+    mediaUrl: stepTraining,
+    mediaAlt: "Team training over AI-automatisering en proces management"
+  }
+];
+
+const kpis = [
+  {
+    icon: Clock,
+    value: "7 uur",
+    label: "per week bespaard"
+  },
+  {
+    icon: TrendingUp,
+    value: "92%",
+    label: "ziet verbetering binnen 30 dagen"
+  },
+  {
+    icon: Users,
+    value: "500+",
+    label: "AI-agents live"
+  }
+];
+
 export default function HowWeWork() {
-  return <div className="min-h-screen bg-white">
+  const [currentStep, setCurrentStep] = useState(1);
+
+  // Handle URL hash for direct linking
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const stepMatch = hash.match(/#stap-(\d+)/);
+      if (stepMatch) {
+        const stepNumber = parseInt(stepMatch[1], 10);
+        if (stepNumber >= 1 && stepNumber <= 5) {
+          setCurrentStep(stepNumber);
+        }
+      }
+    }
+  }, []);
+
+  // Update URL hash when step changes
+  useEffect(() => {
+    window.history.replaceState(null, '', `#stap-${currentStep}`);
+  }, [currentStep]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft' && currentStep > 1) {
+        setCurrentStep(currentStep - 1);
+      } else if (e.key === 'ArrowRight' && currentStep < 5) {
+        setCurrentStep(currentStep + 1);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [currentStep]);
+
+  const handleStepChange = (step: number) => {
+    setCurrentStep(step);
+  };
+
+  const currentStepContent = stepContent.find(step => step.id === currentStep);
+
+  return (
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="section-spacing">
         <div className="container mx-auto px-6">
@@ -71,9 +201,13 @@ export default function HowWeWork() {
             {/* Right Column - Image Card */}
             <div className="lg:flex justify-end items-center">
               <div className="relative w-full lg:w-[40%] min-w-[360px] max-w-[520px] lg:ml-14">
-                <div className="relative group overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
+                <div className="relative group overflow-hidden rounded-[14px] shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-float)] transition-all duration-300 hover:-translate-y-1">
                   <div className="aspect-[4/5] relative">
-                    <img src={howWeWorkHero} alt="Teamtraining over AI-automatisering" className="w-full h-full object-cover" />
+                    <img 
+                      src={howWeWorkHero} 
+                      alt="Workshop automatisering" 
+                      className="w-full h-full object-cover" 
+                    />
                   </div>
                 </div>
               </div>
@@ -82,75 +216,44 @@ export default function HowWeWork() {
         </div>
       </section>
 
-      {/* Flow Band Section */}
-      <section className="py-20" style={{
-      backgroundColor: '#027BFF'
-    }}>
-        <div className="container mx-auto px-6">
-          {/* Desktop Flow */}
-          <div className="hidden lg:flex items-center justify-between gap-4 max-w-6xl mx-auto">
-            {flowSteps.map((step, index) => <div key={index} className="flex items-center">
-                {/* Flow Card */}
-                <div className="bg-white rounded-[14px] p-4 shadow-sm w-[200px]">
-                  <div className="space-y-3">
-                    <div className="inline-block">
-                      <span className="text-foreground font-semibold text-sm">beterzo </span>
-                      <span className="text-[#027BFF] font-semibold text-sm">{step.chip}</span>
-                    </div>
-                    <p className="text-muted-foreground text-xs leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Arrow */}
-                {index < flowSteps.length - 1 && <div className="mx-2 flex items-center">
-                    <div className="w-8 h-0.5 bg-white/60 border-t border-dashed border-white/60"></div>
-                    <ArrowRight className="h-3 w-3 text-white/60 ml-1" strokeWidth={2} />
-                  </div>}
-              </div>)}
-          </div>
-
-          {/* Mobile Flow */}
-          <div className="lg:hidden space-y-6">
-            {flowSteps.map((step, index) => <div key={index}>
-                <div className="bg-white rounded-[14px] p-6 shadow-sm">
-                  <div className="space-y-4">
-                    <div className="inline-block">
-                      <span className="text-foreground font-semibold">beterzo </span>
-                      <span className="text-[#027BFF] font-semibold">{step.chip}</span>
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-                
-                {index < flowSteps.length - 1 && <div className="flex justify-center py-2">
-                    <ChevronRight className="h-6 w-6 text-white/60 rotate-90" strokeWidth={2} />
-                  </div>}
-              </div>)}
-          </div>
+      {/* Interactive Stepper Section */}
+      <section className="section-spacing bg-background">
+        <StepperNavigation
+          currentStep={currentStep}
+          totalSteps={5}
+          onStepChange={handleStepChange}
+          steps={stepperSteps}
+        />
+        
+        <div className="py-16">
+          {currentStepContent && (
+            <StepContent
+              step={currentStepContent}
+              isActive={true}
+            />
+          )}
         </div>
       </section>
 
-      {/* Results Section */}
-      
-
-      {/* FAQ Section */}
-      <section className="section-spacing-sm">
+      {/* KPI Strip */}
+      <section className="section-spacing-sm bg-surface-mist">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="premium-card border-none">
-                  <AccordionTrigger className="text-left font-semibold text-foreground px-6 py-4 hover:no-underline">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 text-muted-foreground leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>)}
-            </Accordion>
+          <div className="premium-grid grid-cols-1 md:grid-cols-3">
+            {kpis.map((kpi, index) => (
+              <div key={index} className="premium-card p-8 space-y-4 text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[10px] mx-auto">
+                  <kpi.icon className="h-6 w-6 text-primary icon-stroke" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-foreground mb-1 kpi-number">
+                    {kpi.value}
+                  </div>
+                  <div className="text-sm text-muted-foreground leading-relaxed">
+                    {kpi.label}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -177,5 +280,6 @@ export default function HowWeWork() {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 }
