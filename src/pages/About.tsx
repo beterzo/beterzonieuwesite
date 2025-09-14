@@ -90,14 +90,14 @@ export default function About() {
             <div className="lg:col-span-3">
               {/* Mini-grid for portraits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                <div className="aspect-[4/5] w-full relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
+                <div className="aspect-[3/4] w-full relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
                   <img 
                     src={jeanlucPortrait}
                     alt="Portret Jean-Luc"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
-                <div className="aspect-[4/5] w-full relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
+                <div className="aspect-[3/4] w-full relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
                   <img 
                     src={ilonaPortrait}
                     alt="Portret Ilona"
