@@ -45,7 +45,7 @@ export default function About() {
             
             {/* Column 1: Kai Portrait (4 cols) */}
             <div className="lg:col-span-4">
-              <div className="aspect-[4/5] h-[520px] relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
+              <div className="aspect-[4/5] h-[460px] relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
                 <img 
                   src={kaiPortrait}
                   alt="Portret Kai"
@@ -63,11 +63,23 @@ export default function About() {
                 
                 <div className="space-y-6 text-muted-foreground leading-[1.55] font-medium max-w-[72ch]">
                   <p>
-                    We bouwen AI-oplossingen die herhaling wegnemen. Teams krijgen tijd terug, processen lopen soepeler en binnen 30 dagen zie je resultaat.
+                    Met Beterzo laat ik zien dat technologie niet alleen ondersteunend is, maar juist dé sleutel tot innovatie. Alles kan nét een tikkie beterzo – en dat is precies wat wij doen.
                   </p>
                   
                   <p>
-                    We combineren pragmatische automatisering met moderne taalmodellen. Dat doen we samen met klanten in korte sprints: helder, meetbaar en zonder gedoe.
+                    Geïnspireerd door visionairs zoals Simon Sinek en Steve Jobs combineer ik creativiteit met de nieuwste technologieën.
+                  </p>
+
+                  <p>
+                    Als onderdeel en met ondersteuning van Bureau Reuring werken we inmiddels voor mooie klanten. Ik maak daar processen slimmer, sneller en efficiënter.
+                  </p>
+
+                  <p>
+                    Alles een stukje beterzo, want waarom genoegen nemen met goed als het beterzo kan?
+                  </p>
+
+                  <p>
+                    Tot snel!
                   </p>
                 </div>
 
@@ -90,14 +102,14 @@ export default function About() {
             <div className="lg:col-span-3">
               {/* Mini-grid for portraits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                <div className="aspect-[3/4] w-full relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
+                <div className="aspect-[5/7] w-full relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
                   <img 
                     src={jeanlucPortrait}
                     alt="Portret Jean-Luc"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
-                <div className="aspect-[3/4] w-full relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
+                <div className="aspect-[5/7] w-full relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
                   <img 
                     src={ilonaPortrait}
                     alt="Portret Ilona"
