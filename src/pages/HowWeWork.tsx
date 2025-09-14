@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Clock, TrendingUp, Users, ArrowRight, ChevronRight } from "lucide-react";
-import workshopHero from "@/assets/workshop-hero.jpg";
+import howWeWorkHero from "@/assets/how-we-work-hero.jpg";
 
 const flowSteps = [
   {
@@ -98,7 +98,7 @@ export default function HowWeWork() {
                 <div className="relative group overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
                   <div className="aspect-[4/5] relative">
                     <img 
-                      src={workshopHero}
+                      src={howWeWorkHero}
                       alt="Teamtraining over AI-automatisering"
                       className="w-full h-full object-cover"
                     />
