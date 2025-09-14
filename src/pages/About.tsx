@@ -89,7 +89,7 @@ export default function About() {
             {/* Column 3: Duo Portraits + Text (3 cols) */}
             <div className="lg:col-span-3">
               {/* Mini-grid for portraits */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-2 gap-6 mb-6">
                 <div className="aspect-square h-[236px] relative overflow-hidden rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
                   <img 
                     src={jeanlucPortrait}
