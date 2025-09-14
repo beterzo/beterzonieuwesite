@@ -38,7 +38,7 @@ export default function Footer() {
                 <img 
                   src={beterzFooterLogo} 
                   alt="Beterzo" 
-                  className="h-10 w-auto"
+                  className="h-14 w-auto"
                 />
               </div>
               <p className="text-[#E2E8F0] leading-[1.55] font-medium max-w-[72ch]">
