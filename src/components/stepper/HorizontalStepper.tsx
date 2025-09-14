@@ -173,9 +173,9 @@ export function HorizontalStepper({ steps }: HorizontalStepperProps) {
   };
 
   return (
-    <section className="section-spacing bg-background">
+    <section className="bg-background">
       {/* Sticky Navigation */}
-      <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-10 border-b border-border py-4">
+      <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-10 border-b border-border py-3">
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between gap-8">
             {/* Step Navigation Chips */}
@@ -207,7 +207,7 @@ export function HorizontalStepper({ steps }: HorizontalStepperProps) {
               </div>
               
               {/* Progress Bar */}
-              <div className="mt-3 flex gap-1">
+              <div className="mt-2 flex gap-1">
                 {Array.from({ length: steps.length }, (_, index) => (
                   <div
                     key={index}
@@ -230,7 +230,7 @@ export function HorizontalStepper({ steps }: HorizontalStepperProps) {
                 onClick={handlePrevious}
                 disabled={activeStep === 1}
                 className={cn(
-                  "h-10 w-10 rounded-full",
+                  "h-9 w-9 rounded-full",
                   "hover:-translate-y-0.5 disabled:hover:translate-y-0"
                 )}
                 aria-label="Previous step"
@@ -243,7 +243,7 @@ export function HorizontalStepper({ steps }: HorizontalStepperProps) {
                 onClick={handleNext}
                 disabled={activeStep === steps.length}
                 className={cn(
-                  "h-10 w-10 rounded-full",
+                  "h-9 w-9 rounded-full",
                   "hover:-translate-y-0.5 disabled:hover:translate-y-0"
                 )}
                 aria-label="Next step"
@@ -288,11 +288,11 @@ export function HorizontalStepper({ steps }: HorizontalStepperProps) {
                   scrollSnapStop: 'always'
                 }}
               >
-                <div className="container mx-auto px-6 py-12">
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                <div className="container mx-auto px-6 py-8">
+                  <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 items-start">
                     {/* Left Column - Content */}
-                    <div className="lg:col-span-7 space-y-8">
-                      <div className="space-y-4">
+                    <div className="lg:col-span-7 space-y-6">
+                      <div className="space-y-3">
                         <h2 className="text-foreground max-w-[72ch]">{step.subtitle}</h2>
                         <p className="text-xl text-muted-foreground leading-relaxed max-w-[70ch]">
                           {step.description}
@@ -300,20 +300,20 @@ export function HorizontalStepper({ steps }: HorizontalStepperProps) {
                       </div>
 
                       {/* Info Grid */}
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-2 gap-3">
                         {step.infoCards.map((card, cardIndex) => {
                           const CardIcon = iconMap[card.icon] || Target;
                           return (
-                            <div key={cardIndex} className="bg-card rounded-[14px] border border-border p-4 space-y-3">
-                              <div className="flex items-center gap-3">
-                                <div className="inline-flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg">
-                                  <CardIcon className="h-4 w-4 text-primary" strokeWidth={2} />
+                            <div key={cardIndex} className="bg-card rounded-[14px] border border-border p-3 space-y-2">
+                              <div className="flex items-center gap-2">
+                                <div className="inline-flex items-center justify-center w-7 h-7 bg-primary/10 rounded-lg">
+                                  <CardIcon className="h-3.5 w-3.5 text-primary" strokeWidth={2} />
                                 </div>
                                 <span className="text-sm font-semibold text-foreground">
                                   {card.label}
                                 </span>
                               </div>
-                              <p className="text-sm text-muted-foreground leading-relaxed font-medium pl-11">
+                              <p className="text-sm text-muted-foreground leading-relaxed font-medium pl-9">
                                 {card.value}
                               </p>
                             </div>
@@ -322,7 +322,7 @@ export function HorizontalStepper({ steps }: HorizontalStepperProps) {
                       </div>
 
                       {/* CTA Row */}
-                      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                      <div className="flex flex-col sm:flex-row gap-3 pt-2">
                         <Button className="btn-primary hover:-translate-y-0.5">
                           Plan kennismaking
                         </Button>

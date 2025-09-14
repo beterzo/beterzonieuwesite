@@ -109,12 +109,12 @@ export default function HowWeWork() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="section-spacing">
+      <section className="pt-12 pb-8">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Column - Content */}
-            <div className="space-y-8">
-              <div className="space-y-4">
+            <div className="space-y-6">
+              <div className="space-y-3">
                 <h1 className="text-foreground">
                   Hoe wij werken
                 </h1>
@@ -150,16 +150,16 @@ export default function HowWeWork() {
       <HorizontalStepper steps={stepperData} />
 
       {/* KPI Strip */}
-      <section className="section-spacing-sm bg-surface-mist">
+      <section className="py-8 bg-surface-mist">
         <div className="container mx-auto px-6">
-          <div className="premium-grid grid-cols-1 md:grid-cols-3">
+          <div className="premium-grid grid-cols-1 md:grid-cols-3 gap-4">
             {kpis.map((kpi, index) => (
-              <div key={index} className="premium-card p-8 space-y-4 text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[10px] mx-auto">
-                  <kpi.icon className="h-6 w-6 text-primary icon-stroke" />
+              <div key={index} className="premium-card p-6 space-y-3 text-center">
+                <div className="inline-flex items-center justify-center w-10 h-10 bg-primary/10 rounded-[10px] mx-auto">
+                  <kpi.icon className="h-5 w-5 text-primary icon-stroke" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-foreground mb-1 kpi-number">
+                  <div className="text-xl font-bold text-foreground mb-1 kpi-number">
                     {kpi.value}
                   </div>
                   <div className="text-sm text-muted-foreground leading-relaxed">
@@ -173,10 +173,10 @@ export default function HowWeWork() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-spacing">
+      <section className="py-12">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl space-y-8">
-            <div className="space-y-4">
+          <div className="max-w-4xl space-y-6">
+            <div className="space-y-3">
               <h2 className="text-foreground">Klaar om te beginnen?</h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Plan een kort gesprek en ontdek je snelste winst.
