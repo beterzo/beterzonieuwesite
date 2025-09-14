@@ -56,7 +56,7 @@ export function PremiumHero() {
               </div>
               
               {/* Mobile Callout - Below image */}
-              <div className="lg:hidden mt-4 flex justify-center">
+              <div className="lg:hidden mt-4">
                 <a 
                   href="/training"
                   className="inline-block bg-white text-[#0F172A] border border-[#E6EAF2] px-[14px] py-[10px] rounded-full text-sm font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.1)] hover:bg-[#F6F8FB] transition-all duration-200"

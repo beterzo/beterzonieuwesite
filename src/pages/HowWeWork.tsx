@@ -173,7 +173,7 @@ export default function HowWeWork() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {kpis.map((kpi, index) => (
-              <div key={index} className="premium-card p-8 text-center space-y-4">
+              <div key={index} className="premium-card p-8 space-y-4">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[10px]">
                   <kpi.icon className="h-6 w-6 text-primary" strokeWidth={2} />
                 </div>

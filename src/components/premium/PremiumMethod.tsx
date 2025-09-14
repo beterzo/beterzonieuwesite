@@ -25,18 +25,18 @@ export function PremiumMethod() {
   return (
     <section className="section-spacing">
       <div className="container mx-auto px-6">
-        <div className="text-center space-y-4 mb-20">
+        <div className="space-y-4 mb-20">
           <h2 className="text-foreground">
             Zo <span className="text-primary">werken wij</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl">
             Van verkennend gesprek tot werkende oplossing
           </p>
         </div>
         
         <div className="premium-grid grid-cols-1 lg:grid-cols-3">
           {steps.map((step, index) => (
-            <div key={index} className="text-center space-y-6">
+            <div key={index} className="space-y-6">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-[14px]">
                 <step.icon className="h-8 w-8 text-primary" strokeWidth={1.5} />
               </div>
@@ -48,7 +48,7 @@ export function PremiumMethod() {
                 <p className="text-lg text-muted-foreground font-medium">
                   {step.description}
                 </p>
-                <p className="text-muted-foreground leading-relaxed max-w-xs mx-auto">
+                <p className="text-muted-foreground leading-relaxed max-w-xs">
                   {step.detail}
                 </p>
               </div>

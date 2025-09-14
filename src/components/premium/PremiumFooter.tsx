@@ -79,7 +79,7 @@ export function PremiumFooter() {
         </div>
         
         {/* Copyright */}
-        <div className="pt-8 border-t border-border text-center">
+        <div className="pt-8 border-t border-border">
           <p className="text-muted-foreground">
             © {new Date().getFullYear()} Beterzo. Alle rechten voorbehouden.
           </p>

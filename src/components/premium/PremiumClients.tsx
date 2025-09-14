@@ -35,14 +35,14 @@ export function PremiumClients() {
   return (
     <section className="section-spacing-sm">
       <div className="container mx-auto px-6">
-        <div className="text-center space-y-12">
+        <div className="space-y-12">
           <h2 className="text-foreground">Vertrouwd door</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {clients.map((client, index) => (
               <div 
                 key={index}
-                className="premium-card p-6 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
+                className="premium-card p-6 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="h-16 flex items-center justify-center">
                   <img

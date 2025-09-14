@@ -48,11 +48,11 @@ export function PremiumSolutions() {
   return (
     <section className="section-spacing bg-surface-mist">
       <div className="container mx-auto px-6">
-        <div className="text-center space-y-4 mb-16">
+        <div className="space-y-4 mb-16">
           <h2 className="text-foreground">
             Onze <span className="text-primary">oplossingen</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl">
             Van standaard tot volledig maatwerk
           </p>
         </div>

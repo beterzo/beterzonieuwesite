@@ -29,7 +29,7 @@ export function PremiumKPIs() {
       <div className="container mx-auto px-6">
         <div className="premium-grid grid-cols-2 lg:grid-cols-4">
           {kpis.map((kpi, index) => (
-            <div key={index} className="premium-card p-8 text-center space-y-4">
+            <div key={index} className="premium-card p-8 space-y-4">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[10px]">
                 <kpi.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
               </div>
