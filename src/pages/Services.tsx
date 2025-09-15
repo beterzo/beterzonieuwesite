@@ -68,14 +68,14 @@ const Services = () => {
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="w-full h-px bg-border mb-4"></div>
           
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-6">
             <div className="max-w-3xl">
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h2 className="text-foreground mb-6">
                 Wij werken met jullie tools
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Dit is slechts een greep uit de systemen waar we mee koppelen. We ondersteunen nog veel meer via API's. 
-                Staat jullie tool er niet bij? Grote kans dat we 'm ook aansluiten.
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl">
+                Hieronder een aantal voorbeelden van systemen waar we mee koppelen. Via API's ondersteunen we nog veel meer. 
+                Staat jullie tool er niet bij? Grote kans dat we die ook kunnen aansluiten!
               </p>
             </div>
             <Button asChild variant="link" className="text-sm font-normal text-muted-foreground hover:text-primary self-start lg:self-center">
@@ -93,13 +93,13 @@ const Services = () => {
             {integrationLogos.map((logo) => (
               <li key={logo.key} className="flex-shrink-0 snap-start">
                 <button
-                  className="flex items-center justify-center h-12 px-3 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1"
+                  className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1"
                   aria-label={`${logo.alt} integratie`}
                 >
                   <img
                     src={`/logos/${logo.src}`}
                     alt={logo.alt}
-                    className="h-5 md:h-6 w-auto object-contain"
+                    className="h-12 md:h-14 w-auto object-contain"
                   />
                 </button>
               </li>
