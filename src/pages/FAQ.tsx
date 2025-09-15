@@ -117,35 +117,89 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header Section */}
+      {/* Combined Header and FAQ Section */}
       <section className="pt-20 pb-8">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-            {/* Left Column - Content */}
-            <div className="lg:col-span-8 space-y-4">
-              <h1 className="text-foreground">
-                Veelgestelde vragen
-              </h1>
-              <div className="flex items-center gap-3">
-                <p className="text-muted-foreground body-m">
-                  Niet gevonden wat je zoekt?
-                </p>
-                <Button
-                  variant="link"
-                  className="p-0 h-auto text-primary font-semibold hover:underline"
-                  asChild
-                >
-                  <a href="mailto:hi@beterzo.tech" className="flex items-center gap-2">
-                    <Mail className="h-4 w-4" />
-                    Stuur ons een bericht
-                  </a>
-                </Button>
+            {/* Left Column - Content and FAQ */}
+            <div className="lg:col-span-8 space-y-6">
+              {/* Header */}
+              <div className="space-y-4">
+                <h1 className="text-foreground">
+                  Veelgestelde vragen
+                </h1>
+                <div className="flex items-center gap-3">
+                  <p className="text-muted-foreground body-m">
+                    Niet gevonden wat je zoekt?
+                  </p>
+                  <Button
+                    variant="link"
+                    className="p-0 h-auto text-primary font-semibold hover:underline"
+                    asChild
+                  >
+                    <a href="mailto:hi@beterzo.tech" className="flex items-center gap-2">
+                      <Mail className="h-4 w-4" />
+                      Stuur ons een bericht
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              {/* FAQ Accordion */}
+              <div className="space-y-4">
+                {faqData.map((item) => (
+                  <div key={item.id} className="premium-card border-none">
+                    <button
+                      className={cn(
+                        "w-full text-left px-6 py-5 flex items-center justify-between transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-[14px]",
+                        "hover:bg-surface-mist"
+                      )}
+                      onClick={() => toggleItem(item.id)}
+                      aria-expanded={isOpen(item.id)}
+                      aria-controls={`faq-content-${item.id}`}
+                    >
+                      <h3 className="text-xl font-bold text-foreground pr-4">
+                        {item.question}
+                      </h3>
+                      <ChevronDown 
+                        className={cn(
+                          "h-5 w-5 text-muted-foreground transition-transform duration-200 flex-shrink-0",
+                          "icon-stroke",
+                          isOpen(item.id) && "rotate-180"
+                        )}
+                      />
+                    </button>
+                    
+                    {isOpen(item.id) && (
+                      <div 
+                        id={`faq-content-${item.id}`}
+                        className="px-6 pb-6 animate-fade-slide"
+                      >
+                        <div className="border-t border-border pt-4">
+                          <p className="text-muted-foreground body-m leading-relaxed mb-4">
+                            {item.answer}
+                          </p>
+                          
+                          {item.hasLink && (
+                            <Button 
+                              variant="outline"
+                              className="btn-secondary text-sm"
+                              onClick={() => window.location.href = item.linkUrl || '#'}
+                            >
+                              {item.linkText}
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Right Column - Image */}
             <div className="lg:col-span-4">
-              <div className="relative group">
+              <div className="relative group sticky top-8">
                 <div className="relative overflow-hidden rounded-[14px] shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-float)] transition-all duration-300 hover:-translate-y-1">
                   <div className="aspect-[4/5] relative bg-surface-mist">
                     <img 
@@ -157,67 +211,6 @@ export default function FAQ() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Accordion Section */}
-      <section className="pb-8">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
-            {/* FAQ Content - Narrower Column */}
-            <div className="lg:col-span-8 space-y-4">
-              {faqData.map((item) => (
-                <div key={item.id} className="premium-card border-none">
-                  <button
-                    className={cn(
-                      "w-full text-left px-6 py-5 flex items-center justify-between transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-[14px]",
-                      "hover:bg-surface-mist"
-                    )}
-                    onClick={() => toggleItem(item.id)}
-                    aria-expanded={isOpen(item.id)}
-                    aria-controls={`faq-content-${item.id}`}
-                  >
-                    <h3 className="text-xl font-bold text-foreground pr-4">
-                      {item.question}
-                    </h3>
-                    <ChevronDown 
-                      className={cn(
-                        "h-5 w-5 text-muted-foreground transition-transform duration-200 flex-shrink-0",
-                        "icon-stroke",
-                        isOpen(item.id) && "rotate-180"
-                      )}
-                    />
-                  </button>
-                  
-                  {isOpen(item.id) && (
-                    <div 
-                      id={`faq-content-${item.id}`}
-                      className="px-6 pb-6 animate-fade-slide"
-                    >
-                      <div className="border-t border-border pt-4">
-                        <p className="text-muted-foreground body-m leading-relaxed mb-4">
-                          {item.answer}
-                        </p>
-                        
-                        {item.hasLink && (
-                          <Button 
-                            variant="outline"
-                            className="btn-secondary text-sm"
-                            onClick={() => window.location.href = item.linkUrl || '#'}
-                          >
-                            {item.linkText}
-                          </Button>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-            
-            {/* Right Column - Empty space to maintain layout */}
-            <div className="lg:col-span-4 hidden lg:block"></div>
           </div>
         </div>
       </section>
