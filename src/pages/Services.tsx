@@ -197,56 +197,7 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl">
             <Card className="card-elegant">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  {/* Labels Column */}
-                  <div className="space-y-6 lg:space-y-8">
-                    <div className="font-medium text-foreground">Doel</div>
-                    <div className="font-medium text-foreground">Doorlooptijd</div>
-                    <div className="font-medium text-foreground">Werkwijze</div>
-                    <div className="font-medium text-foreground">Locatie</div>
-                    <div className="font-medium text-foreground">Deliverables</div>
-                    <div className="font-medium text-foreground">Training</div>
-                    <div className="font-medium text-foreground">Support</div>
-                    <div className="font-medium text-foreground">Integraties</div>
-                    <div className="font-medium text-foreground">Data & security</div>
-                  </div>
-
-                  {/* Agent Atelier Column */}
-                  <div className="space-y-6 lg:space-y-8">
-                    <div className="text-sm text-muted-foreground">Snel een agent live op één duidelijk proces</div>
-                    <div className="text-sm text-muted-foreground">4 dagen op locatie</div>
-                    <div className="text-sm text-muted-foreground">Analyse → bouw → training → live</div>
-                    <div className="text-sm text-muted-foreground">Bij jullie op kantoor</div>
-                    <div className="text-sm text-muted-foreground">Live AI-agent + documentatie</div>
-                    <div className="text-sm text-muted-foreground">Inbegrepen op dag 4</div>
-                    <div className="text-sm text-muted-foreground">30 dagen inbegrepen</div>
-                    <div className="text-sm text-muted-foreground">Koppelen met jullie tools</div>
-                    <div className="text-sm text-muted-foreground">API-first, EU waar kan, geen modeltraining op klantdata</div>
-                  </div>
-
-                  {/* Maatwerk Column */}
-                  <div className="space-y-6 lg:space-y-8">
-                    <div className="text-sm text-muted-foreground">Structureel automatiseren over meerdere processen</div>
-                    <div className="text-sm text-muted-foreground">In sprints; planning in overleg</div>
-                    <div className="text-sm text-muted-foreground">Intake & architectuur → bouw op afstand → iteraties</div>
-                    <div className="text-sm text-muted-foreground">Remote (met checkpoints)</div>
-                    <div className="text-sm text-muted-foreground">Gekoppelde flows/agents + documentatie</div>
-                    <div className="text-sm text-muted-foreground">Inbegrepen bij oplevering</div>
-                    <div className="text-sm text-muted-foreground">Optioneel SLA per maand</div>
-                    <div className="text-sm text-muted-foreground">Koppelen met jullie tools (uitbreidbaar)</div>
-                    <div className="text-sm text-muted-foreground">API-first, EU waar kan, geen modeltraining op klantdata</div>
-                  </div>
-                </div>
-                
-                <div className="pt-8 border-t border-border mt-8">
-                  <Button asChild variant="link" className="p-0 h-auto font-normal">
-                    <a href="/plan" className="text-muted-foreground hover:text-primary">
-                      Twijfel wat past? Plan een verkennend gesprek
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
+              
             </Card>
           </div>
         </div>
