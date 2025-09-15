@@ -247,7 +247,7 @@ const Services = () => {
                        md:overflow-visible mb-4">
             {integrationLogos.map(logo => <li key={logo.key} className="flex-shrink-0 snap-start">
                 <button className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1" aria-label={`${logo.alt} integratie`}>
-                  <img src={`/logos/${logo.src}`} alt={logo.alt} className="h-12 md:h-14 w-auto object-contain" />
+                  
                 </button>
               </li>)}
           </ul>
