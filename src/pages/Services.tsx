@@ -4,42 +4,46 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ExternalLink, ChevronDown, Check, Shield, Zap, Users, Building2, Mail, FileText, MessageSquare, Settings } from "lucide-react";
 import { useState } from "react";
 import { LogoStrip } from "@/components/LogoStrip";
-
 const Services = () => {
   const [openFaq, setOpenFaq] = useState<string | null>(null);
-
   const toggleFaq = (id: string) => {
     setOpenFaq(openFaq === id ? null : id);
   };
-
-  const integrationLogos = [
-    { src: "microsoft-365-color.png", alt: "Microsoft 365", key: "microsoft-365" },
-    { src: "google-workspace-color.png", alt: "Google Workspace", key: "google-workspace" },
-    { src: "afas-color.png", alt: "AFAS", key: "afas" },
-    { src: "exact-color.png", alt: "Exact", key: "exact" },
-    { src: "slack-color.png", alt: "Slack", key: "slack" }
-  ];
-
-  const faqItems = [
-    {
-      id: "which-service",
-      question: "Welke dienst past bij ons?",
-      answer: "Heb je één duidelijk proces en wil je snel live? Kies Agent atelier. Wil je meerdere processen structureel automatiseren? Kies Maatwerk."
-    },
-    {
-      id: "system-integration",
-      question: "Kunnen jullie met ons systeem koppelen?",
-      answer: "Grote kans van wel. We werken via API's met o.a. Google Workspace, Microsoft 365, AFAS, Exact, Slack, HubSpot, Twilio en meer."
-    },
-    {
-      id: "how-fast-start",
-      question: "Hoe snel kunnen we starten?",
-      answer: "Intake snel in te plannen. Voor Agent atelier plannen we direct vier dagen; maatwerk start in sprints."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const integrationLogos = [{
+    src: "microsoft-365-color.png",
+    alt: "Microsoft 365",
+    key: "microsoft-365"
+  }, {
+    src: "google-workspace-color.png",
+    alt: "Google Workspace",
+    key: "google-workspace"
+  }, {
+    src: "afas-color.png",
+    alt: "AFAS",
+    key: "afas"
+  }, {
+    src: "exact-color.png",
+    alt: "Exact",
+    key: "exact"
+  }, {
+    src: "slack-color.png",
+    alt: "Slack",
+    key: "slack"
+  }];
+  const faqItems = [{
+    id: "which-service",
+    question: "Welke dienst past bij ons?",
+    answer: "Heb je één duidelijk proces en wil je snel live? Kies Agent atelier. Wil je meerdere processen structureel automatiseren? Kies Maatwerk."
+  }, {
+    id: "system-integration",
+    question: "Kunnen jullie met ons systeem koppelen?",
+    answer: "Grote kans van wel. We werken via API's met o.a. Google Workspace, Microsoft 365, AFAS, Exact, Slack, HubSpot, Twilio en meer."
+  }, {
+    id: "how-fast-start",
+    question: "Hoe snel kunnen we starten?",
+    answer: "Intake snel in te plannen. Voor Agent atelier plannen we direct vier dagen; maatwerk start in sprints."
+  }];
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="section-spacing bg-background">
         <div className="container mx-auto px-6">
@@ -71,9 +75,7 @@ const Services = () => {
             <Card className="card-elegant h-full">
               <CardHeader>
                 <div className="mb-4">
-                  <div className="inline-flex items-center bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
-                    Maandag idee • donderdag live • vrijdag vrij
-                  </div>
+                  
                   <CardTitle className="text-foreground">Agent atelier</CardTitle>
                 </div>
                 <p className="text-muted-foreground">
@@ -175,27 +177,15 @@ const Services = () => {
             </Button>
           </div>
 
-          <ul 
-            role="list" 
-            className="flex flex-wrap gap-5 md:gap-7 items-center justify-start
+          <ul role="list" className="flex flex-wrap gap-5 md:gap-7 items-center justify-start
                        md:flex-wrap
                        overflow-x-auto scrollbar-hide snap-x snap-mandatory
-                       md:overflow-visible mb-4"
-          >
-            {integrationLogos.map((logo) => (
-              <li key={logo.key} className="flex-shrink-0 snap-start">
-                <button
-                  className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1"
-                  aria-label={`${logo.alt} integratie`}
-                >
-                  <img
-                    src={`/logos/${logo.src}`}
-                    alt={logo.alt}
-                    className="h-12 md:h-14 w-auto object-contain"
-                  />
+                       md:overflow-visible mb-4">
+            {integrationLogos.map(logo => <li key={logo.key} className="flex-shrink-0 snap-start">
+                <button className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1" aria-label={`${logo.alt} integratie`}>
+                  <img src={`/logos/${logo.src}`} alt={logo.alt} className="h-12 md:h-14 w-auto object-contain" />
                 </button>
-              </li>
-            ))}
+              </li>)}
           </ul>
           
           <div className="w-full h-px bg-border mt-4"></div>
@@ -323,14 +313,9 @@ const Services = () => {
           </div>
           
           <div className="flex flex-wrap items-center gap-6 mb-8">
-            {integrationLogos.map((logo, index) => (
-              <div 
-                key={index}
-                className="h-6 flex items-center text-sm font-medium text-muted-foreground"
-              >
+            {integrationLogos.map((logo, index) => <div key={index} className="h-6 flex items-center text-sm font-medium text-muted-foreground">
                 {logo.alt}
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <Button asChild variant="link" className="p-0 h-auto font-normal text-muted-foreground">
@@ -385,8 +370,7 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <div className="space-y-4">
-              {faqItems.map((item) => (
-                <Card key={item.id} className="card-elegant">
+              {faqItems.map(item => <Card key={item.id} className="card-elegant">
                   <Collapsible open={openFaq === item.id} onOpenChange={() => toggleFaq(item.id)}>
                     <CollapsibleTrigger asChild>
                       <button className="w-full">
@@ -394,12 +378,7 @@ const Services = () => {
                           <h3 className="text-lg font-semibold text-foreground text-left">
                             {item.question}
                           </h3>
-                          <ChevronDown 
-                            className={`h-5 w-5 text-muted-foreground transition-transform ${
-                              openFaq === item.id ? 'transform rotate-180' : ''
-                            }`} 
-                            strokeWidth={2}
-                          />
+                          <ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform ${openFaq === item.id ? 'transform rotate-180' : ''}`} strokeWidth={2} />
                         </CardHeader>
                       </button>
                     </CollapsibleTrigger>
@@ -411,8 +390,7 @@ const Services = () => {
                       </CardContent>
                     </CollapsibleContent>
                   </Collapsible>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -437,8 +415,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Services;
