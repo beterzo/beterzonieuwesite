@@ -247,27 +247,7 @@ const Services = () => {
       </section>
 
       {/* Integrations */}
-      <section className="section-spacing bg-background">
-        <div className="container mx-auto px-6">
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Werkt met jullie tools
-            </h3>
-          </div>
-          
-          <div className="flex flex-wrap items-center gap-6 mb-8">
-            {integrationLogos.map((logo, index) => <div key={index} className="h-6 flex items-center text-sm font-medium text-muted-foreground">
-                {logo.alt}
-              </div>)}
-          </div>
-          
-          <Button asChild variant="link" className="p-0 h-auto font-normal text-muted-foreground">
-            <a href="/contact">
-              Ontbreekt jullie systeem? Stel je vraag
-            </a>
-          </Button>
-        </div>
-      </section>
+      
 
       {/* Data & Security */}
       <section className="section-spacing bg-surface-alt">
@@ -340,24 +320,7 @@ const Services = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="section-spacing bg-surface-alt">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl">
-            <h2 className="text-foreground mb-8">
-              Samen ruimte maken voor werk dat telt?
-            </h2>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg">
-                <a href="/plan">Plan gratis gesprek</a>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="/cases">Bekijk cases</a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>;
 };
 export default Services;
