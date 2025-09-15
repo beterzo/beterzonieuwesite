@@ -232,21 +232,12 @@ const Services = () => {
                 Staat jullie tool er niet bij? Grote kans dat we die ook kunnen aansluiten!
               </p>
             </div>
-            <div className="pt-4">
-              <p className="text-base text-muted-foreground">
-                Staat jullie systeem er niet bij? Vraag{" "}
-                <Button asChild variant="link" className="p-0 h-auto font-semibold text-primary hover:text-primary-hover underline">
-                  <a href="/plan">hier</a>
-                </Button>
-                {" "}of we ook met jouw systeem kunnen koppelen!
-              </p>
-            </div>
           </div>
 
           <ul role="list" className="flex flex-wrap gap-5 md:gap-7 items-center justify-start
                        md:flex-wrap
                        overflow-x-auto scrollbar-hide snap-x snap-mandatory
-                       md:overflow-visible mb-4">
+                       md:overflow-visible mb-6">
             {integrationLogos.map(logo => <li key={logo.key} className="flex-shrink-0 snap-start">
                 <button className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1" aria-label={`${logo.alt} integratie`}>
                   <img 
@@ -258,7 +249,17 @@ const Services = () => {
               </li>)}
           </ul>
           
-          <div className="w-full h-px bg-border mt-4"></div>
+          <div className="mb-6">
+            <p className="text-base text-muted-foreground">
+              Staat jullie systeem er niet bij? Vraag{" "}
+              <Button asChild variant="link" className="p-0 h-auto font-semibold text-primary hover:text-primary-hover underline">
+                <a href="/plan">hier</a>
+              </Button>
+              {" "}of we ook met jouw systeem kunnen koppelen!
+            </p>
+          </div>
+          
+          <div className="w-full h-px bg-border"></div>
         </div>
       </section>
 
