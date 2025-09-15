@@ -14,7 +14,7 @@ const Services = () => {
     alt: "Microsoft 365",
     key: "microsoft-365"
   }, {
-    src: "google-workspace-color.png",
+    src: "google-workspace-logo.png",
     alt: "Google Workspace",
     key: "google-workspace"
   }, {
