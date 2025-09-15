@@ -232,9 +232,15 @@ const Services = () => {
                 Staat jullie tool er niet bij? Grote kans dat we die ook kunnen aansluiten!
               </p>
             </div>
-            <Button asChild variant="link" className="text-sm font-normal text-muted-foreground hover:text-primary self-start lg:self-center">
-              <a href="/contact?topic=integratie">Stel integratievraag</a>
-            </Button>
+            <div className="pt-4">
+              <p className="text-base text-muted-foreground">
+                Staat jullie systeem er niet bij? Vraag{" "}
+                <Button asChild variant="link" className="p-0 h-auto font-semibold text-primary hover:text-primary-hover underline">
+                  <a href="/plan">hier</a>
+                </Button>
+                {" "}of we ook met jouw systeem kunnen koppelen!
+              </p>
+            </div>
           </div>
 
           <ul role="list" className="flex flex-wrap gap-5 md:gap-7 items-center justify-start
