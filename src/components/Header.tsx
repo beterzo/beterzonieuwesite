@@ -8,6 +8,7 @@ import beterzLogo from "@/assets/beterzo-logo.png";
 const navigationItems = [
   { name: "Home", href: "/" },
   { name: "Hoe wij werken", href: "/hoe-wij-werken" },
+  { name: "Diensten", href: "/diensten" },
   { name: "Over ons", href: "/over-ons" },
   { name: "FAQ", href: "/faq" }
 ];
