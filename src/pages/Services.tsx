@@ -10,14 +10,6 @@ const Services = () => {
     setOpenFaq(openFaq === id ? null : id);
   };
   const integrationLogos = [{
-    src: "exact-color.png",
-    alt: "Exact",
-    key: "exact"
-  }, {
-    src: "google-workspace-logo.png",
-    alt: "Google Workspace",
-    key: "google-workspace"
-  }, {
     src: "slack-color.png",
     alt: "Slack",
     key: "slack"
@@ -25,6 +17,10 @@ const Services = () => {
     src: "microsoft-365-color.png",
     alt: "Microsoft 365",
     key: "microsoft-365"
+  }, {
+    src: "exact-color.png",
+    alt: "Exact",
+    key: "exact"
   }];
   const faqItems = [{
     id: "which-service",
