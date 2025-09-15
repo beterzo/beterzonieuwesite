@@ -228,8 +228,7 @@ const Services = () => {
                 Wij werken met jullie tools
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Hieronder een aantal voorbeelden van systemen waar we mee koppelen. Via API's ondersteunen we nog veel meer. 
-                Staat jullie tool er niet bij? Grote kans dat we die ook kunnen aansluiten!
+                Hieronder een aantal voorbeelden van systemen waar we mee koppelen. Via API's ondersteunen we nog veel meer.
               </p>
             </div>
           </div>
