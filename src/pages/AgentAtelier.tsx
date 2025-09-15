@@ -1,124 +1,86 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { 
-  FileText, 
-  Target, 
-  TrendingUp, 
-  Clock,
-  Search,
-  GraduationCap,
-  Eye,
-  Shield,
-  ChevronLeft,
-  ChevronRight
-} from "lucide-react";
+import { FileText, Target, TrendingUp, Clock, Search, GraduationCap, Eye, Shield, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
-
-const timelineSteps = [
-  {
-    day: "Dag 1",
-    title: "Analyse & mapping",
-    description: "We brengen processen en herhaalwerk in kaart, kiezen quick wins en bepalen de scope.",
-    chips: ["kansenkaart", "scope", "integratiecheck"],
-    icon: Search
-  },
-  {
-    day: "Dag 2", 
-    title: "Bouw sprint I",
-    description: "We zetten de basis van de agent en koppelingen op. Testen op echte cases.",
-    chips: ["agent-basis", "koppelingen", "testrun"],
-    icon: Target
-  },
-  {
-    day: "Dag 3",
-    title: "Bouw sprint II", 
-    description: "We verfijnen prompts en logica, breiden flows uit en valideren met key users.",
-    chips: ["iteraties", "extra flows", "validatie"],
-    icon: TrendingUp
-  },
-  {
-    day: "Dag 4",
-    title: "Training & go-live",
-    description: "We trainen jullie team en leveren de agent op, inclusief documentatie.",
-    chips: ["training", "documentatie", "livegang"],
-    icon: Clock
-  }
-];
-
-const includedItems = [
-  {
-    icon: Search,
-    title: "Procesanalyse vooraf",
-    description: "We mappen jullie processen en tijdvreters."
-  },
-  {
-    icon: GraduationCap,
-    title: "Training over AI & agents", 
-    description: "Hands-on sessie voor team en key users."
-  },
-  {
-    icon: Eye,
-    title: "Inside look in prompten & taalmodellen",
-    description: "We laten precies zien hoe we bouwen en bijsturen."
-  },
-  {
-    icon: Shield,
-    title: "30 dagen support",
-    description: "Optimalisaties, fixes en vragen in de eerste maand."
-  }
-];
-
-const integrationLogos = [
-  {
-    src: "microsoft-365-color.png",
-    alt: "Microsoft 365",
-    key: "microsoft-365"
-  },
-  {
-    src: "google-workspace-color.png", 
-    alt: "Google Workspace",
-    key: "google-workspace"
-  },
-  {
-    src: "afas-color.png",
-    alt: "AFAS", 
-    key: "afas"
-  },
-  {
-    src: "exact-color.png",
-    alt: "Exact",
-    key: "exact"
-  },
-  {
-    src: "slack-color.png",
-    alt: "Slack",
-    key: "slack"
-  }
-];
-
-const faqItems = [
-  {
-    question: "Hoe snel staan we live?",
-    answer: "Na 4 dagen staat er een agent live."
-  },
-  {
-    question: "Waar werken jullie?", 
-    answer: "Op locatie bij jullie, met een team dat we meenemen."
-  },
-  {
-    question: "Kunnen we uitbreiden?",
-    answer: "Ja, met extra sprints of een maandelijkse SLA."
-  },
-  {
-    question: "Wat als we nog geen scherpe proceskeuze hebben?",
-    answer: "In de intake scherpen we dat samen aan."
-  }
-];
-
+const timelineSteps = [{
+  day: "Dag 1",
+  title: "Analyse & mapping",
+  description: "We brengen processen en herhaalwerk in kaart, kiezen quick wins en bepalen de scope.",
+  chips: ["kansenkaart", "scope", "integratiecheck"],
+  icon: Search
+}, {
+  day: "Dag 2",
+  title: "Bouw sprint I",
+  description: "We zetten de basis van de agent en koppelingen op. Testen op echte cases.",
+  chips: ["agent-basis", "koppelingen", "testrun"],
+  icon: Target
+}, {
+  day: "Dag 3",
+  title: "Bouw sprint II",
+  description: "We verfijnen prompts en logica, breiden flows uit en valideren met key users.",
+  chips: ["iteraties", "extra flows", "validatie"],
+  icon: TrendingUp
+}, {
+  day: "Dag 4",
+  title: "Training & go-live",
+  description: "We trainen jullie team en leveren de agent op, inclusief documentatie.",
+  chips: ["training", "documentatie", "livegang"],
+  icon: Clock
+}];
+const includedItems = [{
+  icon: Search,
+  title: "Procesanalyse vooraf",
+  description: "We mappen jullie processen en tijdvreters."
+}, {
+  icon: GraduationCap,
+  title: "Training over AI & agents",
+  description: "Hands-on sessie voor team en key users."
+}, {
+  icon: Eye,
+  title: "Inside look in prompten & taalmodellen",
+  description: "We laten precies zien hoe we bouwen en bijsturen."
+}, {
+  icon: Shield,
+  title: "30 dagen support",
+  description: "Optimalisaties, fixes en vragen in de eerste maand."
+}];
+const integrationLogos = [{
+  src: "microsoft-365-color.png",
+  alt: "Microsoft 365",
+  key: "microsoft-365"
+}, {
+  src: "google-workspace-color.png",
+  alt: "Google Workspace",
+  key: "google-workspace"
+}, {
+  src: "afas-color.png",
+  alt: "AFAS",
+  key: "afas"
+}, {
+  src: "exact-color.png",
+  alt: "Exact",
+  key: "exact"
+}, {
+  src: "slack-color.png",
+  alt: "Slack",
+  key: "slack"
+}];
+const faqItems = [{
+  question: "Hoe snel staan we live?",
+  answer: "Na 4 dagen staat er een agent live."
+}, {
+  question: "Waar werken jullie?",
+  answer: "Op locatie bij jullie, met een team dat we meenemen."
+}, {
+  question: "Kunnen we uitbreiden?",
+  answer: "Ja, met extra sprints of een maandelijkse SLA."
+}, {
+  question: "Wat als we nog geen scherpe proceskeuze hebben?",
+  answer: "In de intake scherpen we dat samen aan."
+}];
 export default function AgentAtelier() {
   const timelineRef = useRef<HTMLDivElement>(null);
-
   const scrollTimeline = (direction: 'left' | 'right') => {
     if (timelineRef.current) {
       const scrollAmount = timelineRef.current.clientWidth * 0.8;
@@ -128,9 +90,7 @@ export default function AgentAtelier() {
       });
     }
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-14 lg:py-20">
         <div className="container mx-auto px-6">
@@ -155,17 +115,10 @@ export default function AgentAtelier() {
                 </p>
                 
                 <ul className="space-y-3">
-                  {[
-                    "Procesanalyse vooraf",
-                    "Training over AI en agents", 
-                    "Inside look in prompten en taalmodellen",
-                    "30 dagen support na livegang"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
+                  {["Procesanalyse vooraf", "Training over AI en agents", "Inside look in prompten en taalmodellen", "30 dagen support na livegang"].map((item, index) => <li key={index} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2.5 flex-shrink-0" />
                       <span className="text-base text-muted-foreground font-medium">{item}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
               
@@ -197,35 +150,19 @@ export default function AgentAtelier() {
             
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-4 mb-6">
-              <Button 
-                variant="outline" 
-                size="icon"
-                onClick={() => scrollTimeline('left')}
-                className="h-10 w-10"
-              >
+              <Button variant="outline" size="icon" onClick={() => scrollTimeline('left')} className="h-10 w-10">
                 <ChevronLeft className="h-4 w-4" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="icon"
-                onClick={() => scrollTimeline('right')}
-                className="h-10 w-10"
-              >
+              <Button variant="outline" size="icon" onClick={() => scrollTimeline('right')} className="h-10 w-10">
                 <ChevronRight className="h-4 w-4" />
               </Button>
             </div>
             
             {/* Timeline Carousel */}
-            <div 
-              ref={timelineRef}
-              className="flex gap-4 overflow-x-auto pb-4 scroll-snap-type-x scrollbar-hide"
-              style={{ scrollBehavior: 'smooth' }}
-            >
-              {timelineSteps.map((step, index) => (
-                <div 
-                  key={index}
-                  className="bg-background border border-border rounded-[14px] p-6 space-y-4 min-w-[80%] lg:min-w-[25%] flex-shrink-0 scroll-snap-align-start hover:bg-surface-mist transition-colors duration-200"
-                >
+            <div ref={timelineRef} className="flex gap-4 overflow-x-auto pb-4 scroll-snap-type-x scrollbar-hide" style={{
+            scrollBehavior: 'smooth'
+          }}>
+              {timelineSteps.map((step, index) => <div key={index} className="bg-background border border-border rounded-[14px] p-6 space-y-4 min-w-[80%] lg:min-w-[25%] flex-shrink-0 scroll-snap-align-start hover:bg-surface-mist transition-colors duration-200">
                   <div className="flex items-start justify-between">
                     <div className="inline-flex items-center justify-center w-8 h-8 bg-primary/10 rounded-full flex-shrink-0">
                       <step.icon className="h-4 w-4 text-primary" strokeWidth={2} />
@@ -243,23 +180,15 @@ export default function AgentAtelier() {
                     </p>
                     
                     <div className="flex flex-wrap gap-2">
-                      {step.chips.map((chip, chipIndex) => (
-                        <div 
-                          key={chipIndex}
-                          className="inline-block px-3 py-1 bg-surface-mist text-foreground text-xs font-semibold rounded-full border border-border"
-                        >
+                      {step.chips.map((chip, chipIndex) => <div key={chipIndex} className="inline-block px-3 py-1 bg-surface-mist text-foreground text-xs font-semibold rounded-full border border-border">
                           {chip}
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
             
-            <p className="text-sm text-muted-foreground text-center lg:text-left italic">
-              Vrijdag vrij.
-            </p>
+            
           </div>
         </div>
       </section>
@@ -271,11 +200,7 @@ export default function AgentAtelier() {
             <h2 className="text-foreground">Dit zit altijd inbegrepen</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {includedItems.map((item, index) => (
-                <div 
-                  key={index}
-                  className="bg-background border border-border rounded-[14px] p-6 space-y-4"
-                >
+              {includedItems.map((item, index) => <div key={index} className="bg-background border border-border rounded-[14px] p-6 space-y-4">
                   <div className="inline-flex items-center justify-center w-8 h-8 bg-primary/10 rounded-full flex-shrink-0">
                     <item.icon className="h-4 w-4 text-primary" strokeWidth={2} />
                   </div>
@@ -288,8 +213,7 @@ export default function AgentAtelier() {
                       {item.description}
                     </p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -310,20 +234,11 @@ export default function AgentAtelier() {
                        md:flex-wrap
                        overflow-x-auto scrollbar-hide snap-x snap-mandatory
                        md:overflow-visible">
-              {integrationLogos.map(logo => (
-                <li key={logo.key} className="flex-shrink-0 snap-start">
-                  <button 
-                    className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1" 
-                    aria-label={`${logo.alt} integratie`}
-                  >
-                    <img 
-                      src={`/logos/${logo.src}`} 
-                      alt={logo.alt} 
-                      className="h-12 md:h-14 w-auto object-contain" 
-                    />
+              {integrationLogos.map(logo => <li key={logo.key} className="flex-shrink-0 snap-start">
+                  <button className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1" aria-label={`${logo.alt} integratie`}>
+                    <img src={`/logos/${logo.src}`} alt={logo.alt} className="h-12 md:h-14 w-auto object-contain" />
                   </button>
-                </li>
-              ))}
+                </li>)}
             </ul>
             
             <div className="pt-4">
@@ -346,16 +261,10 @@ export default function AgentAtelier() {
             <h2 className="text-foreground">Wat we van jullie nodig hebben om te starten</h2>
             
             <ul className="space-y-4 max-w-2xl">
-              {[
-                "Een duidelijk proces in gedachten en een droomscenario",
-                "Toegang tot relevante tools/data (sandbox waar mogelijk)",
-                "Een procesowner en een beslisser die kan meebeslissen"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
+              {["Een duidelijk proces in gedachten en een droomscenario", "Toegang tot relevante tools/data (sandbox waar mogelijk)", "Een procesowner en een beslisser die kan meebeslissen"].map((item, index) => <li key={index} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2.5 flex-shrink-0" />
                   <span className="text-base text-muted-foreground font-medium">{item}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
             
             <p className="text-base text-muted-foreground font-medium max-w-2xl">
@@ -373,17 +282,10 @@ export default function AgentAtelier() {
             <h2 className="text-foreground">Data & veiligheid</h2>
             
             <ul className="space-y-4 max-w-2xl">
-              {[
-                "API-first",
-                "Hosting zoveel mogelijk binnen de EU", 
-                "Klantdata wordt nooit gebruikt om taalmodellen te trainen",
-                "DPA/AVG-afspraken mogelijk"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
+              {["API-first", "Hosting zoveel mogelijk binnen de EU", "Klantdata wordt nooit gebruikt om taalmodellen te trainen", "DPA/AVG-afspraken mogelijk"].map((item, index) => <li key={index} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2.5 flex-shrink-0" />
                   <span className="text-base text-muted-foreground font-medium">{item}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
             
             <p className="text-sm text-muted-foreground italic max-w-2xl">
@@ -401,16 +303,14 @@ export default function AgentAtelier() {
             <h2 className="text-foreground">Veelgestelde vragen</h2>
             
             <Accordion type="single" collapsible className="w-full max-w-3xl">
-              {faqItems.map((item, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-border">
+              {faqItems.map((item, index) => <AccordionItem key={index} value={`item-${index}`} className="border-border">
                   <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-base text-muted-foreground font-medium">
                     {item.answer}
                   </AccordionContent>
-                </AccordionItem>
-              ))}
+                </AccordionItem>)}
             </Accordion>
           </div>
         </div>
@@ -438,6 +338,5 @@ export default function AgentAtelier() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 }
