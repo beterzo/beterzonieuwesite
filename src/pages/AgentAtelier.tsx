@@ -69,14 +69,32 @@ const includedItems = [
   }
 ];
 
-const integrations = [
-  { src: "/logos/microsoft-365-color.svg", alt: "Microsoft 365" },
-  { src: "/logos/google-workspace-color.svg", alt: "Google Workspace" },
-  { src: "/logos/afas-color.svg", alt: "AFAS" },
-  { src: "/logos/exact-color.svg", alt: "Exact" },
-  { src: "/logos/slack-color.svg", alt: "Slack" },
-  { src: "/logos/hubspot-color.svg", alt: "HubSpot" },
-  { src: "/logos/twilio-color.svg", alt: "Twilio" }
+const integrationLogos = [
+  {
+    src: "microsoft-365-color.png",
+    alt: "Microsoft 365",
+    key: "microsoft-365"
+  },
+  {
+    src: "google-workspace-color.png", 
+    alt: "Google Workspace",
+    key: "google-workspace"
+  },
+  {
+    src: "afas-color.png",
+    alt: "AFAS", 
+    key: "afas"
+  },
+  {
+    src: "exact-color.png",
+    alt: "Exact",
+    key: "exact"
+  },
+  {
+    src: "slack-color.png",
+    alt: "Slack",
+    key: "slack"
+  }
 ];
 
 const faqItems = [
@@ -288,20 +306,25 @@ export default function AgentAtelier() {
               </p>
             </div>
             
-            <div className="flex flex-wrap items-center gap-6 lg:gap-8">
-              {integrations.map((integration, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center justify-center px-4 py-3 bg-background border border-border rounded-[14px]"
-                >
-                  <img 
-                    src={integration.src}
-                    alt={integration.alt}
-                    className="h-6 object-contain"
-                  />
-                </div>
+            <ul role="list" className="flex flex-wrap gap-5 md:gap-7 items-center justify-start
+                       md:flex-wrap
+                       overflow-x-auto scrollbar-hide snap-x snap-mandatory
+                       md:overflow-visible">
+              {integrationLogos.map(logo => (
+                <li key={logo.key} className="flex-shrink-0 snap-start">
+                  <button 
+                    className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1" 
+                    aria-label={`${logo.alt} integratie`}
+                  >
+                    <img 
+                      src={`/logos/${logo.src}`} 
+                      alt={logo.alt} 
+                      className="h-12 md:h-14 w-auto object-contain" 
+                    />
+                  </button>
+                </li>
               ))}
-            </div>
+            </ul>
             
             <div className="pt-4">
               <Button asChild variant="link" className="p-0 h-auto font-medium text-muted-foreground hover:text-foreground">
