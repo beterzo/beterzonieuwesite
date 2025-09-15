@@ -21,16 +21,16 @@ export const LogoStrip: React.FC<LogoStripProps> = ({ logos, className }) => {
 
   const LogoBadge: React.FC<{ logo: Logo }> = ({ logo }) => {
     const content = (
-      <div className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus-within:outline focus-within:outline-2 focus-within:outline-primary focus-within:outline-offset-1">
+      <div className="flex items-center justify-center h-24 px-8 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus-within:outline focus-within:outline-2 focus-within:outline-primary focus-within:outline-offset-1">
         {failedImages.has(logo.src) ? (
-          <span className="text-lg font-semibold text-foreground whitespace-nowrap">
+          <span className="text-xl font-semibold text-foreground whitespace-nowrap">
             {logo.alt}
           </span>
         ) : (
           <img
             src={`/logos/${logo.src}`}
             alt={logo.alt}
-            className="h-12 md:h-14 w-auto object-contain"
+            className="h-16 md:h-18 w-auto object-contain"
             onError={() => handleImageError(logo.src)}
           />
         )}
