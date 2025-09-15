@@ -63,53 +63,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Integration Tools Section */}
-      <section className="py-4 bg-background">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="w-full h-px bg-border mb-4"></div>
-          
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-6">
-            <div className="max-w-3xl">
-              <h2 className="text-foreground mb-6">
-                Wij werken met jullie tools
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl">
-                Hieronder een aantal voorbeelden van systemen waar we mee koppelen. Via API's ondersteunen we nog veel meer. 
-                Staat jullie tool er niet bij? Grote kans dat we die ook kunnen aansluiten!
-              </p>
-            </div>
-            <Button asChild variant="link" className="text-sm font-normal text-muted-foreground hover:text-primary self-start lg:self-center">
-              <a href="/contact?topic=integratie">Stel integratievraag</a>
-            </Button>
-          </div>
-
-          <ul 
-            role="list" 
-            className="flex flex-wrap gap-5 md:gap-7 items-center justify-start
-                       md:flex-wrap
-                       overflow-x-auto scrollbar-hide snap-x snap-mandatory
-                       md:overflow-visible mb-4"
-          >
-            {integrationLogos.map((logo) => (
-              <li key={logo.key} className="flex-shrink-0 snap-start">
-                <button
-                  className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1"
-                  aria-label={`${logo.alt} integratie`}
-                >
-                  <img
-                    src={`/logos/${logo.src}`}
-                    alt={logo.alt}
-                    className="h-12 md:h-14 w-auto object-contain"
-                  />
-                </button>
-              </li>
-            ))}
-          </ul>
-          
-          <div className="w-full h-px bg-border mt-4"></div>
-        </div>
-      </section>
-
       {/* Main Services */}
       <section className="section-spacing bg-surface-alt">
         <div className="container mx-auto px-6">
@@ -199,6 +152,53 @@ const Services = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Integration Tools Section */}
+      <section className="py-4 bg-background">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <div className="w-full h-px bg-border mb-4"></div>
+          
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-6">
+            <div className="max-w-3xl">
+              <h2 className="text-foreground mb-6">
+                Wij werken met jullie tools
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl">
+                Hieronder een aantal voorbeelden van systemen waar we mee koppelen. Via API's ondersteunen we nog veel meer. 
+                Staat jullie tool er niet bij? Grote kans dat we die ook kunnen aansluiten!
+              </p>
+            </div>
+            <Button asChild variant="link" className="text-sm font-normal text-muted-foreground hover:text-primary self-start lg:self-center">
+              <a href="/contact?topic=integratie">Stel integratievraag</a>
+            </Button>
+          </div>
+
+          <ul 
+            role="list" 
+            className="flex flex-wrap gap-5 md:gap-7 items-center justify-start
+                       md:flex-wrap
+                       overflow-x-auto scrollbar-hide snap-x snap-mandatory
+                       md:overflow-visible mb-4"
+          >
+            {integrationLogos.map((logo) => (
+              <li key={logo.key} className="flex-shrink-0 snap-start">
+                <button
+                  className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1"
+                  aria-label={`${logo.alt} integratie`}
+                >
+                  <img
+                    src={`/logos/${logo.src}`}
+                    alt={logo.alt}
+                    className="h-12 md:h-14 w-auto object-contain"
+                  />
+                </button>
+              </li>
+            ))}
+          </ul>
+          
+          <div className="w-full h-px bg-border mt-4"></div>
         </div>
       </section>
 
