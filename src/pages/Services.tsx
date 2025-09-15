@@ -18,10 +18,6 @@ const Services = () => {
     alt: "Google Workspace",
     key: "google-workspace"
   }, {
-    src: "afas-color.png",
-    alt: "AFAS",
-    key: "afas"
-  }, {
     src: "exact-color.png",
     alt: "Exact",
     key: "exact"
@@ -250,7 +246,7 @@ const Services = () => {
                   <img 
                     src={`/logos/${logo.src}`} 
                     alt={logo.alt}
-                    className="h-8 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-200"
+                    className="h-12 object-contain transition-all duration-200"
                   />
                 </button>
               </li>)}
