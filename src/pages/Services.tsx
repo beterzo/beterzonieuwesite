@@ -318,32 +318,32 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="premium-grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-foreground">
+              <h3 className="text-3xl font-bold text-foreground">
                 Data & veiligheid
               </h3>
               
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <Shield className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" strokeWidth={2} />
-                  <span className="text-muted-foreground">Alles via API's</span>
+                  <Shield className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span className="text-lg text-muted-foreground">Alles via API's</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Building2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" strokeWidth={2} />
-                  <span className="text-muted-foreground">Hosting zoveel mogelijk binnen de EU</span>
+                  <Building2 className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span className="text-lg text-muted-foreground">Hosting zoveel mogelijk binnen de EU</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Users className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" strokeWidth={2} />
-                  <span className="text-muted-foreground">Klantdata wordt nooit gebruikt om taalmodellen te trainen</span>
+                  <Users className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span className="text-lg text-muted-foreground">Klantdata wordt nooit gebruikt om taalmodellen te trainen</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" strokeWidth={2} />
-                  <span className="text-muted-foreground">DPA/AVG-afspraken mogelijk</span>
+                  <FileText className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" strokeWidth={2} />
+                  <span className="text-lg text-muted-foreground">DPA/AVG-afspraken mogelijk</span>
                 </li>
               </ul>
             </div>
             
             <div className="lg:pl-8">
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Onderzoek van McKinsey laat zien dat met AI en automatisering tot circa 70% van taken te automatiseren is. 
                 Resultaten verschillen per team en proces.
               </p>
