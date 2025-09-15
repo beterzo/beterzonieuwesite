@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ExternalLink, ChevronDown, Check, Shield, Zap, Users, Building2, Mail, FileText, MessageSquare, Settings } from "lucide-react";
 import { useState } from "react";
+import { LogoStrip } from "@/components/LogoStrip";
 
 const Services = () => {
   const [openFaq, setOpenFaq] = useState<string | null>(null);
@@ -11,19 +12,14 @@ const Services = () => {
     setOpenFaq(openFaq === id ? null : id);
   };
 
-  const softwareLogos = [
-    { name: "Google Workspace", color: "#4285F4" },
-    { name: "Microsoft 365", color: "#0078D4" },
-    { name: "AFAS", color: "#E60012" },
-    { name: "Exact", color: "#00B0F0" },
-    { name: "Slack", color: "#4A154B" },
-    { name: "HubSpot", color: "#FF7A59" },
-    { name: "Twilio", color: "#F22F46" }
-  ];
-
   const integrationLogos = [
-    ...softwareLogos,
-    { name: "en meer…", color: "#475569" }
+    { src: "google-workspace-color.svg", alt: "Google Workspace", href: "/contact?topic=integratie&tool=Google%20Workspace" },
+    { src: "microsoft-365-color.svg", alt: "Microsoft 365", href: "/contact?topic=integratie&tool=Microsoft%20365" },
+    { src: "afas-color.svg", alt: "AFAS", href: "/contact?topic=integratie&tool=AFAS" },
+    { src: "exact-color.svg", alt: "Exact", href: "/contact?topic=integratie&tool=Exact" },
+    { src: "slack-color.svg", alt: "Slack", href: "/contact?topic=integratie&tool=Slack" },
+    { src: "hubspot-color.svg", alt: "HubSpot", href: "/contact?topic=integratie&tool=HubSpot" },
+    { src: "twilio-color.svg", alt: "Twilio", href: "/contact?topic=integratie&tool=Twilio" }
   ];
 
   const faqItems = [
@@ -57,7 +53,7 @@ const Services = () => {
               Oplossingen die specifiek ruimte maken in jullie werk. Volledig op maat, zonder ruis.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button asChild size="lg">
                 <a href="/plan">Plan gratis gesprek</a>
               </Button>
@@ -65,20 +61,10 @@ const Services = () => {
                 <a href="/cases">Bekijk cases</a>
               </Button>
             </div>
-
-            {/* Software logos */}
-            <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-border">
-              {softwareLogos.map((logo, index) => (
-                <div 
-                  key={index}
-                  className="h-6 flex items-center text-sm font-medium"
-                  style={{ color: logo.color }}
-                >
-                  {logo.name}
-                </div>
-              ))}
-            </div>
           </div>
+          
+          {/* Logo Strip Integration */}
+          <LogoStrip logos={integrationLogos} className="mb-4" />
         </div>
       </section>
 
@@ -298,10 +284,9 @@ const Services = () => {
             {integrationLogos.map((logo, index) => (
               <div 
                 key={index}
-                className="h-6 flex items-center text-sm font-medium"
-                style={{ color: logo.color }}
+                className="h-6 flex items-center text-sm font-medium text-muted-foreground"
               >
-                {logo.name}
+                {logo.alt}
               </div>
             ))}
           </div>
