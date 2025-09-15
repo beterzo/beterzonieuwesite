@@ -157,6 +157,70 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Maatwerk Examples */}
+      <section className="section-spacing bg-background">
+        <div className="container mx-auto px-6">
+          <div className="mb-8">
+            <h2 className="text-foreground mb-4">
+              Voorbeelden van maatwerk
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl">
+              Een greep uit de oplossingen die we hebben gebouwd voor verschillende bedrijven.
+            </p>
+          </div>
+          
+          <div className="premium-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <Card className="card-elegant">
+              <CardHeader>
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
+                  <Mail className="h-6 w-6 text-primary" strokeWidth={2} />
+                </div>
+                <CardTitle className="text-lg">Slimme mailfiltering</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Inboxregels die leren, prioriteren en automatisch doorzetten naar de juiste collega.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-elegant">
+              <CardHeader>
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
+                  <FileText className="h-6 w-6 text-primary" strokeWidth={2} />
+                </div>
+                <CardTitle className="text-lg">Contracten automatiseren</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Sjabloon uploaden, data inlezen, automatisch invullen en versturen voor ondertekening.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-elegant">
+              <CardHeader>
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
+                  <MessageSquare className="h-6 w-6 text-primary" strokeWidth={2} />
+                </div>
+                <CardTitle className="text-lg">Klantcommunicatie</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Automatische follow-ups, gepersonaliseerde berichten en slimme doorverwijzingen.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="flex justify-center">
+            <Button asChild variant="outline">
+              <a href="/cases">Naar alle voorbeelden</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Integration Tools Section */}
       <section className="py-4 bg-background">
         <div className="container mx-auto px-6 max-w-[1200px]">
