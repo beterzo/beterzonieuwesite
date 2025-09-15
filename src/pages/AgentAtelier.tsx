@@ -417,15 +417,15 @@ export default function AgentAtelier() {
       {/* Slot CTA */}
       <section className="py-12 lg:py-14">
         <div className="container mx-auto px-6">
-          <div className="text-center space-y-8">
+          <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-foreground">Klaar voor jullie AI-agent?</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-2xl">
                 Plan een demo en ontdek hoe jullie agent binnen 4 dagen live kan.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-primary">
                 <a href="/plan">Plan gratis gesprek</a>
               </Button>
