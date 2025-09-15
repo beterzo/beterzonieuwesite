@@ -246,7 +246,7 @@ const Services = () => {
                   <img 
                     src={`/logos/${logo.src}`} 
                     alt={logo.alt}
-                    className="h-12 object-contain transition-all duration-200"
+                    className="h-16 object-contain transition-all duration-200"
                   />
                 </button>
               </li>)}
