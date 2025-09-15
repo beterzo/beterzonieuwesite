@@ -13,13 +13,11 @@ const Services = () => {
   };
 
   const integrationLogos = [
-    { src: "google-workspace-color.svg", alt: "Google Workspace", href: "/contact?topic=integratie&tool=Google%20Workspace" },
-    { src: "microsoft-365-color.svg", alt: "Microsoft 365", href: "/contact?topic=integratie&tool=Microsoft%20365" },
-    { src: "afas-color.svg", alt: "AFAS", href: "/contact?topic=integratie&tool=AFAS" },
-    { src: "exact-color.svg", alt: "Exact", href: "/contact?topic=integratie&tool=Exact" },
-    { src: "slack-color.svg", alt: "Slack", href: "/contact?topic=integratie&tool=Slack" },
-    { src: "hubspot-color.svg", alt: "HubSpot", href: "/contact?topic=integratie&tool=HubSpot" },
-    { src: "twilio-color.svg", alt: "Twilio", href: "/contact?topic=integratie&tool=Twilio" }
+    { src: "google-workspace-color.png", alt: "Google Workspace", href: "/contact?topic=integratie&tool=Google%20Workspace" },
+    { src: "microsoft-365-color.png", alt: "Microsoft 365", href: "/contact?topic=integratie&tool=Microsoft%20365" },
+    { src: "afas-color.png", alt: "AFAS", href: "/contact?topic=integratie&tool=AFAS" },
+    { src: "exact-color.png", alt: "Exact", href: "/contact?topic=integratie&tool=Exact" },
+    { src: "slack-color.png", alt: "Slack", href: "/contact?topic=integratie&tool=Slack" }
   ];
 
   const faqItems = [
