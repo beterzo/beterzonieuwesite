@@ -46,25 +46,17 @@ const includedItems = [{
   description: "Optimalisaties, fixes en vragen in de eerste maand."
 }];
 const integrationLogos = [{
+  src: "slack-color.png",
+  alt: "Slack",
+  key: "slack"
+}, {
   src: "microsoft-365-color.png",
   alt: "Microsoft 365",
   key: "microsoft-365"
 }, {
-  src: "google-workspace-color.png",
-  alt: "Google Workspace",
-  key: "google-workspace"
-}, {
-  src: "afas-color.png",
-  alt: "AFAS",
-  key: "afas"
-}, {
   src: "exact-color.png",
   alt: "Exact",
   key: "exact"
-}, {
-  src: "slack-color.png",
-  alt: "Slack",
-  key: "slack"
 }];
 const faqItems = [{
   question: "Hoe snel staan we live?",
@@ -224,9 +216,9 @@ export default function AgentAtelier() {
         <div className="container mx-auto px-6">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-foreground">Werkt met jullie tools</h2>
+              <h2 className="text-foreground">Wij werken met jullie tools</h2>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Dit is slechts een greep; we koppelen met nog veel meer via API's.
+                Hieronder een aantal voorbeelden van systemen waar we mee koppelen. Via API's ondersteunen we nog veel meer.
               </p>
             </div>
             
