@@ -193,15 +193,7 @@ const Services = () => {
       </section>
 
       {/* Comparison Table */}
-      <section className="section-spacing bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl">
-            <Card className="card-elegant">
-              
-            </Card>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Example Cases */}
       <section className="section-spacing bg-surface-alt">
