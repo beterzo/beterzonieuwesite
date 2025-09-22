@@ -23,7 +23,7 @@ export function PremiumClients() {
     {
       name: "LEK Sloopwerken",
       logo: "/logos/lek-sloopwerken.png",
-      description: "Voor Lek Sloopwerken hebben we een Twilio-telefoniesysteem opgezet met IVR-keuzemenu's, call logging, voicemail-naar-mail en Make-flows die alles direct bij het juiste team laten landen."
+      description: "Voor Lek Sloopwerken hebben we een telefoniesysteem opgezet met IVR-keuzemenu's, call logging, voicemail-naar-mail en Make-flows die alles direct bij het juiste team laten landen."
     },
     {
       name: "De Groene Wereld",
