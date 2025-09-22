@@ -34,7 +34,7 @@ export function PremiumClients() {
 
   return (
     <section className="section-spacing-sm">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-5 max-w-[1200px]">
         <div className="space-y-12">
           <h2 className="text-foreground">Vertrouwd door</h2>
           
