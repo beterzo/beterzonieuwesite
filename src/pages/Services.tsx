@@ -56,7 +56,7 @@ const Services = () => {
                 <a href="/plan-kennismaking">Plan gratis gesprek</a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="/cases">Bekijk cases</a>
+                
               </Button>
             </div>
           </div>
