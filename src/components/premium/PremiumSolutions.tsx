@@ -28,30 +28,30 @@ const solutions = [
   },
   {
     icon: Mail,
-    title: "Slimme mailfiltering",
-    description: "Voor een Nederlandse onderwijsorganisatie hebben we een AI-systeem ontwikkeld dat dagelijks honderden e-mails automatisch sorteert en prioriteert. Het systeem leert van handmatige correcties en wordt steeds nauwkeuriger.",
-    detailedResults: "Door de implementatie daalde de tijd voor mailverwerking van 3 uur naar 30 minuten per dag. Belangrijke e-mails worden nu binnen 5 minuten geïdentificeerd en doorgestuurd naar de juiste persoon. Het systeem heeft een nauwkeurigheid van 94% bereikt.",
+    title: "Slimme e-mailfiltering voor een bedrijf in documentbeheer",
+    description: "Voor een organisatie die zich richt op documentbeheer hebben we een automatisering gebouwd die dagelijks tientallen inkomende e-mails automatisch analyseert en filtert. Veel van deze e-mails zijn aanvragen voor tijdelijke inhuur, maar slechts een deel is relevant.",
+    detailedResults: "Vóór de automatisering moesten medewerkers elke mail handmatig bekijken en sorteren — tijdrovend en foutgevoelig. We hebben een AI-gestuurd systeem opgezet dat automatisch de juiste aanvragen herkent en direct doorstuurt naar de juiste mailbox. Dit werkt volledig geïntegreerd met hun Microsoft-omgeving. Zo besparen medewerkers tijd, wordt de kans op fouten kleiner en komt alleen nog relevante informatie binnen.",
     hasButton: false
   },
   {
     icon: MessageSquare,
-    title: "AI-klantenservice",
-    description: "Voor een adviesbureau hebben we een meertalige AI-chatbot geïmplementeerd die 24/7 klantenvragen beantwoordt in het Nederlands, Engels en Duits. De bot escaleert complexe vragen automatisch naar menselijke medewerkers.",
-    detailedResults: "Het resultaat: 90% van alle vragen wordt nu automatisch afgehandeld, de gemiddelde responstijd daalde van 4 uur naar 30 seconden, en klanttevredenheid steeg met 23%. De organisatie bespaart wekelijks 35 uur aan handmatige klantenservice.",
+    title: "Slimmer klantcontact voor een bedrijf in de logistieke en sloopsector",
+    description: "Voor een logistiek bedrijf in de sloopsector hebben we het klantcontactproces geautomatiseerd. Klanten belden vaak met dezelfde vragen: \"Waar is de chauffeur nu?\" of \"Hoe laat zijn jullie er?\" — wat zorgde voor veel onderbrekingen en tijdverlies.",
+    detailedResults: "We hebben een systeem ontwikkeld dat deze vragen automatisch beantwoordt met realtime ritinformatie, afgestemd op hun planningssoftware. Klanten krijgen direct antwoord zonder tussenkomst van een medewerker, en chauffeurs worden minder gestoord. De operatie blijft doorgaan, maar dan met veel meer rust en duidelijkheid — voor zowel de klant als het team op kantoor.",
     hasButton: false
   },
   {
     icon: FileText,
-    title: "Toetsgenerator",
-    description: "Voor een onderwijsinstelling ontwikkelden we een AI-tool die automatisch toetsvragen genereert op basis van studiemateriaal. Docenten kunnen het gewenste niveau en vraagtype specificeren, waarna de AI meerkeuzevragen, open vragen en casussen genereert.",
-    detailedResults: "Docenten besparen nu 23% tijd bij het maken van toetsen. De kwaliteit van vragen is consistent hoog en de tool genereert automatisch verschillende moeilijkheidsniveaus. Per toets worden gemiddeld 2,5 uur minder besteed aan vraagcreatie.",
+    title: "Toetsvragen-generator voor een onderwijsadviseur",
+    description: "Voor een onderwijsadviseur die leercontent ontwikkelt, hebben we een slimme toetsvragen-generator gebouwd. Het systeem maakt op basis van lesmateriaal en leerdoelen automatisch toetsvragen in verschillende formats, volledig afgestemd op het niveau en type onderwijs.",
+    detailedResults: "Gebruikers kunnen documenten uploaden (zoals Word of PDF), aangeven welke vraagtypes ze willen, en het systeem doet de rest. Binnen een paar minuten worden kant-en-klare toetsvragen gegenereerd die direct gebruikt kunnen worden in een toets of digitale leeromgeving. Deze tool bespaart enorm veel tijd en zorgt ervoor dat vragen altijd inhoudelijk kloppen en aansluiten bij de leerdoelen.",
     hasButton: false
   },
   {
     icon: ScrollText,
-    title: "Contracten automatiseren",
-    description: "Voor een juridisch adviesbureau automatiseerden we het complete contractproces. Van intake-formulier tot getekend contract verloopt nu via een geïntegreerd systeem dat sjablonen gebruikt, clausules aanpast en herinneringen verstuurt.",
-    detailedResults: "Het contractproces is 70% sneller geworden - van gemiddeld 5 dagen naar 1,5 dag. Fouten door handmatig typen zijn geëlimineerd en clients ontvangen automatisch statusupdates. De organisatie kan nu 40% meer contracten verwerken met hetzelfde team.",
+    title: "Automatische contractgeneratie voor een onderwijsorganisatie",
+    description: "Voor een grote onderwijsorganisatie hebben we het volledige proces rondom contracten geautomatiseerd. Waar eerst elk contract handmatig werd aangemaakt, gemaild, ondertekend en gearchiveerd, gaat nu alles vanzelf.",
+    detailedResults: "Op basis van ingevoerde gegevens wordt automatisch het juiste contract gegenereerd, verstuurd naar de juiste ontvanger voor digitale ondertekening, en zodra het ondertekend is, komt het netjes in de inbox van de verantwoordelijke. Geen handmatig werk meer, geen losse versies of fouten in de verwerking — alleen een strakke, betrouwbare flow van begin tot eind.",
     hasButton: false
   },
 ];
@@ -116,7 +116,7 @@ export function PremiumSolutions() {
                     asChild
                   >
                     <a href={solution.link}>
-                      {solution.title === "Toetsgenerator" ? "Bekijk voorbeeld" : "Meer info"}
+                      Meer info
                     </a>
                   </Button>
                 )}
