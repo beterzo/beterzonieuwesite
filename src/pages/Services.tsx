@@ -165,53 +165,20 @@ const Services = () => {
               </p>
             </div>
             
-            <div className="premium-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            <div className="premium-grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <Card className="card-elegant">
               <CardHeader>
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
                   <Mail className="h-6 w-6 text-primary" strokeWidth={2} />
                 </div>
-                <CardTitle className="text-lg">Slimme mailfiltering</CardTitle>
+                <CardTitle className="text-lg">Slimme e-mailfiltering voor een bedrijf in documentbeheer</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Een AI-systeem dat inkomende emails analyseert op onderwerp, urgentie en afzender. Het systeem leert van jullie gedrag en routeert automatisch emails naar de juiste collega of afdeling.
+                  Voor een organisatie die zich richt op documentbeheer hebben we een automatisering gebouwd die dagelijks tientallen inkomende e-mails automatisch analyseert en filtert. Veel van deze e-mails zijn aanvragen voor tijdelijke inhuur, maar slechts een deel is relevant.
                 </p>
-                <div className="space-y-2 mb-4">
-                  <p className="text-sm font-medium text-foreground">Wat het oplevert:</p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• 70% minder tijd aan inbox-management</li>
-                    <li>• Snellere reactietijden naar klanten</li>
-                    <li>• Geen gemiste belangrijke emails meer</li>
-                  </ul>
-                </div>
-                <p className="text-xs text-muted-foreground italic">
-                  Voorbeeld: Klantvragen over facturen gaan automatisch naar boekhouding, technische vragen naar support.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="card-elegant">
-              <CardHeader>
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
-                  <FileText className="h-6 w-6 text-primary" strokeWidth={2} />
-                </div>
-                <CardTitle className="text-lg">Contracten automatiseren</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Een workflow die contractsjablonen koppelt aan jullie CRM-data. Upload een sjabloon, kies de klant, en het systeem vult automatisch alle gegevens in en verstuurt het contract voor digitale ondertekening.
-                </p>
-                <div className="space-y-2 mb-4">
-                  <p className="text-sm font-medium text-foreground">Wat het oplevert:</p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Van 45 naar 5 minuten per contract</li>
-                    <li>• Geen typfouten in contractgegevens</li>
-                    <li>• Directe digitale ondertekening</li>
-                  </ul>
-                </div>
-                <p className="text-xs text-muted-foreground italic">
-                  Voorbeeld: Nieuwe klant in Exact? Contract wordt automatisch gegenereerd en verzonden.
+                <p className="text-muted-foreground text-sm">
+                  Vóór de automatisering moesten medewerkers elke mail handmatig bekijken en sorteren — tijdrovend en foutgevoelig. We hebben een AI-gestuurd systeem opgezet dat automatisch de juiste aanvragen herkent en direct doorstuurt naar de juiste mailbox. Dit werkt volledig geïntegreerd met hun Microsoft-omgeving. Zo besparen medewerkers tijd, wordt de kans op fouten kleiner en komt alleen nog relevante informatie binnen.
                 </p>
               </CardContent>
             </Card>
@@ -221,22 +188,48 @@ const Services = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
                   <MessageSquare className="h-6 w-6 text-primary" strokeWidth={2} />
                 </div>
-                <CardTitle className="text-lg">Klantcommunicatie</CardTitle>
+                <CardTitle className="text-lg">Slimmer klantcontact voor een bedrijf in de logistieke en sloopsector</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Een systeem dat klantinteracties monitort en automatisch gepersonaliseerde follow-ups verstuurt via email, WhatsApp of SMS. Het kent jullie klanten en past de toon en timing aan.
+                  Voor een logistiek bedrijf in de sloopsector hebben we het klantcontactproces geautomatiseerd. Klanten belden vaak met dezelfde vragen: "Waar is de chauffeur nu?" of "Hoe laat zijn jullie er?" — wat zorgde voor veel onderbrekingen en tijdverlies.
                 </p>
-                <div className="space-y-2 mb-4">
-                  <p className="text-sm font-medium text-foreground">Wat het oplevert:</p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• 40% meer klantretentie door tijdige follow-ups</li>
-                    <li>• Geen gemiste herinneringen meer</li>
-                    <li>• Persoonlijke communicatie op schaal</li>
-                  </ul>
+                <p className="text-muted-foreground text-sm">
+                  We hebben een systeem ontwikkeld dat deze vragen automatisch beantwoordt met realtime ritinformatie, afgestemd op hun planningssoftware. Klanten krijgen direct antwoord zonder tussenkomst van een medewerker, en chauffeurs worden minder gestoord. De operatie blijft doorgaan, maar dan met veel meer rust en duidelijkheid — voor zowel de klant als het team op kantoor.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-elegant">
+              <CardHeader>
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
+                  <FileText className="h-6 w-6 text-primary" strokeWidth={2} />
                 </div>
-                <p className="text-xs text-muted-foreground italic">
-                  Voorbeeld: 3 dagen na levering krijgt elke klant automatisch een persoonlijk dankbericht.
+                <CardTitle className="text-lg">Toetsvragen-generator voor een onderwijsadviseur</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Voor een onderwijsadviseur die leercontent ontwikkelt, hebben we een slimme toetsvragen-generator gebouwd. Het systeem maakt op basis van lesmateriaal en leerdoelen automatisch toetsvragen in verschillende formats, volledig afgestemd op het niveau en type onderwijs.
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  Gebruikers kunnen documenten uploaden (zoals Word of PDF), aangeven welke vraagtypes ze willen, en het systeem doet de rest. Binnen een paar minuten worden kant-en-klare toetsvragen gegenereerd die direct gebruikt kunnen worden in een toets of digitale leeromgeving. Deze tool bespaart enorm veel tijd en zorgt ervoor dat vragen altijd inhoudelijk kloppen en aansluiten bij de leerdoelen.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-elegant">
+              <CardHeader>
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
+                  <Settings className="h-6 w-6 text-primary" strokeWidth={2} />
+                </div>
+                <CardTitle className="text-lg">Automatische contractgeneratie voor een onderwijsorganisatie</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Voor een grote onderwijsorganisatie hebben we het volledige proces rondom contracten geautomatiseerd. Waar eerst elk contract handmatig werd aangemaakt, gemaild, ondertekend en gearchiveerd, gaat nu alles vanzelf.
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  Op basis van ingevoerde gegevens wordt automatisch het juiste contract gegenereerd, verstuurd naar de juiste ontvanger voor digitale ondertekening, en zodra het ondertekend is, komt het netjes in de inbox van de verantwoordelijke. Geen handmatig werk meer, geen losse versies of fouten in de verwerking — alleen een strakke, betrouwbare flow van begin tot eind.
                 </p>
               </CardContent>
             </Card>
