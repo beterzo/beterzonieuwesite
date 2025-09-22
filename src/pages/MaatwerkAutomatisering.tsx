@@ -2,19 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, ChevronDown, ChevronLeft, ChevronRight, 
-         Settings, Layers, Map, Shield, Search, Cog, 
-         FileCheck, Users, CheckCircle, Mail, FileText } from "lucide-react";
+import { ExternalLink, ChevronDown, ChevronLeft, ChevronRight, Settings, Layers, Map, Shield, Search, Cog, FileCheck, Users, CheckCircle, Mail, FileText } from "lucide-react";
 import { useState, useRef } from "react";
-
 const MaatwerkAutomatisering = () => {
   const [openFaq, setOpenFaq] = useState<string | null>(null);
   const stepperRef = useRef<HTMLDivElement>(null);
-  
   const toggleFaq = (id: string) => {
     setOpenFaq(openFaq === id ? null : id);
   };
-
   const scrollStepper = (direction: 'left' | 'right') => {
     if (stepperRef.current) {
       const scrollAmount = stepperRef.current.clientWidth * 0.8;
@@ -24,118 +19,97 @@ const MaatwerkAutomatisering = () => {
       });
     }
   };
-
-  const whyMaatwerkItems = [
-    {
-      icon: Settings,
-      title: "Meerdere processen tegelijk",
-      description: "Als je structureel herhaalwerk in verschillende teams wilt wegnemen."
-    },
-    {
-      icon: Layers,
-      title: "Diepe integraties", 
-      description: "Koppelingen via API's met jullie systemen en datamodellen."
-    },
-    {
-      icon: Map,
-      title: "Gefaseerde roadmap",
-      description: "Van snelle winst naar doorontwikkeling met prioriteiten."
-    },
-    {
-      icon: Shield,
-      title: "Compliance & governance",
-      description: "Documentatie, rechten/rollen en duidelijke overdracht."
-    }
-  ];
-
-  const workSteps = [
-    {
-      number: 1,
-      title: "Intake & kansenkaart",
-      description: "We analyseren processen, tijdvreters en risico's en bepalen meetbare doelen.",
-      info: "60–90 min sessies met procesowner en key users"
-    },
-    {
-      number: 2,
-      title: "Architectuur & scope", 
-      description: "We vertalen jullie eisen naar integraties, datastromen en security-afspraken.",
-      info: "heldere scope, planning en acceptatiecriteria"
-    },
-    {
-      number: 3,
-      title: "Bouwen in sprints",
-      description: "We leveren elke sprint een werkende uitbreiding. Minder handwerk, meer flow.",
-      info: "testen op echte cases; feedback-loops met het team"
-    },
-    {
-      number: 4,
-      title: "Go-live & overdracht",
-      description: "We leveren netjes op: documentatie, rechten/rollen en monitoring.",
-      info: "training inbegrepen"
-    },
-    {
-      number: 5,
-      title: "Doorontwikkeling (optioneel)",
-      description: "Met een SLA of vervolg-sprints verbeteren we door.",
-      info: "vaste uren per maand of losse iteraties"
-    }
-  ];
-
-  const includedItems = [
-    {
-      icon: Search,
-      title: "Intake & architectuur",
-      description: "Processen, datastromen en doelen helder."
-    },
-    {
-      icon: Cog,
-      title: "Integraties via API's", 
-      description: "Koppelingen met jullie tools en data."
-    },
-    {
-      icon: FileCheck,
-      title: "Documentatie & overdracht",
-      description: "Beheersbaar en traceerbaar."
-    },
-    {
-      icon: Users,
-      title: "Training bij oplevering",
-      description: "Team kan direct aan de slag."
-    }
-  ];
-
-  const integrationLogos = [
-    { src: "exact-color.png", alt: "Exact" },
-    { src: "google-workspace-logo.png", alt: "Google Workspace" },
-    { src: "slack-color.png", alt: "Slack" },
-    { src: "microsoft-365-color.png", alt: "Microsoft 365" }
-  ];
-
-  const faqItems = [
-    {
-      id: "which-service",
-      question: "Welke dienst past bij ons?",
-      answer: "Eén duidelijk proces en snel live? Agent atelier. Meer processen en structurele winst? Maatwerk."
-    },
-    {
-      id: "how-fast-results", 
-      question: "Hoe snel zien we resultaat?",
-      answer: "We werken in sprints; een eerste versie staat vaak binnen 4–6 weken."
-    },
-    {
-      id: "system-integration",
-      question: "Kunnen jullie met onze tools koppelen?",
-      answer: "Grote kans van wel. We werken via API's met o.a. Microsoft 365, Google Workspace, AFAS, Exact, Slack, HubSpot, Twilio en meer."
-    },
-    {
-      id: "future-expansion",
-      question: "Wat als we later willen uitbreiden?",
-      answer: "Plan extra sprints of kies een SLA voor doorontwikkeling."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const whyMaatwerkItems = [{
+    icon: Settings,
+    title: "Meerdere processen tegelijk",
+    description: "Als je structureel herhaalwerk in verschillende teams wilt wegnemen."
+  }, {
+    icon: Layers,
+    title: "Diepe integraties",
+    description: "Koppelingen via API's met jullie systemen en datamodellen."
+  }, {
+    icon: Map,
+    title: "Gefaseerde roadmap",
+    description: "Van snelle winst naar doorontwikkeling met prioriteiten."
+  }, {
+    icon: Shield,
+    title: "Compliance & governance",
+    description: "Documentatie, rechten/rollen en duidelijke overdracht."
+  }];
+  const workSteps = [{
+    number: 1,
+    title: "Intake & kansenkaart",
+    description: "We analyseren processen, tijdvreters en risico's en bepalen meetbare doelen.",
+    info: "60–90 min sessies met procesowner en key users"
+  }, {
+    number: 2,
+    title: "Architectuur & scope",
+    description: "We vertalen jullie eisen naar integraties, datastromen en security-afspraken.",
+    info: "heldere scope, planning en acceptatiecriteria"
+  }, {
+    number: 3,
+    title: "Bouwen in sprints",
+    description: "We leveren elke sprint een werkende uitbreiding. Minder handwerk, meer flow.",
+    info: "testen op echte cases; feedback-loops met het team"
+  }, {
+    number: 4,
+    title: "Go-live & overdracht",
+    description: "We leveren netjes op: documentatie, rechten/rollen en monitoring.",
+    info: "training inbegrepen"
+  }, {
+    number: 5,
+    title: "Doorontwikkeling (optioneel)",
+    description: "Met een SLA of vervolg-sprints verbeteren we door.",
+    info: "vaste uren per maand of losse iteraties"
+  }];
+  const includedItems = [{
+    icon: Search,
+    title: "Intake & architectuur",
+    description: "Processen, datastromen en doelen helder."
+  }, {
+    icon: Cog,
+    title: "Integraties via API's",
+    description: "Koppelingen met jullie tools en data."
+  }, {
+    icon: FileCheck,
+    title: "Documentatie & overdracht",
+    description: "Beheersbaar en traceerbaar."
+  }, {
+    icon: Users,
+    title: "Training bij oplevering",
+    description: "Team kan direct aan de slag."
+  }];
+  const integrationLogos = [{
+    src: "exact-color.png",
+    alt: "Exact"
+  }, {
+    src: "google-workspace-logo.png",
+    alt: "Google Workspace"
+  }, {
+    src: "slack-color.png",
+    alt: "Slack"
+  }, {
+    src: "microsoft-365-color.png",
+    alt: "Microsoft 365"
+  }];
+  const faqItems = [{
+    id: "which-service",
+    question: "Welke dienst past bij ons?",
+    answer: "Eén duidelijk proces en snel live? Agent atelier. Meer processen en structurele winst? Maatwerk."
+  }, {
+    id: "how-fast-results",
+    question: "Hoe snel zien we resultaat?",
+    answer: "We werken in sprints; een eerste versie staat vaak binnen 4–6 weken."
+  }, {
+    id: "system-integration",
+    question: "Kunnen jullie met onze tools koppelen?",
+    answer: "Grote kans van wel. We werken via API's met o.a. Microsoft 365, Google Workspace, AFAS, Exact, Slack, HubSpot, Twilio en meer."
+  }, {
+    id: "future-expansion",
+    question: "Wat als we later willen uitbreiden?",
+    answer: "Plan extra sprints of kies een SLA voor doorontwikkeling."
+  }];
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-14 lg:py-20">
         <div className="container mx-auto px-6 max-w-[1200px]">
@@ -176,8 +150,7 @@ const MaatwerkAutomatisering = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {whyMaatwerkItems.map((item, index) => (
-              <Card key={index} className="card-elegant h-full">
+            {whyMaatwerkItems.map((item, index) => <Card key={index} className="card-elegant h-full">
                 <CardHeader>
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
                     <item.icon className="h-6 w-6 text-primary" strokeWidth={2} />
@@ -189,8 +162,7 @@ const MaatwerkAutomatisering = () => {
                     {item.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -215,13 +187,10 @@ const MaatwerkAutomatisering = () => {
           </div>
           
           {/* Stepper */}
-          <div 
-            ref={stepperRef}
-            className="flex gap-6 overflow-x-auto pb-4 scroll-snap-type-x scrollbar-hide mb-8"
-            style={{ scrollBehavior: 'smooth' }}
-          >
-            {workSteps.map((step, index) => (
-              <Card key={index} className="card-elegant min-w-[320px] lg:min-w-[280px] flex-shrink-0 scroll-snap-align-start">
+          <div ref={stepperRef} className="flex gap-6 overflow-x-auto pb-4 scroll-snap-type-x scrollbar-hide mb-8" style={{
+          scrollBehavior: 'smooth'
+        }}>
+            {workSteps.map((step, index) => <Card key={index} className="card-elegant min-w-[320px] lg:min-w-[280px] flex-shrink-0 scroll-snap-align-start">
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="flex items-center justify-center w-8 h-8 bg-primary text-primary-foreground rounded-full font-bold text-sm">
@@ -238,8 +207,7 @@ const MaatwerkAutomatisering = () => {
                     {step.info}
                   </Badge>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
           
           <p className="text-sm text-muted-foreground italic max-w-2xl">
@@ -258,8 +226,7 @@ const MaatwerkAutomatisering = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {includedItems.map((item, index) => (
-              <Card key={index} className="card-elegant h-full">
+            {includedItems.map((item, index) => <Card key={index} className="card-elegant h-full">
                 <CardHeader>
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
                     <item.icon className="h-6 w-6 text-primary" strokeWidth={2} />
@@ -271,8 +238,7 @@ const MaatwerkAutomatisering = () => {
                     {item.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -340,22 +306,14 @@ const MaatwerkAutomatisering = () => {
             </p>
           </div>
           
-          <div 
-            className="flex gap-5 md:gap-7 items-center justify-start
+          <div className="flex gap-5 md:gap-7 items-center justify-start
                        overflow-x-auto scrollbar-hide snap-x snap-mandatory
-                       md:flex-wrap md:overflow-visible mb-6"
-          >
-            {integrationLogos.map((logo, index) => (
-              <div key={index} className="flex-shrink-0 snap-start">
+                       md:flex-wrap md:overflow-visible mb-6">
+            {integrationLogos.map((logo, index) => <div key={index} className="flex-shrink-0 snap-start">
                 <div className="flex items-center justify-center h-20 px-6 border border-border rounded-[14px] bg-background">
-                  <img 
-                    src={`/logos/${logo.src}`} 
-                    alt={logo.alt}
-                    className="h-16 w-auto object-contain"
-                  />
+                  <img src={`/logos/${logo.src}`} alt={logo.alt} className="h-16 w-auto object-contain" />
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <div className="text-right">
@@ -377,17 +335,10 @@ const MaatwerkAutomatisering = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <ul className="space-y-4">
-              {[
-                "API-first",
-                "Hosting zoveel mogelijk binnen de EU", 
-                "Klantdata wordt nooit gebruikt om taalmodellen te trainen",
-                "DPA/AVG-afspraken mogelijk"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
+              {["API-first", "Hosting zoveel mogelijk binnen de EU", "Klantdata wordt nooit gebruikt om taalmodellen te trainen", "DPA/AVG-afspraken mogelijk"].map((item, index) => <li key={index} className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" strokeWidth={2} />
                   <span className="text-muted-foreground">{item}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
             
             <div className="text-sm text-muted-foreground">
@@ -427,16 +378,10 @@ const MaatwerkAutomatisering = () => {
           </div>
           
           <ul className="space-y-4 max-w-3xl">
-            {[
-              "Een procesowner en beslisser",
-              "Toegang tot relevante tools en voorbeelddata (sandbox waar mogelijk)",
-              "Heldere use-case en droomscenario; wij toetsen vooraf wat haalbaar is en leggen een concreet plan voor"
-            ].map((item, index) => (
-              <li key={index} className="flex items-start gap-3">
+            {["Een procesowner en beslisser", "Toegang tot relevante tools en voorbeelddata (sandbox waar mogelijk)", "Heldere use-case en droomscenario; wij toetsen vooraf wat haalbaar is en leggen een concreet plan voor"].map((item, index) => <li key={index} className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2.5 flex-shrink-0" />
                 <span className="text-muted-foreground">{item}</span>
-              </li>
-            ))}
+              </li>)}
           </ul>
         </div>
       </section>
@@ -451,58 +396,27 @@ const MaatwerkAutomatisering = () => {
           </div>
           
           <div className="max-w-4xl space-y-4">
-            {faqItems.map((item) => (
-              <Card key={item.id} className="card-elegant">
-                <div 
-                  className="w-full cursor-pointer"
-                  onClick={() => toggleFaq(item.id)}
-                >
+            {faqItems.map(item => <Card key={item.id} className="card-elegant">
+                <div className="w-full cursor-pointer" onClick={() => toggleFaq(item.id)}>
                   <CardHeader className="flex flex-row items-center justify-between py-6 hover:bg-surface-mist transition-colors">
                     <h3 className="text-lg font-semibold text-foreground">
                       {item.question}
                     </h3>
-                    <ChevronDown 
-                      className={`h-5 w-5 text-muted-foreground transition-transform ${
-                        openFaq === item.id ? 'transform rotate-180' : ''
-                      }`} 
-                      strokeWidth={2} 
-                    />
+                    <ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform ${openFaq === item.id ? 'transform rotate-180' : ''}`} strokeWidth={2} />
                   </CardHeader>
                 </div>
-                {openFaq === item.id && (
-                  <CardContent className="pt-0 pb-6">
+                {openFaq === item.id && <CardContent className="pt-0 pb-6">
                     <p className="text-muted-foreground">
                       {item.answer}
                     </p>
-                  </CardContent>
-                )}
-              </Card>
-            ))}
+                  </CardContent>}
+              </Card>)}
           </div>
         </div>
       </section>
 
       {/* Slot CTA */}
-      <section className="py-14">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="max-w-4xl">
-            <h2 className="text-foreground mb-6">
-              Samen ruimte maken voor werk dat telt?
-            </h2>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg">
-                <a href="/plan">Plan gratis gesprek</a>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="/cases">Bekijk cases</a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+      
+    </div>;
 };
-
 export default MaatwerkAutomatisering;
