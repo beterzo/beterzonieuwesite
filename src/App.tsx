@@ -14,6 +14,7 @@ import Privacy from "./pages/Privacy";
 import FAQ from "./pages/FAQ";
 import AgentAtelier from "./pages/AgentAtelier";
 import MaatwerkAutomatisering from "./pages/MaatwerkAutomatisering";
+import ToetsGenerator from "./pages/ToetsGenerator";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
               <Route path="/veelgestelde-vragen" element={<FAQ />} />
               <Route path="/diensten/agent-atelier" element={<AgentAtelier />} />
               <Route path="/diensten/maatwerk-automatisering" element={<MaatwerkAutomatisering />} />
+              <Route path="/diensten/toetsgenerator" element={<ToetsGenerator />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

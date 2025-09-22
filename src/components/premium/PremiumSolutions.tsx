@@ -89,8 +89,16 @@ export function PremiumSolutions() {
                   ))}
                 </div>
                 
-                <Button variant="outline" className="w-full btn-secondary">
-                  Meer info
+                <Button 
+                  variant="outline" 
+                  className="w-full btn-secondary"
+                  asChild={solution.title === "Toetsgenerator"}
+                >
+                  {solution.title === "Toetsgenerator" ? (
+                    <a href="/diensten/toetsgenerator">Bekijk voorbeeld</a>
+                  ) : (
+                    "Meer info"
+                  )}
                 </Button>
               </div>
             ))}
