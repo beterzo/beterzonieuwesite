@@ -21,7 +21,7 @@ const helpPoints = [
 
 const clientLogos = ["Doxis", "Lek Sloopwerken", "Vinster", "Educared", "De Groene Wereld", "Bureau Reuring"];
 
-export default function About() {
+export default function OverOns() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -131,11 +131,8 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="h-12 px-6 text-base font-semibold">
-                Plan kennismaking
-              </Button>
-              <Button variant="outline" className="h-12 px-6 text-base font-semibold border-2 border-foreground hover:bg-surface-mist">
-                Bekijk cases
+              <Button asChild className="h-12 px-6 text-base font-semibold">
+                <a href="/plan">Plan kennismaking</a>
               </Button>
             </div>
           </div>
