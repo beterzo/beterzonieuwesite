@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, Clock, FileText, Users, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface StepData {
@@ -232,8 +233,8 @@ export function HorizontalStepper({
 
                       {/* CTA Row */}
                       <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                        <Button className="btn-primary hover:-translate-y-0.5">
-                          Plan kennismaking
+                        <Button asChild className="btn-primary hover:-translate-y-0.5">
+                          <Link to="/plan">Plan kennismaking</Link>
                         </Button>
                         
                       </div>

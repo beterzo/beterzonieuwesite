@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Clock, FileText, Users, Target } from "lucide-react";
 
 interface InfoCard {
@@ -73,8 +74,8 @@ export function StepContent({ step, isActive }: StepContentProps) {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="btn-primary">
-                Plan kennismaking
+              <Button asChild className="btn-primary">
+                <Link to="/plan">Plan kennismaking</Link>
               </Button>
               <Button variant="outline" className="btn-secondary">
                 Bekijk voorbeelden
