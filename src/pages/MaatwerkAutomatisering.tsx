@@ -351,7 +351,7 @@ const MaatwerkAutomatisering = () => {
                   <img 
                     src={`/logos/${logo.src}`} 
                     alt={logo.alt}
-                    className="h-6 w-auto object-contain"
+                    className="h-16 w-auto object-contain"
                   />
                 </div>
               </div>
