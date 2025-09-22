@@ -190,26 +190,6 @@ export default function HowWeWork() {
       
 
       {/* CTA Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl space-y-6">
-            <div className="space-y-3">
-              <h2 className="text-foreground">Klaar om te beginnen?</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Plan een kort gesprek en ontdek je snelste winst.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild className="btn-primary">
-                <a href="/plan-kennismaking">Plan gratis gesprek</a>
-              </Button>
-              <Button variant="outline" className="btn-secondary">
-                Bekijk voorbeelden
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>;
 }
