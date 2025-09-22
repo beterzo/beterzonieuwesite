@@ -41,7 +41,7 @@ const Services = () => {
   }];
   return <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="section-spacing bg-background">
+      <section className="py-8 lg:py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-foreground mb-6">
@@ -51,7 +51,7 @@ const Services = () => {
               Oplossingen die specifiek ruimte maken in jullie werk. Volledig op maat, zonder ruis.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Button asChild size="lg">
                 <a href="/plan">Plan gratis gesprek</a>
               </Button>
@@ -154,18 +154,18 @@ const Services = () => {
       </section>
 
       {/* Maatwerk Examples */}
-      <section className="section-spacing bg-background">
+      <section className="py-8 lg:py-12 bg-background">
         <div className="container mx-auto px-6">
-          <div className="mb-8">
-            <h2 className="text-foreground mb-4">
-              Voorbeelden van maatwerk
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl">
-              Een greep uit de oplossingen die we hebben gebouwd voor verschillende bedrijven.
-            </p>
-          </div>
-          
-          <div className="premium-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="mb-6">
+              <h2 className="text-foreground mb-3">
+                Voorbeelden van maatwerk
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl">
+                Een greep uit de oplossingen die we hebben gebouwd voor verschillende bedrijven.
+              </p>
+            </div>
+            
+            <div className="premium-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             <Card className="card-elegant">
               <CardHeader>
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
@@ -266,13 +266,13 @@ const Services = () => {
       
 
       {/* Example Cases */}
-      <section className="section-spacing bg-surface-alt">
+      <section className="py-8 lg:py-12 bg-surface-alt">
         <div className="container mx-auto px-6">
-          <div className="mb-12">
-            <h2 className="text-foreground mb-4">
-              Voorbeelden uit maatwerk
-            </h2>
-          </div>
+            <div className="mb-8">
+              <h2 className="text-foreground mb-3">
+                Voorbeelden uit maatwerk
+              </h2>
+            </div>
           
           <div className="premium-grid grid-cols-1 lg:grid-cols-2 gap-8">
             <Card className="card-elegant">
@@ -320,7 +320,7 @@ const Services = () => {
       
 
       {/* Data & Security */}
-      <section className="section-spacing bg-surface-alt">
+      <section className="py-8 lg:py-12 bg-surface-alt">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl space-y-6">
             <h3 className="text-3xl font-bold text-foreground">
@@ -355,7 +355,7 @@ const Services = () => {
       </section>
 
       {/* Mini FAQ */}
-      <section className="section-spacing bg-background">
+      <section className="py-8 lg:py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <div className="space-y-4">
