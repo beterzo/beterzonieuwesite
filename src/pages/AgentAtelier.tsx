@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { FileText, Target, TrendingUp, Clock, Search, GraduationCap, Eye, Shield, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
+import agentAtelierTraining from "@/assets/agent-atelier-training.jpg";
 const timelineSteps = [{
   day: "Dag 1",
   title: "Analyse & mapping",
@@ -124,9 +125,13 @@ export default function AgentAtelier() {
               </div>
             </div>
             
-            {/* Right Column - Optional Image Placeholder */}
+            {/* Right Column - Training Image */}
             <div className="hidden lg:block">
-              <div className="aspect-[4/5] bg-surface-mist rounded-[14px] border border-border"></div>
+              <img 
+                src={agentAtelierTraining} 
+                alt="Agent Atelier training sessie in moderne conferentieruimte met team"
+                className="aspect-[4/5] w-full object-cover rounded-[14px] border border-border"
+              />
             </div>
           </div>
         </div>
