@@ -130,7 +130,7 @@ export default function AgentAtelier() {
               <img 
                 src={agentAtelierTraining} 
                 alt="Agent Atelier training sessie in moderne conferentieruimte met team"
-                className="aspect-[4/5] w-full object-cover rounded-[14px] border border-border"
+                className="aspect-[4/5] w-full object-contain rounded-[14px] border border-border bg-surface-mist"
               />
             </div>
           </div>
