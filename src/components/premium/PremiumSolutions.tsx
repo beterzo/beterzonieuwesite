@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Palette, FileText, Cog, MessageSquare } from "lucide-react";
+import { Palette, FileText, Cog, MessageSquare, Mail, ScrollText } from "lucide-react";
 
 const solutions = [
   {
@@ -23,13 +23,13 @@ const solutions = [
     ],
   },
   {
-    icon: FileText,
-    title: "Toetsgenerator",
-    description: "23% tijdwinst bij vragen maken",
+    icon: Mail,
+    title: "Slimme mailfiltering",
+    description: "AI sorteert automatisch inkomende e-mails in categorieën",
     results: [
-      "Automatische vraagstelling",
-      "Aangepaste moeilijkheid",
-      "Snelle correctie"
+      "85% minder handmatig sorteren",
+      "Automatische prioritering",
+      "Leert van jouw voorkeuren"
     ],
   },
   {
@@ -40,6 +40,26 @@ const solutions = [
       "Instant antwoorden",
       "Natuurlijke gesprekken",
       "90% automatische afhandeling"
+    ],
+  },
+  {
+    icon: FileText,
+    title: "Toetsgenerator",
+    description: "23% tijdwinst bij vragen maken",
+    results: [
+      "Automatische vraagstelling",
+      "Aangepaste moeilijkheid",
+      "Snelle correctie"
+    ],
+  },
+  {
+    icon: ScrollText,
+    title: "Contracten automatiseren",
+    description: "Van intake tot getekend contract in enkele clicks",
+    results: [
+      "70% sneller proces",
+      "Minder fouten door sjablonen",
+      "Automatische follow-up"
     ],
   },
 ];
@@ -59,7 +79,7 @@ export function PremiumSolutions() {
         
         {/* Horizontal scrollable on mobile, grid on desktop */}
         <div className="overflow-x-auto lg:overflow-visible">
-          <div className="flex lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 min-w-max lg:min-w-0">
+          <div className="flex lg:grid lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 min-w-max lg:min-w-0">
             {solutions.map((solution, index) => (
               <div 
                 key={index} 
