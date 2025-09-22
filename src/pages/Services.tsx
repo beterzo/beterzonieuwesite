@@ -211,7 +211,7 @@ const Services = () => {
 
           <div className="flex justify-center">
             <Button asChild variant="outline">
-              <a href="/cases">Naar alle voorbeelden</a>
+              
             </Button>
           </div>
         </div>
@@ -239,11 +239,7 @@ const Services = () => {
                        md:overflow-visible mb-6">
             {integrationLogos.map(logo => <li key={logo.key} className="flex-shrink-0 snap-start">
                 <button className="flex items-center justify-center h-20 px-6 border border-border rounded-xl bg-transparent hover:border-slate-400 hover:translate-y-[-1px] transition-all duration-200 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-1" aria-label={`${logo.alt} integratie`}>
-                  <img 
-                    src={`/logos/${logo.src}`} 
-                    alt={logo.alt}
-                    className="h-16 object-contain transition-all duration-200"
-                  />
+                  <img src={`/logos/${logo.src}`} alt={logo.alt} className="h-16 object-contain transition-all duration-200" />
                 </button>
               </li>)}
           </ul>
