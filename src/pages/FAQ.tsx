@@ -169,9 +169,7 @@ export default function FAQ() {
               <Button className="btn-primary">
                 Plan kennismaking
               </Button>
-              <Button variant="outline" className="btn-secondary">
-                Bekijk cases
-              </Button>
+              
             </div>
           </div>
         </div>
