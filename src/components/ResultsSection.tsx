@@ -42,7 +42,7 @@ export function ResultsSection() {
         {/* Note */}
         <div className="mb-8 md:mb-10">
           <p className="text-xl text-muted-foreground leading-relaxed max-w-[720px]">
-            Volgens onderzoek van McKinsey kan tot circa 70% van taken worden geautomatiseerd. Resultaten verschillen per team en proces.
+            Volgens onderzoek van McKinsey kan tot circa 70% tijd worden bespaard doormiddel van automatisering. Resultaten verschillen per team en proces.
           </p>
         </div>
 

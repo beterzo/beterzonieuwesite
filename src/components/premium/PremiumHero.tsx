@@ -5,9 +5,9 @@ export function PremiumHero() {
   return (
     <section className="section-spacing">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
-          <div className="space-y-8">
+          <div className="lg:col-span-2 space-y-8">
             <h1 className="text-foreground">
               Welkom bij Beterzo
             </h1>
@@ -35,8 +35,8 @@ export function PremiumHero() {
           </div>
           
           {/* Right Column - Image Card */}
-          <div className="lg:flex justify-end items-center">
-            <div className="relative w-full lg:w-[65%] xl:w-[60%] min-w-[360px] max-w-[720px] lg:ml-8">
+          <div className="lg:col-span-3 lg:flex justify-end items-center">
+            <div className="relative w-full min-w-[360px] max-w-[720px]">
               {/* Image Container */}
               <div className="relative group overflow-hidden rounded-[14px] lg:rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
                 <div className="aspect-[3/4] lg:aspect-[3/4] relative">
