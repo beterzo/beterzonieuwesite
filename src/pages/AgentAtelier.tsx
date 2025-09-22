@@ -117,7 +117,7 @@ export default function AgentAtelier() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild className="btn-primary">
-                  <a href="/plan">Plan gratis gesprek</a>
+                  <a href="/contact">Plan gratis gesprek</a>
                 </Button>
                 <Button asChild variant="outline" className="btn-secondary">
                   <a href="/hoe-wij-werken">Hoe wij werken</a>
@@ -326,7 +326,7 @@ export default function AgentAtelier() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-primary">
-                <a href="/plan">Plan gratis gesprek</a>
+                <a href="/contact">Plan gratis gesprek</a>
               </Button>
               <Button asChild variant="outline" className="btn-secondary">
                 <a href="/cases">Bekijk cases</a>

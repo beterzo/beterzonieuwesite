@@ -33,7 +33,7 @@ export function PremiumFooter() {
                 Wij maken technologie begrijpelijk en snel inzetbaar.
               </p>
               <Button asChild className="btn-primary">
-                <a href="/plan">Plan gratis gesprek</a>
+                <a href="/contact">Plan gratis gesprek</a>
               </Button>
             </div>
             

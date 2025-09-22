@@ -118,7 +118,7 @@ export function PremiumMethod() {
             <a href="/hoe-wij-werken">Bekijk onze werkwijze</a>
           </Button>
           <Button asChild variant="outline" className="btn-secondary">
-            <a href="/plan">Plan gratis gesprek</a>
+            <a href="/contact">Plan gratis gesprek</a>
           </Button>
         </div>
       </div>

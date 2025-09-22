@@ -78,7 +78,7 @@ export default function Footer() {
                   className="w-full md:w-auto bg-primary hover:bg-primary-hover text-white h-12 px-6 text-base font-semibold rounded-[14px]"
                   asChild
                 >
-                  <a href="/plan">
+                  <a href="/contact">
                     Plan gratis gesprek
                   </a>
                 </Button>

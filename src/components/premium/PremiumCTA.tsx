@@ -53,7 +53,7 @@ export function PremiumCTA() {
         
         <div>
           <Button asChild className="btn-primary text-lg px-12 py-6">
-            <a href="/plan">Plan gratis gesprek</a>
+            <a href="/contact">Plan gratis gesprek</a>
           </Button>
         </div>
       </div>

@@ -126,7 +126,7 @@ const MaatwerkAutomatisering = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Button asChild size="lg">
-                <a href="/plan">Plan gratis gesprek</a>
+                <a href="/contact">Plan gratis gesprek</a>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <a href="/cases">Bekijk cases</a>
