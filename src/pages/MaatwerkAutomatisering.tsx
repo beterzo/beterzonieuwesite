@@ -320,7 +320,7 @@ const MaatwerkAutomatisering = () => {
           
           <div className="text-right">
               <Button asChild variant="link" className="p-0 h-auto font-semibold text-primary hover:text-primary-hover underline">
-                <a href="/plan-kennismaking?topic=integratie">Ontbreekt jullie systeem? Stel je vraag</a>
+                <a href="/plan">Ontbreekt jullie systeem? Stel je vraag</a>
               </Button>
           </div>
         </div>

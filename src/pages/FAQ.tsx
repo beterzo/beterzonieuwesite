@@ -107,7 +107,7 @@ export default function FAQ() {
                     Niet gevonden wat je zoekt?
                   </p>
                   <Button variant="link" className="p-0 h-auto text-primary font-semibold hover:underline" asChild>
-                    <a href="mailto:hi@beterzo.tech" className="flex items-center gap-2">
+                    <a href="/plan" className="flex items-center gap-2">
                       <Mail className="h-4 w-4" />
                       Stuur ons een bericht
                     </a>
