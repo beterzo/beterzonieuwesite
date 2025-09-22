@@ -5,7 +5,7 @@ const footerLinks = {
     { name: "Home", href: "/" },
     { name: "Diensten", href: "/diensten" },
     { name: "Over ons", href: "/over-ons" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/plan-kennismaking" },
     { name: "Privacy", href: "/privacy" },
   ],
   services: [
@@ -33,7 +33,7 @@ export function PremiumFooter() {
                 Wij maken technologie begrijpelijk en snel inzetbaar.
               </p>
               <Button asChild className="btn-primary">
-                <a href="/contact">Plan gratis gesprek</a>
+                <a href="/plan-kennismaking">Plan gratis gesprek</a>
               </Button>
             </div>
             

@@ -126,7 +126,7 @@ const MaatwerkAutomatisering = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Button asChild size="lg">
-                <a href="/contact">Plan gratis gesprek</a>
+                <a href="/plan-kennismaking">Plan gratis gesprek</a>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <a href="/cases">Bekijk cases</a>
@@ -319,9 +319,9 @@ const MaatwerkAutomatisering = () => {
           </div>
           
           <div className="text-right">
-            <Button asChild variant="link" className="p-0 h-auto font-semibold text-primary hover:text-primary-hover underline">
-              <a href="/contact?topic=integratie">Ontbreekt jullie systeem? Stel je vraag</a>
-            </Button>
+              <Button asChild variant="link" className="p-0 h-auto font-semibold text-primary hover:text-primary-hover underline">
+                <a href="/plan-kennismaking?topic=integratie">Ontbreekt jullie systeem? Stel je vraag</a>
+              </Button>
           </div>
         </div>
       </section>

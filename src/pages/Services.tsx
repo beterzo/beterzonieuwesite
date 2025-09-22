@@ -53,7 +53,7 @@ const Services = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Button asChild size="lg">
-                <a href="/contact">Plan gratis gesprek</a>
+                <a href="/plan-kennismaking">Plan gratis gesprek</a>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <a href="/cases">Bekijk cases</a>
@@ -144,7 +144,7 @@ const Services = () => {
                     <a href="/diensten/maatwerk-automatisering">Bekijk maatwerk</a>
                   </Button>
                   <Button asChild variant="outline" className="w-full">
-                    <a href="/contact">Plan gratis gesprek</a>
+                    <a href="/plan-kennismaking">Plan gratis gesprek</a>
                   </Button>
                 </div>
               </CardContent>

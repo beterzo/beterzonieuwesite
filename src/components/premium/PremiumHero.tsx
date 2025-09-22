@@ -26,7 +26,7 @@ export function PremiumHero() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-primary">
-                <a href="/contact">Plan gratis gesprek</a>
+                <a href="/plan-kennismaking">Plan gratis gesprek</a>
               </Button>
               <Button asChild variant="outline" className="btn-secondary">
                 <a href="/diensten">Bekijk voorbeelden</a>
