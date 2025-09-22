@@ -166,8 +166,8 @@ export default function FAQ() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-primary">
-                Plan kennismaking
+              <Button className="btn-primary" asChild>
+                <a href="/plan">Plan kennismaking</a>
               </Button>
               
             </div>
@@ -178,8 +178,8 @@ export default function FAQ() {
       {/* Sticky CTA for Mobile */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border p-4 z-20">
         <div className="container mx-auto px-2">
-          <Button className="btn-primary w-full">
-            Plan kennismaking
+          <Button className="btn-primary w-full" asChild>
+            <a href="/plan">Plan kennismaking</a>
           </Button>
         </div>
       </div>

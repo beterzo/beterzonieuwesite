@@ -7,7 +7,6 @@ const footerLinks = {
     { name: "Home", href: "/" },
     { name: "Over ons", href: "/over-ons" },
     { name: "Hoe wij werken", href: "/hoe-wij-werken" },
-    { name: "Cases", href: "/cases" },
     { name: "FAQ", href: "/veelgestelde-vragen" },
     { name: "Contact", href: "/plan-kennismaking" }
   ]
