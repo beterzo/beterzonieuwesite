@@ -8,7 +8,7 @@ export function PremiumClients() {
     {
       name: "Doxis",
       logo: "/logos/doxis.png",
-      description: "Voor Doxis hebben we een slimme trechter voor DAS-aanvragen opgezet met automatische filtering, classificatie en routering naar de juiste collega, waardoor urgente cases sneller worden opgepakt en handwerk verdwijnt."
+      description: "Voor Doxis hebben we een slimme email trechter voor aanbestedingen opgezet met automatische filtering, classificatie en routering naar de juiste collega, waardoor urgente cases sneller worden opgepakt en handwerk verdwijnt."
     },
     {
       name: "Vinster",
