@@ -11,6 +11,8 @@ const solutions = [
       "75% minder handmatig werk",
       "24/7 beschikbaarheid"
     ],
+    hasButton: true,
+    link: "/diensten/agent-atelier"
   },
   {
     icon: Cog,
@@ -21,46 +23,37 @@ const solutions = [
       "Naadloze integratie",
       "Directe ROI zichtbaar"
     ],
+    hasButton: true,
+    link: "/diensten/maatwerk-automatisering"
   },
   {
     icon: Mail,
     title: "Slimme mailfiltering",
-    description: "AI sorteert automatisch inkomende e-mails in categorieën",
-    results: [
-      "85% minder handmatig sorteren",
-      "Automatische prioritering",
-      "Leert van jouw voorkeuren"
-    ],
+    description: "Voor een Nederlandse onderwijsorganisatie hebben we een AI-systeem ontwikkeld dat dagelijks honderden e-mails automatisch sorteert en prioriteert. Het systeem leert van handmatige correcties en wordt steeds nauwkeuriger.",
+    detailedResults: "Door de implementatie daalde de tijd voor mailverwerking van 3 uur naar 30 minuten per dag. Belangrijke e-mails worden nu binnen 5 minuten geïdentificeerd en doorgestuurd naar de juiste persoon. Het systeem heeft een nauwkeurigheid van 94% bereikt.",
+    hasButton: false
   },
   {
     icon: MessageSquare,
     title: "AI-klantenservice",
-    description: "24/7, meertalig, escalaties",
-    results: [
-      "Instant antwoorden",
-      "Natuurlijke gesprekken",
-      "90% automatische afhandeling"
-    ],
+    description: "Voor een adviesbureau hebben we een meertalige AI-chatbot geïmplementeerd die 24/7 klantenvragen beantwoordt in het Nederlands, Engels en Duits. De bot escaleert complexe vragen automatisch naar menselijke medewerkers.",
+    detailedResults: "Het resultaat: 90% van alle vragen wordt nu automatisch afgehandeld, de gemiddelde responstijd daalde van 4 uur naar 30 seconden, en klanttevredenheid steeg met 23%. De organisatie bespaart wekelijks 35 uur aan handmatige klantenservice.",
+    hasButton: false
   },
   {
     icon: FileText,
     title: "Toetsgenerator",
-    description: "23% tijdwinst bij vragen maken",
-    results: [
-      "Automatische vraagstelling",
-      "Aangepaste moeilijkheid",
-      "Snelle correctie"
-    ],
+    description: "Voor een onderwijsinstelling ontwikkelden we een AI-tool die automatisch toetsvragen genereert op basis van studiemateriaal. Docenten kunnen het gewenste niveau en vraagtype specificeren, waarna de AI meerkeuzevragen, open vragen en casussen genereert.",
+    detailedResults: "Docenten besparen nu 23% tijd bij het maken van toetsen. De kwaliteit van vragen is consistent hoog en de tool genereert automatisch verschillende moeilijkheidsniveaus. Per toets worden gemiddeld 2,5 uur minder besteed aan vraagcreatie.",
+    hasButton: true,
+    link: "/diensten/toetsgenerator"
   },
   {
     icon: ScrollText,
     title: "Contracten automatiseren",
-    description: "Van intake tot getekend contract in enkele clicks",
-    results: [
-      "70% sneller proces",
-      "Minder fouten door sjablonen",
-      "Automatische follow-up"
-    ],
+    description: "Voor een juridisch adviesbureau automatiseerden we het complete contractproces. Van intake-formulier tot getekend contract verloopt nu via een geïntegreerd systeem dat sjablonen gebruikt, clausules aanpast en herinneringen verstuurt.",
+    detailedResults: "Het contractproces is 70% sneller geworden - van gemiddeld 5 dagen naar 1,5 dag. Fouten door handmatig typen zijn geëlimineerd en clients ontvangen automatisch statusupdates. De organisatie kan nu 40% meer contracten verwerken met hetzelfde team.",
+    hasButton: false
   },
 ];
 
@@ -100,26 +93,34 @@ export function PremiumSolutions() {
                   </div>
                 </div>
                 
-                <div className="space-y-3">
-                  {solution.results.map((result, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
-                      {result}
+                <div className="space-y-4">
+                  {solution.results ? (
+                    <div className="space-y-3">
+                      {solution.results.map((result, idx) => (
+                        <div key={idx} className="flex items-center text-sm text-muted-foreground">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                          {result}
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  ) : (
+                    <p className="text-muted-foreground leading-relaxed text-sm">
+                      {solution.detailedResults}
+                    </p>
+                  )}
                 </div>
                 
-                <Button 
-                  variant="outline" 
-                  className="w-full btn-secondary"
-                  asChild={solution.title === "Toetsgenerator"}
-                >
-                  {solution.title === "Toetsgenerator" ? (
-                    <a href="/diensten/toetsgenerator">Bekijk voorbeeld</a>
-                  ) : (
-                    "Meer info"
-                  )}
-                </Button>
+                {solution.hasButton && (
+                  <Button 
+                    variant="outline" 
+                    className="w-full btn-secondary"
+                    asChild
+                  >
+                    <a href={solution.link}>
+                      {solution.title === "Toetsgenerator" ? "Bekijk voorbeeld" : "Meer info"}
+                    </a>
+                  </Button>
+                )}
               </div>
             ))}
           </div>
