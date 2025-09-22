@@ -105,13 +105,10 @@ const MaatwerkAutomatisering = () => {
   ];
 
   const integrationLogos = [
-    { src: "microsoft-365-color.svg", alt: "Microsoft 365" },
-    { src: "google-workspace-color.svg", alt: "Google Workspace" },
-    { src: "afas-color.svg", alt: "AFAS" },
-    { src: "exact-color.svg", alt: "Exact" },
-    { src: "slack-color.svg", alt: "Slack" },
-    { src: "hubspot-color.svg", alt: "HubSpot" },
-    { src: "twilio-color.svg", alt: "Twilio" }
+    { src: "exact-color.png", alt: "Exact" },
+    { src: "google-workspace-logo.png", alt: "Google Workspace" },
+    { src: "slack-color.png", alt: "Slack" },
+    { src: "microsoft-365-color.png", alt: "Microsoft 365" }
   ];
 
   const faqItems = [
