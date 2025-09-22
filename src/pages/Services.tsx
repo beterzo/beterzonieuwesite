@@ -174,8 +174,19 @@ const Services = () => {
                 <CardTitle className="text-lg">Slimme mailfiltering</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Inboxregels die leren, prioriteren en automatisch doorzetten naar de juiste collega.
+                <p className="text-muted-foreground mb-4">
+                  Een AI-systeem dat inkomende emails analyseert op onderwerp, urgentie en afzender. Het systeem leert van jullie gedrag en routeert automatisch emails naar de juiste collega of afdeling.
+                </p>
+                <div className="space-y-2 mb-4">
+                  <p className="text-sm font-medium text-foreground">Wat het oplevert:</p>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• 70% minder tijd aan inbox-management</li>
+                    <li>• Snellere reactietijden naar klanten</li>
+                    <li>• Geen gemiste belangrijke emails meer</li>
+                  </ul>
+                </div>
+                <p className="text-xs text-muted-foreground italic">
+                  Voorbeeld: Klantvragen over facturen gaan automatisch naar boekhouding, technische vragen naar support.
                 </p>
               </CardContent>
             </Card>
@@ -188,8 +199,19 @@ const Services = () => {
                 <CardTitle className="text-lg">Contracten automatiseren</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Sjabloon uploaden, data inlezen, automatisch invullen en versturen voor ondertekening.
+                <p className="text-muted-foreground mb-4">
+                  Een workflow die contractsjablonen koppelt aan jullie CRM-data. Upload een sjabloon, kies de klant, en het systeem vult automatisch alle gegevens in en verstuurt het contract voor digitale ondertekening.
+                </p>
+                <div className="space-y-2 mb-4">
+                  <p className="text-sm font-medium text-foreground">Wat het oplevert:</p>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Van 45 naar 5 minuten per contract</li>
+                    <li>• Geen typfouten in contractgegevens</li>
+                    <li>• Directe digitale ondertekening</li>
+                  </ul>
+                </div>
+                <p className="text-xs text-muted-foreground italic">
+                  Voorbeeld: Nieuwe klant in Exact? Contract wordt automatisch gegenereerd en verzonden.
                 </p>
               </CardContent>
             </Card>
@@ -202,8 +224,19 @@ const Services = () => {
                 <CardTitle className="text-lg">Klantcommunicatie</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Automatische follow-ups, gepersonaliseerde berichten en slimme doorverwijzingen.
+                <p className="text-muted-foreground mb-4">
+                  Een systeem dat klantinteracties monitort en automatisch gepersonaliseerde follow-ups verstuurt via email, WhatsApp of SMS. Het kent jullie klanten en past de toon en timing aan.
+                </p>
+                <div className="space-y-2 mb-4">
+                  <p className="text-sm font-medium text-foreground">Wat het oplevert:</p>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• 40% meer klantretentie door tijdige follow-ups</li>
+                    <li>• Geen gemiste herinneringen meer</li>
+                    <li>• Persoonlijke communicatie op schaal</li>
+                  </ul>
+                </div>
+                <p className="text-xs text-muted-foreground italic">
+                  Voorbeeld: 3 dagen na levering krijgt elke klant automatisch een persoonlijk dankbericht.
                 </p>
               </CardContent>
             </Card>
@@ -279,14 +312,17 @@ const Services = () => {
                 <CardTitle className="text-lg">Slimme mailfiltering</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-6">
-                  Inboxregels die leren, prioriteren en automatisch doorzetten naar de juiste collega of flow.
+                <p className="text-muted-foreground mb-4">
+                  Een AI-systeem dat inkomende emails analyseert op onderwerp, urgentie en afzender. Het systeem leert van jullie gedrag en routeert automatisch emails naar de juiste collega of afdeling.
                 </p>
-                <Button asChild variant="outline" size="sm">
-                  <a href="/cases/slimme-mailfiltering">
-                    Bekijk voorbeeld <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
+                <div className="space-y-2">
+                  <p className="text-sm font-medium text-foreground">Resultaat:</p>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• 70% minder tijd aan inbox-management</li>
+                    <li>• Snellere reactietijden naar klanten</li>
+                    <li>• Geen gemiste belangrijke emails meer</li>
+                  </ul>
+                </div>
               </CardContent>
             </Card>
 
@@ -298,14 +334,17 @@ const Services = () => {
                 <CardTitle className="text-lg">Contracten automatiseren</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-6">
-                  Sjabloon uploaden, data inlezen, automatisch invullen en versturen voor ondertekening.
+                <p className="text-muted-foreground mb-4">
+                  Een workflow die contractsjablonen koppelt aan jullie CRM-data. Upload een sjabloon, kies de klant, en het systeem vult automatisch alle gegevens in en verstuurt het contract voor digitale ondertekening.
                 </p>
-                <Button asChild variant="outline" size="sm">
-                  <a href="/cases/contracten-automatiseren">
-                    Bekijk voorbeeld <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
+                <div className="space-y-2">
+                  <p className="text-sm font-medium text-foreground">Resultaat:</p>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Van 45 naar 5 minuten per contract</li>
+                    <li>• Geen typfouten in contractgegevens</li>
+                    <li>• Directe digitale ondertekening</li>
+                  </ul>
+                </div>
               </CardContent>
             </Card>
           </div>
