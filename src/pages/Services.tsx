@@ -64,7 +64,7 @@ const Services = () => {
       </section>
 
       {/* Main Services */}
-      <section className="section-spacing bg-surface-alt">
+      <section className="py-8 lg:py-12 bg-surface-alt">
         <div className="container mx-auto px-6">
           <div className="premium-grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Agent Atelier */}
