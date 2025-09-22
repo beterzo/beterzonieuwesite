@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, ArrowLeft } from "lucide-react";
 
 const MAX_FILE_SIZE = 10000000; // 10MB
@@ -24,6 +25,7 @@ type FormData = z.infer<typeof formSchema>;
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -39,20 +41,50 @@ export function ContactForm() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     
-    // Add small delay for anti-spam
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
     try {
-      // Here you would normally send the data to your API endpoint
-      // For now, we'll just simulate a successful submission
-      
-      console.log("Form data:", data);
-      
-      // Simulate success
+      // Check for honeypot (anti-spam)
+      if (data.honeypot) {
+        console.log("Bot detected");
+        return;
+      }
+
+      // Prepare data for webhook (exclude honeypot field)
+      const webhookData = {
+        name: data.name,
+        email: data.email,
+        organization: data.organization || "",
+        message: data.message,
+        timestamp: new Date().toISOString(),
+        source: "Beterzo Website Contact Form"
+      };
+
+      // Send to Make.com webhook
+      const response = await fetch("https://hook.eu2.make.com/4kgh7j2xw1373fbrna9wfhvvotqwih7h", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify(webhookData),
+      });
+
+      // Since we're using no-cors, we can't check the actual response
+      // But if we get here without an error, the request was sent
       setIsSubmitted(true);
+      
+      toast({
+        title: "Bericht verzonden!",
+        description: "We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.",
+      });
+
     } catch (error) {
       console.error("Form submission error:", error);
-      // Handle error - you could show a toast notification here
+      
+      toast({
+        title: "Er is iets misgegaan",
+        description: "Probeer het nogmaals of neem direct contact met ons op via hi@beterzo.tech",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
