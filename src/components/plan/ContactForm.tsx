@@ -48,12 +48,12 @@ export function ContactForm() {
         return;
       }
 
-      // Prepare data for webhook (exclude honeypot field)
+      // Prepare data for webhook with labels
       const webhookData = {
-        name: data.name,
-        email: data.email,
-        organization: data.organization || "",
-        message: data.message,
+        "Naam": data.name,
+        "Email": data.email,
+        "Organisatie": data.organization || "",
+        "Vraag": data.message,
         timestamp: new Date().toISOString(),
         source: "Beterzo Website Contact Form"
       };
