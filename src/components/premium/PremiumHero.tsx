@@ -43,7 +43,7 @@ export function PremiumHero() {
                   <img 
                     src={heroPresentationImage}
                     alt="Presentatie over automatisering tijdens een workshop"
-                    className="w-full h-full object-cover object-left"
+                    className="w-full h-full object-cover object-[30%_50%]"
                   />
                   {/* Subtle bottom gradient overlay */}
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/12 to-transparent pointer-events-none"></div>
