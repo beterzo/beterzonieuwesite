@@ -129,7 +129,7 @@ export default function ToetsGenerator() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-primary">
-                <a href="/plan">Plan demo</a>
+                <a href="/plan-gesprek">Plan demo</a>
               </Button>
               <Button variant="outline" className="btn-secondary">
                 Contact
@@ -347,7 +347,7 @@ export default function ToetsGenerator() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="btn-primary text-lg px-12 py-6">
-                <a href="/plan">Plan gratis demo</a>
+                <a href="/plan-gesprek">Plan gratis demo</a>
               </Button>
               <Button variant="outline" className="btn-secondary text-lg px-12 py-6">
                 Meer informatie

@@ -132,7 +132,7 @@ export default function OverOns() {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="h-12 px-6 text-base font-semibold">
-                <a href="/plan">Plan kennismaking</a>
+                <a href="/plan-gesprek">Plan kennismaking</a>
               </Button>
             </div>
           </div>

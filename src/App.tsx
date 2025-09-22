@@ -7,9 +7,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import OverOns from "./pages/OverOns";
-import HowWeWork from "./pages/HowWeWork";
+import HoeWijWerken from "./pages/HoeWijWerken";
 import Services from "./pages/Services";
-import Plan from "./pages/Plan";
+import PlanGesprek from "./pages/PlanGesprek";
 import Privacy from "./pages/Privacy";
 import FAQ from "./pages/FAQ";
 import AgentAtelier from "./pages/AgentAtelier";
@@ -31,12 +31,11 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/over-ons" element={<OverOns />} />
-              <Route path="/how-we-work" element={<HowWeWork />} />
-              <Route path="/hoe-wij-werken" element={<HowWeWork />} />
+              <Route path="/hoe-wij-werken" element={<HoeWijWerken />} />
               <Route path="/diensten" element={<Services />} />
-              <Route path="/plan" element={<Plan />} />
-              <Route path="/plan-gesprek" element={<Plan />} />
-              <Route path="/plan-kennismaking" element={<Plan />} />
+              <Route path="/plan-gesprek" element={<PlanGesprek />} />
+              <Route path="/plan" element={<PlanGesprek />} />
+              <Route path="/plan-kennismaking" element={<PlanGesprek />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/veelgestelde-vragen" element={<FAQ />} />

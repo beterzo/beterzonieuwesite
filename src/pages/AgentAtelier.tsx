@@ -242,7 +242,7 @@ export default function AgentAtelier() {
               <p className="text-base text-muted-foreground">
                 Staat jullie systeem er niet bij? Vraag{" "}
                 <Button asChild variant="link" className="p-0 h-auto font-semibold text-primary hover:text-primary-hover underline">
-                  <a href="/plan">hier</a>
+                  <a href="/plan-gesprek">hier</a>
                 </Button>
                 {" "}of we ook met jouw systeem kunnen koppelen!
               </p>

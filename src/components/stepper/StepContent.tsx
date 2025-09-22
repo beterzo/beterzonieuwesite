@@ -75,7 +75,7 @@ export function StepContent({ step, isActive }: StepContentProps) {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button asChild className="btn-primary">
-                <Link to="/plan">Plan kennismaking</Link>
+                <Link to="/plan-gesprek">Plan kennismaking</Link>
               </Button>
               <Button variant="outline" className="btn-secondary">
                 Bekijk voorbeelden

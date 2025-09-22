@@ -1,7 +1,7 @@
 import { ContactForm } from "@/components/plan/ContactForm";
 import { Mail, Phone } from "lucide-react";
 
-export default function Plan() {
+export default function PlanGesprek() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-6 py-16">

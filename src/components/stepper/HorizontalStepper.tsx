@@ -234,7 +234,7 @@ export function HorizontalStepper({
                       {/* CTA Row */}
                       <div className="flex flex-col sm:flex-row gap-3 pt-2">
                         <Button asChild className="btn-primary hover:-translate-y-0.5">
-                          <Link to="/plan">Plan kennismaking</Link>
+                          <Link to="/plan-gesprek">Plan kennismaking</Link>
                         </Button>
                         
                       </div>

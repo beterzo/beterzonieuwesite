@@ -107,7 +107,7 @@ export default function FAQ() {
                     Niet gevonden wat je zoekt?
                   </p>
                   <Button variant="link" className="p-0 h-auto text-primary font-semibold hover:underline" asChild>
-                    <a href="/plan" className="flex items-center gap-2">
+                    <a href="/plan-gesprek" className="flex items-center gap-2">
                       <Mail className="h-4 w-4" />
                       Stuur ons een bericht
                     </a>
@@ -167,7 +167,7 @@ export default function FAQ() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="btn-primary" asChild>
-                <a href="/plan">Plan kennismaking</a>
+                <a href="/plan-gesprek">Plan kennismaking</a>
               </Button>
               
             </div>
@@ -179,7 +179,7 @@ export default function FAQ() {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border p-4 z-20">
         <div className="container mx-auto px-2">
           <Button className="btn-primary w-full" asChild>
-            <a href="/plan">Plan kennismaking</a>
+            <a href="/plan-gesprek">Plan kennismaking</a>
           </Button>
         </div>
       </div>
