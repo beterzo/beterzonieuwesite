@@ -45,8 +45,7 @@ const solutions = [
     title: "Toetsgenerator",
     description: "Voor een onderwijsinstelling ontwikkelden we een AI-tool die automatisch toetsvragen genereert op basis van studiemateriaal. Docenten kunnen het gewenste niveau en vraagtype specificeren, waarna de AI meerkeuzevragen, open vragen en casussen genereert.",
     detailedResults: "Docenten besparen nu 23% tijd bij het maken van toetsen. De kwaliteit van vragen is consistent hoog en de tool genereert automatisch verschillende moeilijkheidsniveaus. Per toets worden gemiddeld 2,5 uur minder besteed aan vraagcreatie.",
-    hasButton: true,
-    link: "/diensten/toetsgenerator"
+    hasButton: false
   },
   {
     icon: ScrollText,
@@ -72,7 +71,7 @@ export function PremiumSolutions() {
         
         {/* Horizontal scrollable on mobile, grid on desktop */}
         <div className="overflow-x-auto lg:overflow-visible">
-          <div className="flex lg:grid lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 min-w-max lg:min-w-0">
+          <div className="flex lg:grid lg:grid-cols-2 gap-6 lg:gap-8 min-w-max lg:min-w-0">
             {solutions.map((solution, index) => (
               <div 
                 key={index} 
