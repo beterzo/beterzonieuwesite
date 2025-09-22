@@ -295,61 +295,7 @@ const Services = () => {
       
 
       {/* Example Cases */}
-      <section className="py-8 lg:py-12 bg-surface-alt">
-        <div className="container mx-auto px-6">
-            <div className="mb-8">
-              <h2 className="text-foreground mb-3">
-                Voorbeelden uit maatwerk
-              </h2>
-            </div>
-          
-          <div className="premium-grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Card className="card-elegant">
-              <CardHeader>
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
-                  <Mail className="h-6 w-6 text-primary" strokeWidth={2} />
-                </div>
-                <CardTitle className="text-lg">Slimme mailfiltering</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Een AI-systeem dat inkomende emails analyseert op onderwerp, urgentie en afzender. Het systeem leert van jullie gedrag en routeert automatisch emails naar de juiste collega of afdeling.
-                </p>
-                <div className="space-y-2">
-                  <p className="text-sm font-medium text-foreground">Resultaat:</p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• 70% minder tijd aan inbox-management</li>
-                    <li>• Snellere reactietijden naar klanten</li>
-                    <li>• Geen gemiste belangrijke emails meer</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="card-elegant">
-              <CardHeader>
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-[14px] mb-4">
-                  <FileText className="h-6 w-6 text-primary" strokeWidth={2} />
-                </div>
-                <CardTitle className="text-lg">Contracten automatiseren</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Een workflow die contractsjablonen koppelt aan jullie CRM-data. Upload een sjabloon, kies de klant, en het systeem vult automatisch alle gegevens in en verstuurt het contract voor digitale ondertekening.
-                </p>
-                <div className="space-y-2">
-                  <p className="text-sm font-medium text-foreground">Resultaat:</p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Van 45 naar 5 minuten per contract</li>
-                    <li>• Geen typfouten in contractgegevens</li>
-                    <li>• Directe digitale ondertekening</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Integrations */}
       
