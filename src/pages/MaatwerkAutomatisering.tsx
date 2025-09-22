@@ -261,14 +261,15 @@ const MaatwerkAutomatisering = () => {
                 <CardTitle className="text-xl">Slimme mailfiltering</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-6">
-                  Inbox leert prioriteren en routeert automatisch naar de juiste collega of flow.
+                <p className="text-muted-foreground mb-4">
+                  <strong>Wat we hebben gebouwd:</strong> Een intelligente mailfilter die inkomende e-mails automatisch categoriseert op urgentie, onderwerp en afzender. Het systeem leert van handmatige acties en routeert berichten naar de juiste workflows.
                 </p>
-                <Button asChild variant="outline" size="sm">
-                  <a href="/cases/slimme-mailfiltering">
-                    Bekijk voorbeeld <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
+                <p className="text-muted-foreground mb-4">
+                  <strong>Wat het oplevert:</strong> 40% minder tijd kwijt aan e-mail sorteren. Belangrijke berichten worden direct doorgestuurd naar de juiste persoon. Standaard berichten krijgen een automatisch antwoord met vervolgstappen.
+                </p>
+                <Badge variant="secondary" className="bg-surface-alt text-muted-foreground border-border">
+                  Integratie: Outlook, Gmail, Slack
+                </Badge>
               </CardContent>
             </Card>
 
@@ -280,14 +281,15 @@ const MaatwerkAutomatisering = () => {
                 <CardTitle className="text-xl">Contracten automatiseren</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-6">
-                  Sjabloon uploaden, data inlezen, automatisch invullen en versturen voor ondertekening.
+                <p className="text-muted-foreground mb-4">
+                  <strong>Wat we hebben gebouwd:</strong> Een systeem dat contractsjablonen automatisch invult met klantdata uit het CRM, juridische clausules aanpast op basis van type samenwerking, en documenten direct verstuurt voor digitale ondertekening.
                 </p>
-                <Button asChild variant="outline" size="sm">
-                  <a href="/cases/contracten-automatiseren">
-                    Bekijk voorbeeld <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
+                <p className="text-muted-foreground mb-4">
+                  <strong>Wat het oplevert:</strong> Van 2 uur handwerk naar 5 minuten per contract. Geen typefouten meer, consistente formatting en automatische follow-up als contract niet binnen 7 dagen is ondertekend.
+                </p>
+                <Badge variant="secondary" className="bg-surface-alt text-muted-foreground border-border">
+                  Integratie: HubSpot, DocuSign, Exact
+                </Badge>
               </CardContent>
             </Card>
           </div>
