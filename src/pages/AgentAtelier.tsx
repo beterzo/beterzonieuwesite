@@ -87,9 +87,9 @@ export default function AgentAtelier() {
       {/* Hero Section */}
       <section className="py-14 lg:py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
             {/* Left Column - Content */}
-            <div className="space-y-8">
+            <div className="lg:col-span-2 space-y-8">
               <div className="space-y-6">
                 <Badge variant="secondary" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary border-primary/20 font-semibold">
                   Flagship
@@ -126,7 +126,7 @@ export default function AgentAtelier() {
             </div>
             
             {/* Right Column - Training Image */}
-            <div className="hidden lg:block">
+            <div className="lg:col-span-3 hidden lg:block">
               <img 
                 src={agentAtelierTraining} 
                 alt="Agent Atelier training sessie in moderne conferentieruimte met team"
